@@ -1,19 +1,4 @@
-body {
-    margin: 0; 
-    overflow: hidden;
-    background-color: white;
-  }
+html body {
+    background-color: #85cde9;
 
-canvas { 
-    display: block; 
-}
-
-.aquarium_window {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: auto;
-    background-color: powderblue;
 }
