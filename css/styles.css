@@ -1,5 +1,5 @@
 /* #85cde9; */
-/* #081E34; */
+/* #00A9E7; */
 
 
 .full-height-container {
@@ -27,6 +27,6 @@ nav {
 
 }
 .btn:hover {
-    background-color: #00AFEF !important;
-    transition:0.2s ease;
+    background-color: #00AFEF  !important;
+    transition:0.1s ease;
 }
