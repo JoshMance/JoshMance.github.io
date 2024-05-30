@@ -1,12 +1,8 @@
 /* #85cde9; */
 /* #00A9E7; */
 
-
-.full-height-container {
-    min-height: 90vh;
-    min-width: 90vw;
-    background: #FFFFFF78;
-
+.full-height {
+    min-height: 100vh;
 }
 
 html, body {
@@ -15,6 +11,10 @@ html, body {
 
 nav {
     background: #081E34!important;
+}
+
+p {
+    font-size: 2.2vh;
 }
 
 .nav-item:hover .nav-link {
@@ -29,4 +29,10 @@ nav {
 .btn:hover {
     background-color: #00AFEF  !important;
     transition:0.1s ease;
+}
+
+#profile-image {
+    border-style: solid;
+    border-radius: 500px;
+    border-color: #0F3A64!important;
 }
