@@ -1,4 +1,29 @@
-html body {
-    background-color: #85cde9;
+/* #85cde9; */
+
+
+.full-height-container {
+    min-height: 90vh;
+    min-width: 90vw;
+    background: #FFFFFF78;
 
 }
+
+html, body {
+    min-height: 100%;
+}
+
+nav {
+    background: #000000 !important;
+}
+
+.nav-item:hover .nav-link{
+
+    text-decoration: underline;
+    
+
+}
+
+/* .nav-item:hover {
+    background-color: #1F86E7;
+    
+} */
