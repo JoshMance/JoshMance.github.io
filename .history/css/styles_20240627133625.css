@@ -1,0 +1,27 @@
+:root {
+    --primary-colour:          #1E90FF;
+    --secondary-colour:        #FFFFFF;
+    --background-colour:       #121212;
+    --muted-background-colour: #37474F;
+    --accent-colour:           #00BCD4; 
+
+}
+
+body {
+    background-image: url('./noisy_net.webp');
+}
+
+img {
+    width: 5vw;
+}
+
+.navbar {
+    color: var(--secondary-colour) !important;
+}
+
+.navbar-brand {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 10%;
+    background-color: var(--primary-colour) !important;
+}

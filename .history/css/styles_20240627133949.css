@@ -1,0 +1,27 @@
+:root {
+    --primary-colour:          #1E90FF;
+    --secondary-colour:        #FFFFFF;
+    --background-colour:       #121212;
+    --muted-background-colour: #37474F;
+    --accent-colour:           #00BCD4; 
+
+}
+
+body {
+    background-image: url('./noisy_net.webp');
+}
+
+img {
+    width: 5vw;
+}
+
+.navbar {
+    color: var(--secondary-colour) !important;
+}
+
+.navbar-brand {
+    padding-bottom:100%; overflow:hidden; position:relative
+    border-radius: 10%;
+    background-color: var(--primary-colour) !important;
+    box-shadow: 0 4px 8px 0 rgba(256, 256, 256, 0.2), 0 6px 20px 0 rgba(265, 256, 256, 0.19);
+}
