@@ -1,0 +1,27 @@
+:root {
+  --primary-colour: #1e90ff;
+  --secondary-colour: #ffffff;
+  --background-colour: #121212;
+  --muted-background-colour: #37474f;
+  --accent-colour: #00bcd4;
+}
+
+    
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+body {
+  background: rgb(216,223,255);
+  background: linear-gradient(140deg, rgba(216,223,255,1) 20%, rgba(219,226,235,0.9934174353335085) 51%);
+}
+
+
