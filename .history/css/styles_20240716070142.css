@@ -1,0 +1,16 @@
+/* #13042E
+#041F2E */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(-225deg, #040A2E 0%, #0A123C 50%, #040A2E 100%) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+

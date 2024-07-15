@@ -1,0 +1,9 @@
+body {
+  background: linear-gradient(-20deg, #58D5CD 0%, #2478D2 100%) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
