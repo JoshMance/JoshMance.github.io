@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: linear-gradient(to bottom left,theme(colors.secondary), theme(colors.primary)); 
+    background-attachment: fixed;
+}
