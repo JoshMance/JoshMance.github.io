@@ -11,7 +11,7 @@ module.exports = {
       current: 'currentColor',
       'primary': '#0A3473',
       'secondary': '#150B6C',
-      'accent': '#3AD9E4',
+      'accent': '#6DC7D5',
       'white': '#F7F8F9',
     },
   },
