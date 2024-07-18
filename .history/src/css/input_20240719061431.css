@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: radial-gradient(circle, theme(colors.secondary), theme(colors.primary)); 
+    background-attachment: fixed;
+}
+
+nav {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 6px, rgba(0, 0, 0, 0.23) 0px 2px 4px;
+}
+
+img {
+    box-shadow: -10px 10px theme(colors.accent), 10px -10px theme(colors.accent);
+}
