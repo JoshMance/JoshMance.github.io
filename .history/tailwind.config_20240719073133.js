@@ -11,10 +11,14 @@ module.exports = {
       current: 'currentColor',
       'primary': '#041B3E',
       'secondary': '#08162D',
-      'accent': '#EFB711',
+      'accent': '#ffca28',
       'white': '#F1F3F6',
       'grey' : '#171718'
     },
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "'./src/css/cartographer.webp'",
+      }
   },
   plugins: [],
 }

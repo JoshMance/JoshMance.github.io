@@ -8,6 +8,11 @@ body {
     background-attachment: fixed;
 }
 
+nav {
+    background-image: radial-gradient(circle, #08162D9F, #041B3E95);
+    background-attachment: fixed;
+}
+
 img {
     box-shadow: -10px 10px theme(colors.accent), 10px -10px theme(colors.accent);
 }

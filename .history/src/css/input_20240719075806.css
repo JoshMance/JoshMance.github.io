@@ -8,6 +8,10 @@ body {
     background-attachment: fixed;
 }
 
+nav {
+    background-color:  theme(colors.primary-muted);
+}
+
 img {
     box-shadow: -10px 10px theme(colors.accent), 10px -10px theme(colors.accent);
 }

@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 body {
-    background-image: radial-gradient(circle, #08162D9F, #041B3E95),
-    url('darkness.webp'); 
+    background-image: radial-gradient(circle, #08162D77, #041B3E6E),
+    url('dark_matter(1).webp'); 
     background-attachment: fixed;
 }
+
 
 img {
     box-shadow: -10px 10px theme(colors.accent), 10px -10px theme(colors.accent);
