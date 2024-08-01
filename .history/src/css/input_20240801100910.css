@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url('darkness.webp'); 
+    background-attachment: fixed;
+}
+
+img {
+
+    border-radius: 90%;
+}

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color:  #061223;
+}
+
+img {
+
+    border-radius: 90%;
+    border-color: white;
+}

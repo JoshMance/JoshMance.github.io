@@ -1,0 +1,21 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.html', 
+            './index.html'],
+  theme: {
+    container: {
+      center: true,
+    },
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'primary': '#000E23',
+      'secondary': '#0A3C8C',
+      'accent': '#092D62',
+      'white': '#F1F3F6',
+      'grey' : '#171718'
+    },
+  },
+  plugins: [],
+}
+

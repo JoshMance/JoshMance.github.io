@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: radial-gradient( #16166D, #11113C),
+    url('darkness.webp'); 
+    background-attachment: fixed;
+}
+
+img {
+    border: solid;
+    border-radius: 50%;
+}
