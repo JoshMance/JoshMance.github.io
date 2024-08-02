@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color:  #061223;
+}
+
+img {
+    border-radius: 50%;
+    background: radial-gradient(circle, #054C7C 0%, #061223 70%);
+}
+
+.text-box {
+    background-color: #000;
+    color: #fff;
+    opacity: .5;
+}
