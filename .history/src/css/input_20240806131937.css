@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.background-stars {
+    background-attachment: fixed;
+    background: linear-gradient(334deg, #0D186B, #091151, #000319);
+
+    background-size: 180% 180%;
+    animation: gradient-animation 2s ease infinite;
+    
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}
+
+.navbar.scrolled {
+    background: #F1F3F6E4;
+    backdrop-filter: opacity(20%);
+    backdrop-filter: blur(10px);
+    transition: background-color 300ms linear;
+  }
+
+  .navbar.scrolled span {
+    color: #0BD067;
+    transition: background-color 200ms linear;
+  }
+
+  .navbar.scrolled li {
+    color: #0BD067 !important;
+  }
+    
+
+img {
+    border-radius: 4%;
+    border-style: solid;
+    background: radial-gradient(circle, #054C7C 0%, #0D1F46 90%);
+}
+
