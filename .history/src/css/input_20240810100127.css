@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.header {
+    background: radial-gradient(circle, #15659A 0%, #0A255E 90%);
+    background-size: 180% 180%; 
+}
+
+.navbar {
+    box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+}
+
+.navbar.scrolled {
+    background: #004967;
+    backdrop-filter: opacity(100%);
+    transition: background-color 300ms linear;
+  }
+
+  .navbar.scrolled span {
+    color: #EAF0ED !important;
+  }
+
+  .navbar.scrolled li a {
+    color: #EAF0ED !important;
+  }
+    
+
+img {
+    border-radius: 50%;
+    border-style: solid;
+}
+
