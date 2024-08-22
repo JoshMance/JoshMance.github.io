@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: radial-gradient(circle, #159A79C1 0%, #0A255ECF 90%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+}
+
+.header {
+}
+
+.navbar {
+    font-size: 10px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    color: #000C0F !important;
+    background-color:#F9FDFE !important;
+    backdrop-filter: opacity(0%);
+    transition: background-color 300ms linear;
+  }
+    
+
+img {
+    border-radius: 50%;
+    border-style: solid;
+    background: radial-gradient(circle, #159A79C1 0%, #0A255ECF 90%);
+    background-size: 180% 180%; 
+}
+

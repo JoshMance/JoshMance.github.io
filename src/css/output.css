@@ -677,16 +677,12 @@ video {
   height: 100vh;
 }
 
-.min-h-screen {
-  min-height: 100vh;
-}
-
 .w-10 {
   width: 2.5rem;
 }
 
-.w-2\/5 {
-  width: 40%;
+.w-4\/5 {
+  width: 80%;
 }
 
 .w-5 {
@@ -699,10 +695,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-4\/5 {
-  width: 80%;
 }
 
 .flex-row {
@@ -781,10 +773,6 @@ video {
   background-color: rgb(0 19 27 / var(--tw-bg-opacity));
 }
 
-.p-1 {
-  padding: 0.25rem;
-}
-
 .p-16 {
   padding: 4rem;
 }
@@ -832,9 +820,8 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.pb-40 {
+  padding-bottom: 10rem;
 }
 
 .text-3xl {
@@ -862,8 +849,14 @@ video {
   line-height: 1.75rem;
 }
 
-.font-semibold {
-  font-weight: 600;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .text-accent {
@@ -871,23 +864,19 @@ video {
   color: rgb(11 1 1 / var(--tw-text-opacity));
 }
 
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(247 240 232 / var(--tw-text-opacity));
+}
+
 .text-secondary {
   --tw-text-opacity: 1;
   color: rgb(0 19 27 / var(--tw-text-opacity));
 }
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+.panel-blue {
+  background: url("/src/images/11565115.jpg")  !important;
+  background-size: cover !important;
 }
 
 .navbar {
@@ -896,18 +885,19 @@ video {
 .header {
 }
 
-.navbar.scrolled {
-  box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
-  -webkit-backdrop-filter: opacity(100%);
-          backdrop-filter: opacity(100%);
+.navbar {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  color: #000C0F !important;
+  background-color:#F9FDFE !important;
+  -webkit-backdrop-filter: opacity(0%);
+          backdrop-filter: opacity(0%);
   transition: background-color 300ms linear;
 }
 
 img {
   border-radius: 50%;
   border-style: solid;
-  background: radial-gradient(circle, #15659A 0%, #0A255E 90%);
-  background-size: 180% 180%;
+  background: radial-gradient(circle, #093288CF 0%, #093288CF 90%);
 }
 
 .hover\:text-accent:hover {

@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url('/src/images/pexels-therato-3374210.jpg') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+}
+
+.header {
+}
+
+.navbar.scrolled {
+    box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+    background-color:#31A5D7 !important;
+    backdrop-filter: opacity(0%);
+    transition: background-color 30ms linear;
+  }
+    
+
+img {
+    border-radius: 50%;
+    border-style: solid;
+    background: radial-gradient(circle, #159A79C1 0%, #0A255ECF 90%);
+    background-size: 180% 180%; 
+}
+
