@@ -12,8 +12,8 @@ body, /* blink currently has bug that requires declaration on `body` */
     }
 
 .panel-blue {
-    background: url("/src/images/bg2.jpg")  !important;
-    background-size: cover !important;
+  background-image: url("/src/images/bg_image.jpg");
+  background-size: cover;
 }
 
 .navbar {
@@ -25,15 +25,9 @@ body, /* blink currently has bug that requires declaration on `body` */
 .navbar {
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     color: #02161B !important;
-    background-color:#041021 !important;
+    background-color:#004582 !important;
     backdrop-filter: opacity(100%);
     transition: background-color 300ms linear;
   }
     
-
-img {
-    border-radius: 50%;
-    border-style: solid;
-    background: radial-gradient(circle, #011428 0%, #011428 90%);
-}
 

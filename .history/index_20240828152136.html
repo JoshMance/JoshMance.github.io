@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joshua Mance</title>
+<link rel="stylesheet" href="./src/css/output.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+
+    $.get("./src/components/navbar.html", function(data){
+        $(".navbar-placeholder").replaceWith(data);
+    });
+    $.get("./src/components/footer.html", function(data){
+        $(".footer-placeholder").replaceWith(data);
+    });
+
+    $("#about").click(function() {
+                alert("hey")
+    });
+
+    $( document ).ready(function() {
+
+            console.log($(window).height(), $(window).width())
+
+            $(document).scroll(function () {
+                var $nav = $(".navbar");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+    });
+</script>
+</head>
+<body class="bg-primary font-sans">
+
+    <div class="navbar-placeholder"></div>
+    <div class="panel-blue md:h-[75vh] flex flex-grow items-end justify-center">          
+
+               
+        <div class="md:float-right md:mx-16 size-[500px]">
+            <img src="/src/images/profile_picture.png" alt="Joshua Mance Profile Picture">
+        </div>
+    </div>
+
+
+    <div class="flex flex-col w-screen">
+        
+
+        <div class="snaptarget flex flex-rol h-screen w-screen justify-evenly items-center">
+            <div class="h-4/5 w-4/5 border-2 border-solid">
+                lorum ipsum
+            </div>
+        </div>
+        <div class="snaptarget flex flex-rol h-screen w-screen justify-evenly items-center">
+            <div class="h-4/5 w-4/5 border-2 border-solid">
+                lorum ipsum
+            </div>
+        </div>
+        <div class="flex flex-rol h-screen w-screen justify-evenly items-center">
+            <div class="h-4/5 w-4/5 border-2 border-solid">
+                lorum ipsum
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    <div id="footer-placeholder"></div>
+</body>
+</html> 
+

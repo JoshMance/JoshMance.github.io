@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body, /* blink currently has bug that requires declaration on `body` */
+    html {
+      scroll-snap-type: y proximity;
+    }
+    .snaptarget {
+      scroll-snap-align: start;
+    }
+
+.panel-blue {
+    background: url("/src/images/light-cosmic-navy-abstract-creative-background-design.jpg")  !important;
+    background-size: cover !important;
+}
+
+.navbar {
+}
+
+.header {
+}
+
+.navbar {
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    color: #02161B !important;
+    backdrop-filter: opacity(100%);
+    transition: background-color 300ms linear;
+  }
+    
+
+img {
+    border-radius: 50%;
+    border-style: solid;
+    background: radial-gradient(circle, #5D8ABB 0%, #CBD5DF 90%);
+}
+
