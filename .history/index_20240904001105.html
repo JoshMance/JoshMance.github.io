@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joshua Mance</title>
+<link rel="stylesheet" href="./src/css/output.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+    $.get("./src/components/navbar.html", function(data){
+        $(".navbar-placeholder").replaceWith(data);
+    });
+    $.get("./src/components/footer.html", function(data){
+        $(".footer-placeholder").replaceWith(data);
+    });
+
+    $( document ).ready(function() {
+
+        $(document).scroll(function () {
+            var $nav = $(".navbar");
+            $nav.toggleClass("scrolled", $(this).scrollTop() >= $nav.height());
+        });
+    });
+
+    $( document ).on('click', '#dark-mode-toggle', function() {
+        $('*').toggleClass("dark");
+        $('#dark-mode-toggle').children("*").toggleClass("bi-brightness-high-fill");
+        $('#dark-mode-toggle').children("*").toggleClass("bi-moon-stars-fill");
+    });
+
+    $( document ).on('click', '#home', function() {
+        scroll({top: 0, left: 0, behavior: "smooth"});
+    });
+
+    $( document ).on('click', '#about', function() {
+        var distance = $('#about-page').position().top - 2*$('nav').height() 
+        scroll({top: distance, left: 0, behavior: "smooth"});
+    });
+
+    $( document ).on('click', '#projects', function() {
+        var distance = $('#projects-page').position().top - 2*$('nav').height() 
+        scroll({top: distance, left: 0, behavior: "smooth"});
+    });
+    
+</script>
+</head>
+<body class="home dark:bg-primary-dark items-center justify-center">
+
+    <div class="navbar-placeholder"></div>
+
+    <!-- Splash page content -->
+    <div class= "flex md:h-[90vh] md:mx-[2vw] items-center justify-center">                 
+       
+        <!-- bio panel -->
+        <div class="flex flex-col md:w-[20vw] md:h-[70vh] md:mr-[2vw] justify-between bg-primary dark:bg-secondary-dark rounded-lg">
+
+            <!-- profile picture -->
+            <div class="px-[3vw] my-4">
+                <img class ="aspect-square rounded-xl border-2 border-secondary" src="/src/images/profile_picture.png" alt="Joshua Mance Profile Picture">
+            </div> 
+
+             <!-- bio panel text -->
+            <div class="flex-1 flex-col text-xl md:text-3xl text-center h-auto rounded-lg">
+                <div class = "text-secondary dark:text-primary">
+                    <div>Hi I'm Josh, a computer science and data science graduate
+                        who's passionate about creating scientific software and building on the web!</div>
+                    
+                    <!-- External links -->
+                    <ul class="flex flex-row md:text-4xl justify-evenly py-5">
+                        <li><a href="https://github.com/JoshMance" class=" text-secondary dark:text-primary hover:text-accent"><i class="bi bi-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/joshua-mance/" class=" text-secondary dark:text-primary hover:text-accent"><i class="bi bi-linkedin"></i></a></li>
+                        <li><a href="#" class=" text-secondary dark:text-primary hover:text-accent"><i class="bi bi-envelope-fill"></i></a></li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+
+        <!-- Splash page projects carousel -->
+        <div class="rollover-blur md:h-[70vh] md:w-[50vw] bg-accent-dark dark:bg-secondary-dark">
+            <h3> Content </h3>
+        </div>
+    </div>
+
+
+    <div class="flex flex-col w-screen">
+        
+
+        <div class="flex flex-rol h-screen w-screen justify-evenly items-center">
+            
+            <!-- about/my skills page -->
+            <div id = "about-page" class="flex flex-col h-4/5 w-4/5 border-2 border-solid">
+                <div class="bg-accent text-center text-3xl mb-[5vh]">
+                    My Skills
+                </div>
+                <div class="flex flex-row bg-secondary text-center text-3xl">
+                </div>
+            </div>
+
+        </div>
+        <div id = "projects-page" class="flex flex-rol h-screen w-screen justify-evenly items-center">
+            <div class="h-4/5 w-4/5 border-2 border-solid">
+                lorum ipsum
+            </div>
+        </div>
+        <div class="flex flex-rol h-screen w-screen justify-evenly items-center">
+            <div class="h-4/5 w-4/5 border-2 border-solid">
+                lorum ipsum
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+    <div id="footer-placeholder"></div>
+</body>
+</html> 
+
