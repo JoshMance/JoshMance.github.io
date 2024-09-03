@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body, /* blink currently has bug that requires declaration on `body` */
+    html {
+      scroll-snap-type: y proximity;
+    }
+    .snaptarget {
+      scroll-snap-align: start;
+    }
+
+.panel-blue {
+  background-image: url("/src/images/bg2.jpg");
+  background-size: cover;
+}
+
+.navbar {
+}
+
+.header {
+}
+
+.navbar {  
+  color: #F3F7F7;  
+    &.scrolled {
+      color: #F3F7F7;  
+      background-color: #013949;
+      transition: background-color 300ms linear;
+    }
+  }
+
+
+img {
+  display: inline-block;
+}
+    
+

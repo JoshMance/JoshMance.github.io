@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.cdnfonts.com/css/archia');
+font-family: 'Archia', sans-serif;
+
+body, /* blink currently has bug that requires declaration on `body` */
+    html {
+      scroll-snap-type: y proximity;
+    }
+    .snaptarget {
+      scroll-snap-align: start;
+    }
+    
+
+.panel {
+  background-image: url('/src/images/174106574_34ef4fc2-d136-427c-adaf-bc4a6a4d8c9f.jpg');
+  background-style: cover;
+}
+
+
+
+img {
+  background-color: #A9CDFF;
+}
+

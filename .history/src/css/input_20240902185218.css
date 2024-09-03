@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.cdnfonts.com/css/archia');
+font-family: 'Archia', sans-serif;
+
+:root {
+  color-scheme: light dark !import;
+}
+
+body {
+  color: light-dark(#333b3c, #767621);
+  background-color: light-dark(#efedea, #223a2c);
+}
+
+body, /* blink currently has bug that requires declaration on `body` */
+    html {
+      scroll-snap-type: y proximity;
+    }
+    .snaptarget {
+      scroll-snap-align: start;
+    }
+    
+nav {
+
+    box-shadow: light-dark(rgba(99, 99, 99, 0.2) 0px 2px 8px 0px, none);
+}
+
+
+
+img {
+  background-color: #A9CDFF;
+}
+

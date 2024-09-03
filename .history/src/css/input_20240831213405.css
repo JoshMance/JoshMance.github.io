@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body, /* blink currently has bug that requires declaration on `body` */
+    html {
+      scroll-snap-type: y proximity;
+    }
+    .snaptarget {
+      scroll-snap-align: start;
+    }
+
+.panel-blue {
+  background-image: url("/src/images/abstract-pui5-light-background-wallpaper-colorful-gradient-blurry-soft-smooth-motion-bright-shine.jpg");
+  background-size: cover;
+}
+
+.navbar {
+}
+
+.header {
+}
+
+.navbar {  
+  color: #F3F7F7;  
+    &.scrolled {
+      color: #F3F7F7;  
+      background-color: #092026;
+      box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+      transition: background-color 200ms linear;
+    }
+  }
+
+
+img {
+  display: inline-block;
+}
+    
+
