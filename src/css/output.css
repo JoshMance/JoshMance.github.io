@@ -663,10 +663,6 @@ video {
   align-items: center;
 }
 
-.justify-start {
-  justify-content: flex-start;
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -741,7 +737,7 @@ video {
 }
 
 .bg-secondary-transparent {
-  background-color: #0AA0F16C;
+  background-color: #15638D29;
 }
 
 .p-2 {
@@ -801,10 +797,6 @@ video {
   text-align: center;
 }
 
-.font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -820,20 +812,8 @@ video {
   line-height: 2.5rem;
 }
 
-.font-medium {
-  font-weight: 500;
-}
-
 .font-semibold {
   font-weight: 600;
-}
-
-.font-light {
-  font-weight: 300;
-}
-
-.font-normal {
-  font-weight: 400;
 }
 
 .text-primary {
@@ -852,14 +832,8 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.backdrop-blur-sm {
-  --tw-backdrop-blur: blur(4px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
 .banner {
-  background-image: url('/src/images/4650622_2455890.jpg');
+  background-image: url('/src/images/full-frame-shot-star-field-night.jpg');
   background-size: cover;
 }
 
@@ -875,8 +849,8 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:ml-\[2vw\] {
-    margin-left: 2vw;
+  .md\:mr-\[2vw\] {
+    margin-right: 2vw;
   }
 
   .md\:mt-0 {
@@ -903,8 +877,8 @@ video {
     width: 16vw;
   }
 
-  .md\:w-\[50vw\] {
-    width: 50vw;
+  .md\:w-\[60vw\] {
+    width: 60vw;
   }
 
   .md\:w-auto {

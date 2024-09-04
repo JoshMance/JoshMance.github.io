@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.cdnfonts.com/css/br-shape');
+
+
+.banner {
+    background-image: url('/src/images/abstract-pui5-light-background-wallpaper-colorful-gradient-blurry-soft-smooth-motion-bright-shine.jpg');
+    background-size: cover;
+
+    -webkit-backdrop-filter: blur(5px) !important;
+    backdrop-filter: blur(5px) !important;
+}

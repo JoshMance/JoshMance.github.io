@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.cdnfonts.com/css/br-shape');
+
+
+.banner {
+    background-image: url('/src/images/251272583_2d8edbbc-e1cf-41f8-8c9e-f72f34273bca.jpg');
+}
