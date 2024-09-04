@@ -15,8 +15,8 @@ module.exports = {
       'accent-bright': '#7E0A0A',
       'accent-dull': '#0D77B03F',
 
-      'primary-transparent': '#F3F4F85C',
-      'secondary-transparent':'#0AA0F16C', 
+      'primary-faded': '#F3F4F85C',
+      'secondary-faded':'#15638D64', 
 
       'primary-dark': '#01010F', 
       'secondary-dark':'#060B33',
