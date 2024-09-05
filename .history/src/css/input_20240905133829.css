@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.cdnfonts.com/css/br-shape');
+
+
+.banner {
+    background-image: url('/src/images/full-frame-shot-star-field-night.jpg');
+    background-size: cover;
+}
+
+.fixed-div {
+    position: fixed; 
+    bottom: 60px; 
+    right: 60px; 
+    z-index: 1000; 
+    background-color: #15638D; 
+    padding: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+
+    :hover{
+        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3); 
+    }
+
+  }
