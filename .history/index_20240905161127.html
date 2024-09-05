@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joshua Mance</title>
+<link rel="stylesheet" href="./src/css/output.css">
+<link href="https://fonts.cdnfonts.com/css/br-shape" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+    $.get("./src/components/navbar.html", function(data){
+        $(".navbar-placeholder").replaceWith(data);
+    });
+    $.get("./src/components/footer.html", function(data){
+        $(".footer-placeholder").replaceWith(data);
+    });
+
+    $( document ).ready(function() {
+       
+        // Adding the scrolled class to the navbar when the user is not at the 
+        // top of the page 
+        $(document).scroll(function () {
+            var $nav = $(".navbar");
+            $nav.toggleClass("scrolled", $(this).scrollTop() >= $nav.height());
+
+            if ($(this).scrollTop() < $nav.height()) {
+                if ($('#home-button').hasClass('hidden sm:hidden')) {
+                    $('#home-button').toggleClass('hidden sm:hidden');
+                }
+            }
+
+        });
+    });
+
+    $( document ).on('click', '#dark-mode-toggle', function() {
+        $('*').toggleClass("dark");
+        $('#dark-mode-toggle').children("*").toggleClass("bi-brightness-high-fill");
+        $('#dark-mode-toggle').children("*").toggleClass("bi-moon-stars-fill");
+    });
+
+    $( document ).on('click', '#home', function() {
+        scroll({top: 0, left: 0, behavior: "smooth"});
+    });
+    $( document ).on('click', '#home-button', function() {
+        scroll({top: 0, left: 0, behavior: "smooth"});
+    });
+
+    $( document ).on('click', '#about', function() {
+        var distance = $('#about-section').position().top - 2*$('nav').height() 
+        scroll({top: distance, left: 0, behavior: "smooth"});
+    });
+
+    $( document ).on('click', '#projects', function() {
+        var distance = $('#projects-section').position().top - 2*$('nav').height() 
+        scroll({top: distance, left: 0, behavior: "smooth"});
+    });
+
+    $( document ).on('click', '#contact', function() {
+        var distance = $('#contact-section').position().top - 2*$('nav').height() 
+        scroll({top: distance, left: 0, behavior: "smooth"});
+    });
+    
+</script>
+</head>
+<body class="home grid grid-cols-1  bg-primary dark:bg-primary-dark subpixel-antialiased scroll-smooth">
+
+    <div class="navbar-placeholder"></div> 
+    
+    <div id="home-button" class="hidden fixed-div hover:cursor-pointer border-2 border-transparent hover:border-2 hover:border-primary ease-in duration-200">
+        <i class="text-5xl text-primary font-bold bi bi-chevron-double-up"></i>
+    </div>
+
+    <!-- landing page content -->
+    <div class= "banner h-auto flex flex-col-reverse sm:flex-row sm:h-[70vh] sm:pt-[0vh] justify-center items-center">                 
+
+        <!-- profile picture panel -->
+        <div class="flex flex-col w-[50vw] h-[10vh] mb-[3vh] sm:w-[16vw] sm:h-[50vh] sm:mr-[2vw] justify-center bg-secondary-transparent dark:bg-accent-dull-dark rounded-2xl">
+            <!-- profile picture -->
+            <div class="hidden sm:block sm:h-auto sm:w-auto m-4">
+                <img class ="rounded-full border-2 border-primary" src="/src/images/profile_picture.png" alt="Joshua Mance Profile Picture">
+            </div> 
+            <!-- External links -->
+            <div class="flex flex-row text-4xl sm:text-5xl pt-[2vh] pb-[2vh] justify-evenly">
+                <a href="https://github.com/JoshMance" class="text-primary dark:text-primary hover:text-accent"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/joshua-mance/" class=" text-primary dark:text-primary  hover:text-accent"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class=" text-primary dark:text-primary  hover:text-accent"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+        </div>
+
+        <!-- bio panel -->
+        <div class="sm:h-[50vh] sm:w-[60vw] rounded-3xl dark:bg-accent-dull-dark">
+            
+             <!-- bio panel text -->
+             <div class="flex-1 flex-col h-auto px-3 sm:p-5 text-2xl sm:text-4xl text-left rounded-lg">
+                <div class = "text-primary dark:text-primary">
+                    <div class="py-8 sm:py-4 font-semibold">Hi there!</div>
+                    <div class="py-2 sm:py-4">I'm Josh, </div>
+                    <div class="py-2 sm:py-4" >a computer & data science graduate who's passionate about operations research and building on the web!</div>
+
+                    <div class="py-8 sm:py-16" >Here you can explore my projects, read my articles, or contact me</div>
+                </div>
+            </div> 
+            
+        </div>
+
+
+    </div>
+
+
+    <div class="flex flex-col w-screen">
+        
+        <!-- about/my skills section -->
+        <div class="flex flex-row h-screen w-screen justify-evenly items-center">
+            <div id = "about-section" class="section flex flex-col h-4/5 w-4/5 border-2 border-solid">
+                <div class="bg-accent text-center text-3xl mb-[5vh]">
+                    My Skills
+                </div>
+                <div class="flex flex-row bg-secondary text-center text-3xl">
+                </div>
+            </div>
+        </div>
+
+        <!--projects section -->
+        <div class="flex flex-row h-screen w-screen justify-evenly items-center">
+            <div id = "projects-section" class="section flex flex-col h-4/5 w-4/5 border-2 border-solid">
+                <div class="bg-accent text-center text-3xl mb-[5vh]">
+                    My Projects
+                </div>
+                <div class="flex flex-row bg-secondary text-center text-3xl">
+                </div>
+            </div>
+        </div>
+
+        <!--contact section -->
+        <div class="flex flex-row h-screen w-screen justify-evenly items-center">
+            <div id = "contact-section" class="section flex flex-col h-4/5 w-4/5 border-2 border-solid">
+                <div class="bg-accent text-center text-3xl mb-[5vh]">
+                    Contact me
+                </div>
+                <div class="flex flex-row bg-secondary text-center text-3xl">
+                </div>
+            </div>
+        </div>
+</div>
+    <div class="footer-placeholder"></div>
+</body>
+</html> 
+

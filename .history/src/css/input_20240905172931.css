@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.cdnfonts.com/css/br-shape');
+
+
+.banner {
+    background-image: url('/src/images/full-frame-shot-star-field-night.jpg');
+    background-size: cover;
+
+    background-image {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transition-duration: 10s;
+        -moz-transition-duration: 10s;
+        -o-transition-duration: 10s;
+        transition-duration: 10s;
+    }
+}
+
+.fixed-div {
+    position: fixed; 
+    bottom: 60px; 
+    right: 60px; 
+    z-index: 1000; 
+    background-color: #15638D; 
+    padding: 10px; 
+    border-radius: 50%;
+  }
