@@ -554,6 +554,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .sticky {
   position: sticky;
 }
@@ -574,28 +578,14 @@ video {
   margin: 1rem;
 }
 
-.m-\[5vh\] {
-  margin: 5vh;
-}
-
-.mx-\[1vw\] {
-  margin-left: 1vw;
-  margin-right: 1vw;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.my-\[2vh\] {
-  margin-top: 2vh;
-  margin-bottom: 2vh;
+.my-\[7vh\] {
+  margin-top: 7vh;
+  margin-bottom: 7vh;
 }
 
 .mb-\[3vh\] {
@@ -628,10 +618,6 @@ video {
 
 .aspect-square {
   aspect-ratio: 1 / 1;
-}
-
-.h-1\/6 {
-  height: 16.666667%;
 }
 
 .h-10 {
@@ -788,6 +774,10 @@ video {
   border-width: 2px;
 }
 
+.border-t-4 {
+  border-top-width: 4px;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -795,6 +785,11 @@ video {
 .border-primary {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 248 / var(--tw-border-opacity));
+}
+
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(21 99 141 / var(--tw-border-opacity));
 }
 
 .border-transparent {
@@ -813,6 +808,10 @@ video {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-3 {
@@ -858,6 +857,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .text-2xl {
@@ -927,9 +930,7 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-div {
-  border: 1px solid #000000 !important;
-}
+/* div {border: 1px solid #000000 !important;} */
 
 .banner {
   background-image: url('/src/images/full-frame-shot-star-field-night.jpg');
@@ -959,13 +960,33 @@ div {
   border-color: rgb(243 244 248 / var(--tw-border-opacity));
 }
 
+.hover\:bg-secondary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 99 141 / var(--tw-bg-opacity));
+}
+
 .hover\:text-accent:hover {
   --tw-text-opacity: 1;
   color: rgb(0 2 12 / var(--tw-text-opacity));
 }
 
+.hover\:text-primary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 248 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.focus\:bg-secondary:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 99 141 / var(--tw-bg-opacity));
+}
+
+.focus\:text-primary:focus {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 248 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {

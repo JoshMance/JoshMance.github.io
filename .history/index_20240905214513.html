@@ -21,6 +21,9 @@
     });
 
     $( document ).ready(function() {
+       
+        // Toggling all divs that are initially focused
+        $('focused-at-start').toggleClass('focus');
 
         // Adding the scrolled class to the navbar when the user is not at the top of the page 
         $(document).scroll(function () {
@@ -51,10 +54,6 @@
             $('#' + panel_id).toggleClass('hidden');
             $('#' + panel_id).toggleClass('flex');
         });
-
-               
-        // Toggling all divs that are initially focused
-        $('focused-at-start').toggleClass('focus');
 
     });
 
@@ -229,6 +228,8 @@
 
                     </div>
 
+                    <div class="h-auto m-20 text-4xl">lorum ipsum</div>
+                    <div class="h-auto m-20 text-4xl">lorum ipsum</div>
                     <div class="h-auto m-20 text-4xl">lorum ipsum</div>
                 </div>
     

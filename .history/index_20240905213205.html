@@ -21,7 +21,7 @@
     });
 
     $( document ).ready(function() {
-
+       
         // Adding the scrolled class to the navbar when the user is not at the top of the page 
         $(document).scroll(function () {
             var $nav = $(".navbar");
@@ -42,19 +42,11 @@
 
             $('.about-panel').toggleClass('hidden', true);
             $('.about-panel').toggleClass('flex', false);
-            $('.about-panel').toggleClass('focus', false);
 
-            
-            $(this).toggleClass('focus');
             var panel_id = $(this).data('target');
-            
             $('#' + panel_id).toggleClass('hidden');
             $('#' + panel_id).toggleClass('flex');
         });
-
-               
-        // Toggling all divs that are initially focused
-        $('focused-at-start').toggleClass('focus');
 
     });
 
@@ -156,29 +148,29 @@
 
                     <div class="flex flex-row w-full h-[5vh] text-3xl text-center justify-evenly flex-wrap">
                         
-                        <button class="about-panel-button focused-at-start h-full px-3 focus:bg-secondary hover:bg-secondary focus:text-primary hover:text-primary hover:cursor-pointer"
+                        <button class="about-panel-button h-full px-3 hover:bg-secondary hover:text-primary hover:cursor-pointer"
                             data-target = web-development-panel>  
                             Web Development
                         </button>
 
-                        <button class="about-panel-button h-full px-3 focus:bg-secondary hover:bg-secondary focus:text-primary hover:text-primary hover:cursor-pointer"
+                        <button class="about-panel-button h-full px-3 hover:bg-secondary hover:text-primary hover:cursor-pointer"
                             data-target = operations-research-panel>  
                             Operations Research/Simulation
                         </button>
                         
-                        <button class="about-panel-button h-full px-3 focus:bg-secondary hover:bg-secondary focus:text-primary hover:text-primary hover:cursor-pointer"
+                        <button class="about-panel-button h-full px-3 hover:bg-secondary hover:text-primary hover:cursor-pointer"
                             data-target = data-visualisation-panel>  
                             Data Visualisation
                         </button>
 
-                        <button class="about-panel-button h-full px-3 align-middle focus:bg-secondary hover:bg-secondary focus:text-primary hover:text-primary hover:cursor-pointer"
+                        <button class="about-panel-button h-full px-3 hover:bg-secondary hover:text-primary hover:cursor-pointer"
                                 data-target = data-engineering-panel> 
                                 Data Engineering
                         </button>
 
                     </div>
 
-                    <div class="p-8 border-t-4 border-secondary">
+                    <div class="my-10 bg-secondary">
 
                         <!-- Web dev panel -->
                         <div id="web-development-panel" class="about-panel flex flex-row w-full h-[15vh] justify-evenly flex-wrap">
@@ -229,6 +221,8 @@
 
                     </div>
 
+                    <div class="h-auto m-20 text-4xl">lorum ipsum</div>
+                    <div class="h-auto m-20 text-4xl">lorum ipsum</div>
                     <div class="h-auto m-20 text-4xl">lorum ipsum</div>
                 </div>
     
