@@ -7,6 +7,12 @@ module.exports = {
     container: {
       center: true,
     },        
+    light: {
+      mediaQuery: prefersLight /* "@media (prefers-color-scheme: light)" */,
+    },
+    dark: {
+      mediaQuery: prefersDark /* "@media (prefers-color-scheme: dark)" */,
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',

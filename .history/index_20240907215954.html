@@ -110,24 +110,36 @@
 
     // Hamburger menu scroll handlers 
     $( document ).on('click', '#about-hamburger', function() {
-        var distance = $('#about-section').position().top - 4*$('nav').height() 
+        var distance = $('#about-section').position().top 
         scroll({top: distance, left: 0, behavior: "smooth"});
 
-        close_hamburger_menu();
+        $('#hamburger-menu').toggleClass('hidden');
+        $('#hamburger-menu').toggleClass('flex');
+
+        $('#hamburger-menu-button').children("*").toggleClass("bi bi-list");
+        $('#hamburger-menu-button').children("*").toggleClass("bi bi-x-lg");
     });
 
     $( document ).on('click', '#projects-hamburger', function() {
-        var distance = $('#projects-section').position().top - 4*$('nav').height() 
+        var distance = $('#projects-section').position().top
         scroll({top: distance, left: 0, behavior: "smooth"});
-        
-        close_hamburger_menu();
+
+        $('#hamburger-menu').toggleClass('hidden');
+        $('#hamburger-menu').toggleClass('flex');
+
+        $('#hamburger-menu-button').children("*").toggleClass("bi bi-list");
+        $('#hamburger-menu-button').children("*").toggleClass("bi bi-x-lg");
     });
 
     $( document ).on('click', '#contact-hamburger', function() {
-        var distance = $('#contact-section').position().top - 4*$('nav').height()  
+        var distance = $('#contact-section').position().top  
         scroll({top: distance, left: 0, behavior: "smooth"});
 
-        close_hamburger_menu();
+        $('#hamburger-menu').toggleClass('hidden');
+        $('#hamburger-menu').toggleClass('flex');
+
+        $('#hamburger-menu-button').children("*").toggleClass("bi bi-list");
+        $('#hamburger-menu-button').children("*").toggleClass("bi bi-x-lg");
     });
 
 

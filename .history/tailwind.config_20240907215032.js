@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-    },        
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -22,5 +22,16 @@ module.exports = {
       'accent-yellow-dull': '#D2CA41',
     },
   },
-  plugins: [],
+  plugins: [
+    themeVariants({
+      themes: {
+        light: {
+          mediaQuery: prefersLight /* "@media (prefers-color-scheme: light)" */,
+        },
+        dark: {
+          mediaQuery: prefersDark /* "@media (prefers-color-scheme: dark)" */,
+        },
+      },
+    }),
+  ],
 }

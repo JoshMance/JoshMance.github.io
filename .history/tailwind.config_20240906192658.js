@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-    },        
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',

@@ -57,29 +57,29 @@
 
     });
 
-    function close_hamburger_menu() {
+
+    // Hamburger menu toggle 
+    $(document).on('click', '#hamburger-menu-button', function() {
+
         $('#hamburger-menu').toggleClass('hidden');
         $('#hamburger-menu').toggleClass('flex');
 
         $('#hamburger-menu-button').children("*").toggleClass("bi bi-list");
         $('#hamburger-menu-button').children("*").toggleClass("bi bi-x-lg");
-    } 
-
-    // Hamburger menu toggle 
-    $(document).on('click', '#hamburger-menu-button', function() {
-        close_hamburger_menu();
     });
 
 
     // Dark mode toggle 
     $(document).on('click', '#dark-mode-toggle', function() {
         $('*').toggleClass("dark");
+        $('*').toggleClass("light");
         $('#dark-mode-toggle').children("*").toggleClass("bi-brightness-high-fill");
         $('#dark-mode-toggle').children("*").toggleClass("bi-moon-stars-fill");
     });
 
     $(document).on('click', '#dark-mode-toggle-hamburger', function() {
         $('*').toggleClass("dark");
+        $('*').toggleClass("light");
         $('#dark-mode-toggle-hamburger').children("*").toggleClass("bi-brightness-high-fill");
         $('#dark-mode-toggle-hamburger').children("*").toggleClass("bi-moon-stars-fill");
     });
@@ -110,24 +110,18 @@
 
     // Hamburger menu scroll handlers 
     $( document ).on('click', '#about-hamburger', function() {
-        var distance = $('#about-section').position().top - 4*$('nav').height() 
+        var distance = $('#about-section').position().top 
         scroll({top: distance, left: 0, behavior: "smooth"});
-
-        close_hamburger_menu();
     });
 
     $( document ).on('click', '#projects-hamburger', function() {
-        var distance = $('#projects-section').position().top - 4*$('nav').height() 
+        var distance = $('#projects-section').position().top
         scroll({top: distance, left: 0, behavior: "smooth"});
-        
-        close_hamburger_menu();
     });
 
     $( document ).on('click', '#contact-hamburger', function() {
-        var distance = $('#contact-section').position().top - 4*$('nav').height()  
+        var distance = $('#contact-section').position().top  
         scroll({top: distance, left: 0, behavior: "smooth"});
-
-        close_hamburger_menu();
     });
 
 
