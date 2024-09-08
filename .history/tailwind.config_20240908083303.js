@@ -10,8 +10,8 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'primary': '#ffffff', 
-      'primary-alt': '#E8E8F4', 
+      'primary': '#F3F4F8', 
+      'primary-alt': '#F3F4F8', 
       'secondary':'#15638D',
       'accent': '#00020C',
 

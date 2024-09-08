@@ -8,7 +8,7 @@
 /* div {border: 1px solid #000000 !important;} */
 
 
-.banner {
+.home {
     background-image: url('/src/images/full-frame-shot-star-field-night.jpg');
     background-size: cover;
 }
@@ -18,4 +18,15 @@
     bottom: 60px; 
     right: 60px; 
     z-index: 1000; 
+    background-color: #15638D; 
+    padding: 10px; 
+    border-radius: 50%;
   }
+
+.navbar {
+    &.scrolled {
+        background: #15638D;
+        box-shadow: 1.8px 3.5px 3.5px hsl(0deg 0% 0% / 0.45) !important;
+        transition: 0.8s ease;
+    }
+}

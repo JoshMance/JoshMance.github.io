@@ -11,7 +11,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       'primary': '#ffffff', 
-      'primary-alt': '#E8E8F4', 
+      'primary-alt': '#F8F8FA', 
       'secondary':'#15638D',
       'accent': '#00020C',
 
