@@ -12,8 +12,6 @@
 <script>
 
     var BREAKPOINT_SM = 640
-    var project_content = ['./src/project-content/temp.json']
-
 
     $.get("./src/components/navbar.html", function(data){
         $(".navbar-placeholder").replaceWith(data);
@@ -56,23 +54,6 @@
             $('#' + panel_id).toggleClass('hidden');
             $('#' + panel_id).toggleClass('flex');
         });
-
-
-        // Creating the project info boxes using the info-box 
-        // component and data from the /src/project-info/ file
-        
-        //$('project-boxes')
-
-
-        // for (i = 0; i < project_content.length; i++) {
-        //     $.get(project_content[i], function(data) {
-        //         console.log(data)
-        //     });
-        // }
-
-
-
-
 
     });
 
@@ -210,7 +191,7 @@
         <div id = "about-section" class="flex flex-col h-screen w-screen justify-evenly items-center bg-primary">
             
             <!-- Title -->
-            <div class="text-center text-2xl font-bold sm:text-5xl mt-[5vh] pb-[3vh]">My Skills</div>
+            <div class="text-center text-2xl sm:text-5xl mt-[5vh] pb-[3vh]">My Skills</div>
 
             <div class="section flex flex-col h-4/5 w-4/5">
                 <div class="h-full w-full border-secondary">
@@ -225,7 +206,7 @@
 
                         <button class="about-panel-button h-full px-5 align-middle sm:rounded-full aria-selected:bg-secondary hover:bg-secondary aria-selected:text-primary hover:text-primary hover:cursor-pointer"
                             data-target = operations-research-panel>  
-                            Operations Research
+                            Operations Research/Simulation
                         </button>
                         
 
@@ -236,7 +217,7 @@
 
                     </div>
 
-                    <div class="py-12 sm:py-20 border-secondary">
+                    <div class="py-12 sm:py-20 sm:px-8 border-secondary">
 
                         <!-- Web dev panel -->
                         <div id="web-development-panel" class="about-panel flex flex-row w-full h-[4vh] sm:h-[15vh] justify-evenly flex-wrap">
@@ -257,7 +238,7 @@
                         
 
                             <!-- Web dev text -->
-                            <div class="h-full w-full my-10 py-6 text-sm sm:text-3xl border-t-4 border-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper laoreet elit, sit amet tincidunt ex finibus quis. Phasellus ullamcorper ligula eget ullamcorper placerat. Nunc vehicula, felis quis scelerisque maximus, velit justo scelerisque elit, ut fringilla lacus metus vel erat. Morbi ante turpis, blandit ac ex eget, tempor tristique augue. Proin congue elit et leo lobortis, nec sodales odio lobortis. Curabitur euismod eros eget posuere eleifend. In sit amet turpis sollicitudin, aliquet magna ac, dapibus lorem. Proin interdum, purus ut tempus sollicitudin, quam quam egestas enim, vel semper tellus nunc sed leo. Quisque maximus libero sit amet quam posuere congue. Duis non velit sed leo vestibulum interdum. </div>
+                            <div class="h-auto w-full my-10 py-6 text-sm sm:text-3xl border-t-4 border-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper laoreet elit, sit amet tincidunt ex finibus quis. Phasellus ullamcorper ligula eget ullamcorper placerat. Nunc vehicula, felis quis scelerisque maximus, velit justo scelerisque elit, ut fringilla lacus metus vel erat. Morbi ante turpis, blandit ac ex eget, tempor tristique augue. Proin congue elit et leo lobortis, nec sodales odio lobortis. Curabitur euismod eros eget posuere eleifend. In sit amet turpis sollicitudin, aliquet magna ac, dapibus lorem. Proin interdum, purus ut tempus sollicitudin, quam quam egestas enim, vel semper tellus nunc sed leo. Quisque maximus libero sit amet quam posuere congue. Duis non velit sed leo vestibulum interdum. </div>
 
                         </div>
 
@@ -297,24 +278,12 @@
 
 
         <!--projects section -->
-        <div id = "projects-section" class="flex flex-wrap h-screen w-screen justify-evenly items-center bg-primary-alt">
-
-
-            
-            <!--projects section inner container-->
-            <div class="section flex flex-col h-4/5 w-4/5">
-                 
-                <!-- Title -->
-                 <div class=" text-center text-5xl font-bold mb-[5vh]">
-                    My Projects
-                 </div>
-
-                    <div class="project-boxes grid grid-cols-3 gap-7">
-                        
-                        <!-- Project info boxes-->
-
-
-                    </div>
+        <div id = "projects-section" class="flex flex-row h-screen w-screen justify-evenly items-center">
+            <div class="section flex flex-col h-4/5 w-4/5 border-2 border-solid">
+                 <!-- Title -->
+                 <div class=" text-center text-3xl mb-[5vh]">My Projects</div>
+                <div class="flex flex-row bg-secondary text-center text-3xl">
+                </div>
             </div>
         </div>
 

@@ -574,14 +574,6 @@ video {
   margin: 1rem;
 }
 
-.m-\[2vh\] {
-  margin: 2vh;
-}
-
-.m-\[5vh\] {
-  margin: 5vh;
-}
-
 .mx-10 {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
@@ -595,16 +587,6 @@ video {
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-}
-
-.mx-\[2vh\] {
-  margin-left: 2vh;
-  margin-right: 2vh;
-}
-
-.mx-12 {
-  margin-left: 3rem;
-  margin-right: 3rem;
 }
 
 .mb-\[3vh\] {
@@ -645,6 +627,10 @@ video {
 
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
 }
 
 .h-10 {
@@ -699,20 +685,20 @@ video {
   width: 100vw;
 }
 
-.w-\[40vw\] {
-  width: 40vw;
-}
-
 .flex-1 {
   flex: 1 1 0%;
 }
 
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-subgrid {
+  grid-template-columns: subgrid;
 }
 
 .flex-row {
@@ -753,6 +739,18 @@ video {
 
 .justify-evenly {
   justify-content: space-evenly;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-7 {
+  gap: 1.75rem;
 }
 
 .space-x-5 > :not([hidden]) ~ :not([hidden]) {
@@ -797,10 +795,6 @@ video {
   border-width: 2px;
 }
 
-.border-t-2 {
-  border-top-width: 2px;
-}
-
 .border-t-4 {
   border-top-width: 4px;
 }
@@ -830,7 +824,7 @@ video {
 
 .bg-primary-alt {
   --tw-bg-opacity: 1;
-  background-color: rgb(232 232 244 / var(--tw-bg-opacity));
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .bg-secondary {
@@ -840,10 +834,6 @@ video {
 
 .p-2 {
   padding: 0.5rem;
-}
-
-.p-\[2vh\] {
-  padding: 2vh;
 }
 
 .p-\[1vh\] {
@@ -880,33 +870,22 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pb-\[2vh\] {
   padding-bottom: 2vh;
+}
+
+.pb-\[3vh\] {
+  padding-bottom: 3vh;
 }
 
 .pl-4 {
@@ -919,22 +898,6 @@ video {
 
 .pt-\[2vh\] {
   padding-top: 2vh;
-}
-
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
-.pb-10 {
-  padding-bottom: 2.5rem;
-}
-
-.pb-\[3vh\] {
-  padding-bottom: 3vh;
 }
 
 .text-left {
@@ -1086,31 +1049,6 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:mx-\[5vw\] {
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-
-  .sm\:mx-\[4vw\] {
-    margin-left: 4vw;
-    margin-right: 4vw;
-  }
-
-  .sm\:mx-\[3vw\] {
-    margin-left: 3vw;
-    margin-right: 3vw;
-  }
-
-  .sm\:mx-\[6vw\] {
-    margin-left: 6vw;
-    margin-right: 6vw;
-  }
-
-  .sm\:mx-\[1vw\] {
-    margin-left: 1vw;
-    margin-right: 1vw;
-  }
-
   .sm\:mx-\[10vw\] {
     margin-left: 10vw;
     margin-right: 10vw;
@@ -1160,28 +1098,12 @@ video {
     width: auto;
   }
 
-  .sm\:w-full {
-    width: 100%;
-  }
-
-  .sm\:w-\[40vw\] {
-    width: 40vw;
-  }
-
-  .sm\:w-\[80vw\] {
-    width: 80vw;
-  }
-
   .sm\:flex-row {
     flex-direction: row;
   }
 
   .sm\:flex-wrap {
     flex-wrap: wrap;
-  }
-
-  .sm\:rounded-2xl {
-    border-radius: 1rem;
   }
 
   .sm\:rounded-full {
@@ -1201,19 +1123,9 @@ video {
     padding: 1.25rem;
   }
 
-  .sm\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .sm\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-
-  .sm\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
 
   .sm\:py-20 {
@@ -1221,9 +1133,9 @@ video {
     padding-bottom: 5rem;
   }
 
-  .sm\:px-\[5vw\] {
-    padding-left: 5vw;
-    padding-right: 5vw;
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .sm\:pt-\[0vh\] {
@@ -1243,11 +1155,6 @@ video {
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
-  }
-
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 }
 

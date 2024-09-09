@@ -64,11 +64,10 @@
         //$('project-boxes')
 
 
-        // for (i = 0; i < project_content.length; i++) {
-        //     $.get(project_content[i], function(data) {
-        //         console.log(data)
-        //     });
-        // }
+        for (i = 0; i < project_box_content_urls.length; i++) {
+            var content = $.get(project_box_content_urls[i], function(data) {return JSON.parse(data)});
+            console.log(content)
+        }
 
 
 

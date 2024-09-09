@@ -12,8 +12,6 @@
 <script>
 
     var BREAKPOINT_SM = 640
-    var project_content = ['./src/project-content/temp.json']
-
 
     $.get("./src/components/navbar.html", function(data){
         $(".navbar-placeholder").replaceWith(data);
@@ -56,23 +54,6 @@
             $('#' + panel_id).toggleClass('hidden');
             $('#' + panel_id).toggleClass('flex');
         });
-
-
-        // Creating the project info boxes using the info-box 
-        // component and data from the /src/project-info/ file
-        
-        //$('project-boxes')
-
-
-        // for (i = 0; i < project_content.length; i++) {
-        //     $.get(project_content[i], function(data) {
-        //         console.log(data)
-        //     });
-        // }
-
-
-
-
 
     });
 
@@ -297,24 +278,18 @@
 
 
         <!--projects section -->
-        <div id = "projects-section" class="flex flex-wrap h-screen w-screen justify-evenly items-center bg-primary-alt">
-
-
+        <div id = "projects-section" class="flex flex-row h-screen w-screen justify-evenly items-center bg-primary-alt">
             
             <!--projects section inner container-->
-            <div class="section flex flex-col h-4/5 w-4/5">
-                 
-                <!-- Title -->
-                 <div class=" text-center text-5xl font-bold mb-[5vh]">
-                    My Projects
-                 </div>
+            <div class="section flex flex-col h-4/5 w-4/5 border-2 border-solid">
+                 <!-- Title -->
+                 <div class=" text-center text-5xl font-bold mb-[5vh]">My Projects</div>
+                
+                 <!-- Project info box-->
+                 <div class="flex flex-row h-0.5 bg-secondary text-center text-3xl">
+                    hello
+                </div>
 
-                    <div class="project-boxes grid grid-cols-3 gap-7">
-                        
-                        <!-- Project info boxes-->
-
-
-                    </div>
             </div>
         </div>
 

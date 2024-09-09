@@ -12,8 +12,6 @@
 <script>
 
     var BREAKPOINT_SM = 640
-    var project_content = ['./src/project-content/temp.json']
-
 
     $.get("./src/components/navbar.html", function(data){
         $(".navbar-placeholder").replaceWith(data);
@@ -56,23 +54,6 @@
             $('#' + panel_id).toggleClass('hidden');
             $('#' + panel_id).toggleClass('flex');
         });
-
-
-        // Creating the project info boxes using the info-box 
-        // component and data from the /src/project-info/ file
-        
-        //$('project-boxes')
-
-
-        // for (i = 0; i < project_content.length; i++) {
-        //     $.get(project_content[i], function(data) {
-        //         console.log(data)
-        //     });
-        // }
-
-
-
-
 
     });
 
@@ -302,18 +283,31 @@
 
             
             <!--projects section inner container-->
-            <div class="section flex flex-col h-4/5 w-4/5">
+            <div class="section flex flex-col h-4/5 w-4/5 border-2 border-solid">
                  
                 <!-- Title -->
                  <div class=" text-center text-5xl font-bold mb-[5vh]">
                     My Projects
                  </div>
 
-                    <div class="project-boxes grid grid-cols-3 gap-7">
+                    <div class="grid grid-cols-3 gap-2">
                         
-                        <!-- Project info boxes-->
+                            <!-- Project info box-->
+                        <div class="grid grid-cols-subgrid aspect-video bg-secondary text-center justify-center text-3xl">
+                            hello
+                        </div>
 
+                        <div class="grid grid-cols-subgrid aspect-video bg-secondary text-center justify-center text-3xl">
+                            hello
+                        </div>
 
+                        <div class="grid grid-cols-subgrid aspect-video bg-secondary text-center justify-center text-3xl">
+                            hello
+                        </div>
+
+                        <div class="grid grid-cols-subgrid aspect-video bg-secondary text-center justify-center text-3xl">
+                            hello
+                        </div>
                     </div>
             </div>
         </div>
