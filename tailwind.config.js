@@ -10,17 +10,17 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'primary': '#ffffff', 
-      'primary-alt': '#f3f4f6', 
-      'secondary':'#15638D',
-      'accent': '#00020C',
+      'primary': '#3485CB', 
+      'secondary':'#B2491F',
+      'accent': '#f3d403',
+      'accent-dull': '#D2CA41',
 
       'primary-dark': '#111827', 
       'secondary-dark':'#374151',
       'accent-dark': '#e4e4e4',
 
-      'accent-yellow-bright': '#FFEA00',
-      'accent-yellow-dull': '#D2CA41',
+      'black':'#090909',
+      'white': '#ffffff',
     },
   },
   plugins: [],

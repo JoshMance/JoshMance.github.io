@@ -28,7 +28,7 @@
         // Adding the scrolled class to the navbar when the user is not at the top of the page 
         $(document).scroll(function () {
             var $nav = $(".navbar");
-            $nav.toggleClass("scrolled", $(this).scrollTop() >= $nav.height());
+            $nav.toggleClass("scrolled", $(this).scrollTop() >= 5*$nav.height());
 
             // Toggling whether the scroll to top button is visible 
             if (screen.width >= BREAKPOINT_SM) {
@@ -137,19 +137,14 @@
 
         close_hamburger_menu();
     });
-
-
-    
 </script>
 </head>
-
 <body class="home grid grid-cols-1  bg-primary dark:bg-primary-dark text-accent dark:text-accent-dark subpixel-antialiased scroll-smooth">
     
     <!-- home button: returns user to the top of the page -->
-    
-    <div id="home-button" class="hidden fixed-div hover:cursor-pointer border-2 border-transparent hover:border-2 hover:border-primary ease-in duration-200">
-        <i class="text-5xl text-primary font-bold bi bi-chevron-double-up"></i>
-        <div class="text-xs text-primary">
+    <div id="home-button" class="hidden fixed-div home-button flex flex-col items-center border-2 border-transparent hover:cursor-pointer hover:first:scale-110 ease-in duration-90">
+        <i class="text-5xl text-accent m-0 font-bold bi bi-chevron-double-up"></i>
+        <div class="text-xs text-accent">
             BACK TO TOP
         </div>
     </div>
@@ -157,46 +152,44 @@
     <div class="navbar-placeholder"></div> 
 
     <!-- landing page content -->
-    <div class= "banner h-auto flex flex-col-reverse sm:flex-row sm:h-[80vh] sm:pt-[0vh] justify-center items-center">                 
+    <div class= "banner h-auto flex flex-col-reverse sm:flex-row sm:h-[80vh] sm:pt-[15vh] justify-center p-auto">                 
 
-        <!-- profile picture panel -->
-        <div class="flex flex-col w-[50vw] h-[10vh] mb-[3vh] sm:w-[16vw] sm:h-[50vh] sm:mr-[2vw] justify-center dark:bg-accent-dull-dark rounded-2xl">
-            <!-- profile picture -->
-            <div class="hidden sm:block sm:h-auto sm:w-auto m-4">
-                <img class ="rounded-full border-2 border-primary bg-secondary" src="/src/images/profile_picture.png" alt="Joshua Mance Profile Picture">
-            </div> 
-            <!-- External links -->
-            <div class="flex flex-row text-4xl sm:text-5xl pt-[2vh] pb-[2vh] justify-evenly">
-                <a href="https://github.com/JoshMance" class="text-primary dark:text-primary hover:scale-110"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/joshua-mance/" class=" text-primary dark:text-primary hover:scale-110"><i class="bi bi-linkedin"></i></a>
-                <a href="#" class=" text-primary dark:text-primary hover:scale-110"><i class="bi bi-envelope-fill"></i></a>
-            </div>
-        </div>
-
-        <!-- bio panel -->
-        <div class="sm:h-[50vh] sm:w-[60vw] rounded-3xl dark:bg-accent-dull-dark">
+        <!-- landing page content panel -->
+        <div class="flex flex-row w-[80vw] h-[30vh] justify-center align-centre dark:bg-accent-dull-dark rounded-2xl">
             
-             <!-- bio panel text -->
-             <div class="flex-1 flex-col h-auto px-6 sm:p-5 text-2xl sm:text-4xl text-left rounded-lg">
-                <div class = "text-primary dark:text-primary">
-                    <div class="py-8 sm:py-4 font-semibold">Hi there!</div>
-                    <div class="py-2 sm:py-4">I'm Josh, </div>
-                    <div class="py-2 sm:py-4" >a computer & data science graduate who's passionate about operations research and building on the web!</div>
-
-                    <div class="py-8 sm:py-16" >Here you can explore my projects, read my articles, or contact me</div>
+            <div class="aspect-square">
+                <!-- profile picture -->
+                <div class="hidden sm:block m-4">
+                    <img class ="rounded-full border-2 border-white bg-accent dark:bf" src="/src/images/profile_picture.png" alt="Joshua Mance Profile Picture">
+                </div> 
+                <!-- External links -->
+                <div class="flex flex-row text-4xl text-white dark:text-primary  sm:text-4xl pt-[2vh] pb-[2vh] justify-evenly">
+                    <a href="https://github.com/JoshMance" class="hover:scale-110"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/joshua-mance/" class="hover:scale-110"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="hover:scale-110"><i class="bi bi-envelope-fill"></i></a>
+                </div>
+            </div>
+            
+             <!-- bio panel -->
+             <div class="flex-1 flex-col h-auto px-6 justify-self-start sm:text-3xl text-left rounded-lg">
+                <div class = "text-white dark:text-primary sm:block sm:h-auto sm:w-auto m-4">
+                    <div class="pb-8 font-semibold">Hi there!</div>
+                    <div class="pb-4">I'm Josh, </div>
+                    <div class="" >a computer & data science graduate who's passionate about creating 
+                    <span class="text-accent">industrial simulations</span>
+                    and 
+                    <span class="text-accent">building on the web!</span>
+                    </div>
                 </div>
             </div> 
             
         </div>
-
-
     </div>
-
 
     <div class="flex flex-col w-screen">
         
         <!-- about/my skills section -->
-        <div id = "about-section" class="flex flex-col h-screen w-screen justify-evenly items-center bg-primary">
+        <div id = "about-section" class="flex flex-col h-screen w-screen justify-evenly items-center bg-white">
             
             <!-- Title -->
             <div class="text-center text-2xl font-bold sm:text-5xl mt-[5vh] pb-[3vh]">My Skills</div>
