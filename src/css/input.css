@@ -4,20 +4,22 @@
 
 @import url('https://fonts.cdnfonts.com/css/br-shape');
 
-
-/* div {border: 1px solid #000000 !important;}  */
-
+/* 
+div {border: 1px solid #000000 !important;}  */
 
 .home {
     background-image: url('/src/images/bg.jpg');
     background-size: contain;
 }
 
+.about-panel-button:focus {
+
+}
 
 .fixed-div {
-    position: fixed; 
-    bottom: 50px; 
-    right: 20px; 
+    /* position: fixed;  */
+    /* bottom: 50px; 
+    right: 20px;  */
     z-index: 1000; 
 }
 

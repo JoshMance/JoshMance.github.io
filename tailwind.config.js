@@ -20,6 +20,7 @@ module.exports = {
       'accent-dark': '#e4e4e4',
 
       'black':'#090909',
+      'grey': "#e9e9e9",
       'white': '#ffffff',
     },
   },
