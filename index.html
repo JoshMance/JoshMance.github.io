@@ -149,36 +149,36 @@
     });
 </script>
 </head>
-<body class="grid grid-cols-1 bg-primary dark:bg-primary-dark text-accent dark:text-accent-dark home">
+<body class="grid grid-cols-1 bg-primary dark:bg-primary-dark text-accent dark:text-accent-dark bg-phone sm:bg-desktop">
 
     <div class="navbar-placeholder"></div> 
 
     <!-- landing page -->
-    <div class= "flex sm:flex-row flex-col-reverse justify-center sm:pt-[15vh] lg:pt-[15vh] md:pt-auto h-auto xl:h-[85vh] banner">                 
+    <div class= "flex flex-col justify-start sm:flex-row sm:justify-center h-[75vh] sm:h-[85vh] pt-[2vh] sm:pt-[15vh] lg:pt-[15vh] xl:h-[85vh] banner">                 
 
         <!-- banner panel -->
-        <div class="flex flex-row justify-center dark:bg-accent-dull-dark md:w-[80vw] h-fit align-centre">
+        <div class="flex flex-col items-center pt-5 sm:items-start sm:flex-row justify-center dark:bg-accent-dull-dark md:w-[80vw] h-fit">
             
-            <div class="flex flex-col sm:w-[23vw] lg:w-[20vw] xl:w-[18vw] justify-between">
+            <div class="sm:flex-none w-[35vw] sm:w-[23vw] lg:w-[20vw] xl:w-[18vw] sm:justify-between">
                 <div class="aspect-square">
                     <!-- profile picture -->
-                    <div class="sm:block hidden md:m-4">
+                    <div class="md:m-4">
                         <img class ="rounded-full border-2 border-white bg-accent" src="/src/images/profile_picture.png" alt="Joshua Mance Profile Picture">
                     </div> 
                 </div>
                 <!-- External links -->
-                <div class="flex flex-row justify-evenly sm:text-3xl space-x-2 md:text-4xl xl:text-5xl text-white dark:text-primary">
+                <div class="flex flex-row justify-evenly pt-4 sm:pt-0 text-2xl sm:text-3xl space-x-2 md:text-4xl xl:text-5xl text-white dark:text-primary">
                     <a href="https://github.com/JoshMance" class="hover:scale-110"><i class="bi bi-github"></i></a>
-                    <a href="https://www.linkedin.com/in/joshua-mance/" class="hover:scale-110"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/joshua-mance/" class=" hover:scale-110"><i class="bi bi-linkedin"></i></a>
                     <a href="#" class="hover:scale-110"><i class="bi bi-envelope-fill"></i></a>
                 </div>
             </div>
             
              <!-- banner text -->
-             <div class="flex-1 justify-stretch space-y-3 pl-12 pt-4 text-left text-white sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
+             <div class="flex-1 justify-stretch space-y-3 pl-12 pt-6 sm:pt-4 text-left text-white sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
                     <div class="xl:pb-6 font-semibold">Hi there!</div>
                     <div class="xl:pb-2">I'm Josh, </div>
-                    <div class="xl:pb-2" >a computer science & data science student who's passionate about building
+                    <div class="pb-6 xl:pb-2" >a computer science & data science student who's passionate about building
                         robust <span class="text-accent">industrial simulations</span>
                         and creating useful <span class="text-accent">interactive tools!</span>
                     </div>
@@ -191,12 +191,12 @@
     <div class="flex flex-col w-screen">
         
         <!-- about/my skills section -->
-        <div id = "about-section" class="flex flex-col justify-evenly items-center bg-white w-screen h-screen text-black">
+        <div id = "about-section" class="flex flex-col justify-start items-center bg-white w-screen h-screen text-black">
             
             <!-- Title -->
-            <div class="font-semibold text-2xl text-center sm:text-4xl">My Skills</div>
+            <div class="font-semibold text-2xl text-start sm:text-center sm:text-4xl py-[5vh] sm:py-[10vh]">My Skills</div>
 
-            <div class="flex flex-col shadow rounded-t-lg w-4/5 h-3/5 section">
+            <div class="flex flex-col shadow rounded-t-lg w-4/5 h-3/5 section rounded-2xl">
 
                     <!-- Skills button panel -->
                     <div id="skills-button-panel" class="flex flex-row sm:flex-wrap justify-start items-center space-x-3 border-primary border-b-4 text-center text-xl sm:text-2xl">

@@ -7,11 +7,15 @@
 
 /* div {border: 1px solid #000000 !important;}  */
 
-.home {
-    background-image: url('/src/images/bg.jpg');
+.bg-desktop {
+    background-image: url('/src/images/bg_desktop.jpg');
     background-size: contain;
-    background-repeat: 1;
 }
+.bg-phone {
+    background-image: url('/src/images/bg_phone.jpg');
+    background-size: contain;
+}
+
 
 .about-panel-button:focus {
 
