@@ -10,8 +10,8 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'primary': '#105893', 
-      'secondary':'#1574C1',
+      'primary': '#123458', 
+      'secondary':'#123458',
       'accent': '#f3d403',
       'accent-dull': '#D2CA41',
 
@@ -20,7 +20,7 @@ module.exports = {
       'accent-dark': '#e4e4e4',
 
       'black':'#090909',
-      'grey': "#e9e9e9",
+      'grey': "#eeeeee",
       'white': '#ffffff',
     },
   },

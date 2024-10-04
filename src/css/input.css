@@ -30,7 +30,7 @@
 
 .scrolled {
     color: #fdfbfb;
-    background-color: #105893;
+    background-color: #123458;
     transition: linear 0.2s;
     &.dark {
         color: #fdfbfb;
