@@ -1,14 +1,14 @@
-<nav class="navbar sticky text-white dark:shadow-none top-0 p-1 m-0">
-    <div class="max-w-screen-3xl flex items-start justify-between mx-auto pl-4">
+<nav class="top-0 sticky dark:shadow-none m-0 p-1 text-white lg:text-lg xl:text-xl navbar">
+    <div class="flex justify-between items-start mx-auto pl-4 max-w-screen-3xl">
     
       <!-- Brand -->
       <div class="flex items-center space-x-5 rtl:space-x-reverse">
-        <span id ="home" class="rounded-corners self-center text-xl sm:text-xl py-2 px-5 font-semibold whitespace-nowrap hover:cursor-pointer"> Joshua Mance 
+        <span id ="home" class="px-5 py-2 rounded-corners font-semibold text-xl lg:text-xl xl:text-2xl whitespace-nowrap hover:cursor-pointer self-center"> Joshua Mance 
         </span>
       </div>
         
     <div class="flex flex-row">
-      <a href="#" id="dark-mode-toggle-hamburger" class="block sm:hidden justify-end text-accent-yellow-bright dark:text-accent-yellow-dull text-2xl py-2 mr-2 hover:cursor-pointer hover:scale-110"><i class="bi bi-brightness-high-fill"></i></a>
+      <a href="#" id="dark-mode-toggle-hamburger" class="block text-accent-yellow-bright justify-end sm:hidden mr-2 py-2 text-2xl dark:text-accent-yellow-dull hover:cursor-pointer hover:scale-110"><i class="bi-brightness-high-fill bi"></i></a>
       <!-- Hamburger menu button -->
       <button type="button"  id="hamburger-menu-button" class="sm:hidden p-2 w-10 h-10 text-xl" target = "hamburger-menu">
           <i class="bi bi-list"></i>
@@ -16,19 +16,19 @@
   </div>
 
     <!-- nav items desktop -->
-    <div class="hidden w-full md:block md:w-auto" id="navbar">
-      <ul class="text-xl flex flex-col self-center  md:p-0 mt-5 border rounded-lg md:flex-row rtl:space-x-reverse md:mt-0 md:border-0">
+    <div class="md:block hidden w-full md:w-auto" id="navbar">
+      <ul class="flex md:flex-row flex-col rtl:space-x-reverse md:border-0 mt-5 md:mt-0 md:p-0 border rounded-lg self-center">
         <li class="px-5">
-          <div id = "about" class="block py-2 px-7 rounded-3xl hover:underline hover:cursor-pointer hover:text-accent">Skills</div>
+          <div id = "about" class="block px-7 py-2 rounded-3xl hover:text-accent hover:underline hover:cursor-pointer">Skills</div>
         </li>
         <li class="px-5">
-          <div id = "projects" class="block py-2 px-7 rounded-3xl hover:underline hover:cursor-pointer hover:text-accent">Projects</div>
+          <div id = "projects" class="block px-7 py-2 rounded-3xl hover:text-accent hover:underline hover:cursor-pointer">Projects</div>
         </li>
         <li class="px-5">
-          <div id="contact" class="block py-2 px-7 whitespace-nowrap  rounded-3xl hover:underline hover:cursor-pointer hover:text-accent">Contact</div>
+          <div id="contact" class="block px-7 py-2 rounded-3xl hover:text-accent hover:underline whitespace-nowrap hover:cursor-pointer">Contact</div>
         </li>
-        <li class="px-7 ">
-          <a href="#" id="dark-mode-toggle" class="text-accent dark:text-accent-dull text-2xl block py-2 px-3 hover:cursor-pointer hover:scale-110"><i class="bi bi-brightness-high-fill"></i></a>
+        <li class="px-7">
+          <a href="#" id="dark-mode-toggle" class="block px-3 py-2 text-accent dark:text-accent-dull hover:cursor-pointer hover:scale-110"><i class="bi-brightness-high-fill bi"></i></a>
         </li>
       </ul>
     </div>
@@ -37,7 +37,7 @@
 
 </nav>
 
-  <nav id="hamburger-menu" class="hidden sticky top-0 flex-col pt-2 items-center h-auto text-xl bg-secondary dark:bg-secondary-dark text-primary">
+  <nav id="hamburger-menu" class="top-0 sticky flex-col items-center hidden bg-secondary dark:bg-secondary-dark pt-2 h-auto text-primary text-xl">
     <div id = "about-hamburger" class="py-2">
         About
     </div>
