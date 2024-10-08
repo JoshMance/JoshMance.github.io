@@ -7,18 +7,14 @@
 
 /* div {border: 1px solid #000000 !important;}  */
 
-.bg-desktop {
+.bg-image-light {
     background-image: url('/src/images/bg_desktop.jpg');
     background-size: contain;
 }
-.bg-phone {
-    background-image: url('/src/images/bg_phone.jpg');
+
+.bg-image-dark {
+    background-image: url('/src/images/bg_desktop_dark.jpg');
     background-size: contain;
-}
-
-
-.about-panel-button:focus {
-
 }
 
 .home-button {
@@ -41,8 +37,8 @@
     background-color: #123458;
     transition: linear 0.2s;
     &.dark {
-        color: #fdfbfb;
-        background-color: #0e4c9e;
+        color: #fdfbfb; 
+        background-color: #111827;
         transition: linear 0.2s;
 
     }

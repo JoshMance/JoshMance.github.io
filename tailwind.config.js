@@ -4,6 +4,38 @@ module.exports = {
             './index.html'],
   darkMode: 'selector',
   theme: {
+    extend: {
+      backgroundImage: {
+        'light': "url('/src/images/bg_desktop.jpg')",
+        'dark': "url('/src/images/bg_desktop_dark.jpg')",
+      },
+      animation: {
+        "text-reveal": "text-reveal 1.2s cubic-bezier(0.25, 1, 0.5, 1)",
+        "opacity-reveal": "opacity-reveal 1.2s cubic-bezier(0.25, 1, 0.5, 1)",
+      },
+      keyframes: {
+
+        "text-reveal": {
+          "0%": {
+            transform: "translate(0, 100%)",
+            opacity: 1,
+          },
+          "100%": {
+            transform: "translate(0, 0)",
+            opacity: 1,
+          },
+        },
+
+      "opacity-reveal": {
+          "0%": {
+            opacity: 0.3,
+          },
+          "100%": {
+            opacity: 1,
+          },
+        },
+      },
+    },
     container: {
       center: true,
     },        
