@@ -13,17 +13,57 @@
 
     // Loading all components 
     components = ["navbar", "home-button", "footer", "project-boxes"]
-
     components.forEach(function(name) {
         $.get(`./src/components/${name}.html`, function(data){
             $(`.${name}-placeholder`).replaceWith(data);
         });
     })
 
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+        
+    async function typewriter($div, text, index) {
+        if (index < text.length) {
+            let contents = text.substring(0, index);
+            $div.html(contents + "_");
+
+            var speed = getRandomInt(30, 40);
+            let char = text.substring(index-1, index);
+            if (char == " ") {
+                speed += getRandomInt(10, 20);
+            }
+            if (char == "," || char == "." || char == "!") {
+                speed += getRandomInt(200, 300);
+                $div.append('<br>');
+            }
+            setTimeout(() => {typewriter($div, text, index + 1);}, speed);
+        }
+        else {
+            let contents = text.substring(0, index);
+            $div.html(contents);
+        }
+    }
+
     $( document ).ready(function() {
         // Holds the distance from the top. 
         // Used by the scoll handler to access the previous state.
         var scroll_distance = 0;
+
+        
+        // Running typewriter effect for the typewriter class
+        // by first saving the text, making the div visible and then passing 
+        // the text to the typewriter function to be (re-) written
+        let $div = $(".type-out");
+        let text = $div.text();
+        $div.empty();
+        $div.show();
+        typewriter($div, text, 0);
+
+
+
 
         // Handling the navbar style and return-to-top button visability when the user scrolls.
         $(document).scroll(function () {
@@ -178,33 +218,30 @@
     });
 </script>
 </head>
-<body class="grid grid-cols-1 bg-primary dark:bg-primary-dark bg-contain w-screen text-accent dark:text-accent-dark">
+<body class="grid grid-cols-1 dark:bg-primary-dark bg-contain w-screen text-accent dark:text-accent-dark">
 
     <div class="navbar-placeholder"></div> 
 
     <!-- landing page -->
-    <div class= "flex sm:flex-row flex-col justify-between sm:justify-center items-stretch pt-[2vh] sm:pt-[15vh] lg:pt-[15vh] h-[75vh] sm:h-[85vh] xl:h-[85vh] banner">                 
+    <div class= "flex sm:flex-row flex-col justify-between sm:justify-center items-stretch h-[80vh] banner bg-image">                 
 
         <!-- banner panel -->
-        <div class="flex sm:flex-row flex-col justify-center items-center sm:items-start dark:bg-accent-dull-dark pt-5 md:w-[80vw] h-fit">
+        <div class="flex sm:items-start md:w-[80vw] h-full">
             
-            <div class="sm:flex-none sm:justify-between w-[35vw] sm:w-[23vw] lg:w-[20vw] xl:w-[18vw]">
-                <div class="animate-opacity-reveal aspect-square">
+            <div class="flex flex-col justify-end w-[30vw] h-full">
+                <div class="">
                     <!-- profile picture -->
-                    <div class="md:m-4">
-                        <img class ="rounded-full border-2 border-white bg-accent" src="/src/images/profile_picture_border_2.png" alt="Joshua Mance Profile Picture">
+                
+                    <div class="">
+                        <img class ="" src="/src/images/profile_picture.png" alt="Joshua Mance Profile Picture">
                     </div> 
+
                 </div>
             </div>
             
              <!-- banner text -->
-             <div class="flex-1 justify-stretch space-y-3 px-6 pt-6 sm:pt-4 text-left text-white text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
-                    <div class="xl:pb-2 font-semibold animate-text-reveal">Hi there!</div>
-                    <div class="xl:pb-2 animate-text-reveal">I'm Josh, </div>
-                    <div class="pb-6 xl:pb-2 animate-text-reveal" >a computer science & data science student who's passionate about building
-                        robust <span class="text-accent">industrial simulations</span>
-                        and creating useful <span class="text-accent">interactive tools!</span>
-                    </div>
+             <div class="flex flex-col justify-center flex-1 h-full space-y-3 px-6 sm:pt-4 text-left text-black text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
+                    <div class="type-out hidden">Hi there! \ I'm Josh, a computer science & data science graduate who's passionate about building on the web!</div>
             </div> 
             
         </div>
@@ -312,7 +349,7 @@
         </div>
 
         <!--projects section -->
-        <div id = "projects-section" class="flex flex-wrap justify-evenly bg-grey w-screen h-screen text-black">
+        <div id = "projects-section" class="inset-shadow flex flex-wrap justify-evenly bg-grey w-screen h-screen text-black">
 
             <!--projects section inner container-->
             <div class="flex flex-col py-[8vh] w-[90vw] h-auto section">

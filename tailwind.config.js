@@ -42,18 +42,18 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'primary': '#123458', 
-      'secondary':'#123458',
-      'accent': '#f3d403',
+      'primary': '#0f172a', 
+      'secondary':'#0f172a',
+      'accent': '#EDE212FF',
       'accent-dull': '#D2CA41',
 
-      'primary-dark': '#111827', 
-      'secondary-dark':'#374151',
-      'accent-dark': '#e4e4e4',
+      'primary-dark': '#283b54', 
+      'secondary-dark':'#203045',
+      'accent-dark': '#806c00',
 
-      'black':'#090909',
-      'grey': "#eeeeee",
-      'white': '#ffffff',
+      'black':'#161717FF',
+      'grey': "#7e899d",
+      'white': '#d7dfec',
     },
   },
   plugins: [       
