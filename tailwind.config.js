@@ -5,10 +5,6 @@ module.exports = {
   darkMode: 'selector',
   theme: {
     extend: {
-      backgroundImage: {
-        'light': "url('/src/images/bg_desktop.jpg')",
-        'dark': "url('/src/images/bg_desktop_dark.jpg')",
-      },
       animation: {
         "text-reveal": "text-reveal 1.2s cubic-bezier(0.25, 1, 0.5, 1)",
         "opacity-reveal": "opacity-reveal 1.2s cubic-bezier(0.25, 1, 0.5, 1)",
@@ -42,29 +38,31 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'primary': '#0f172a', 
-      'secondary':'#0f172a',
-      'accent': '#EDE212FF',
+      'primary': '#649bc9ff', 
+      'secondary':'#0d2558ff',
+      'accent': '#f7cb2d',
       'accent-dull': '#D2CA41',
 
       'primary-dark': '#283b54', 
       'secondary-dark':'#203045',
       'accent-dark': '#806c00',
 
+      'primary-faint': '#7aa0bfff', 
+
       'black':'#161717FF',
-      'grey': "#7e899d",
-      'white': '#d7dfec',
+      'grey': "#e0e3e9ff",
+      'white': '#F0F2F6FF',
     },
   },
   plugins: [       
     function ({addUtilities}) {
-    const extendUnderline = {
+      const extendUnderline = {
         '.underline': {
             'textDecoration': 'underline',
             'text-decoration-color': '#f3d403',
         },
-    }
-    addUtilities(extendUnderline)
-}
+      }
+      addUtilities(extendUnderline)
+  }
 ]
 }

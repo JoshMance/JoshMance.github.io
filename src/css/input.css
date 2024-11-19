@@ -2,21 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.cdnfonts.com/css/br-shape');
+@font-face {
+    font-family: outfitRegular;
+    src: url(/src/fonts/outfit/OutfitRegular.ttf);
+}
+@font-face {
+    font-family: outfitLight;
+    src: url(/src/fonts/outfit/OutfitLight.ttf);
+}
+@font-face {
+    font-family: outfitSemibold;
+    src: url(/src/fonts/outfit/OutfitSemiBold.ttf);
+}
 
 :root {
     --primary:theme("colors.primary");
     --secondary:theme("colors.secondary");
     --accent:theme("colors.accent");
     --white:theme("colors.white");
+
+    line-height: 3.5;
+
+    font-family: outfitLight;
   }
 
-
-/* div {border: 1px solid #b90e0e !important;}  */
-
-.bg-image {
-    /* background: #0f172a; */
+nav {
+    font-family: outfitRegular;
 }
+
+#brand-bold {
+    font-family: outfitSemibold;  
+}
+
+/* div {border: 1px solid #000000 !important;}  */
 
 .home-button {
     position: fixed; 
@@ -35,7 +53,7 @@
 
 .scrolled {
     color: #fdfbfb;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     transition: linear 0.2s;
     &.dark {
         color: #fdfbfb; 
