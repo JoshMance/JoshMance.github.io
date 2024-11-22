@@ -3,12 +3,21 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: outfitRegular;
-    src: url(/src/fonts/outfit/OutfitRegular.ttf);
+    font-family: outfitExtraLight;
+    src: url(/src/fonts/outfit/OutfitExtraLight.ttf);
 }
+
 @font-face {
     font-family: outfitLight;
     src: url(/src/fonts/outfit/OutfitLight.ttf);
+}
+@font-face {
+    font-family: outfitMedium;
+    src: url(/src/fonts/outfit/OutfitMedium.ttf);
+}
+@font-face {
+    font-family: outfitRegular;
+    src: url(/src/fonts/outfit/OutfitRegular.ttf);
 }
 @font-face {
     font-family: outfitSemibold;
@@ -27,12 +36,9 @@
   }
 
 nav {
-    font-family: outfitRegular;
+    font-family:  outfitLight;
 }
 
-#brand-bold {
-    font-family: outfitSemibold;  
-}
 
 /* div {border: 1px solid #000000 !important;}  */
 

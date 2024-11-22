@@ -38,10 +38,10 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'primary': '#649bc9ff', 
-      'secondary':'#0d2558ff',
-      'accent': '#f7cb2d',
-      'accent-dull': '#D2CA41',
+      'primary': '#1064a9ff', 
+      'secondary':'#162f66ff',
+      'accent': '#e9d587',
+      'accent-dull': '#ffde59',
 
       'primary-dark': '#283b54', 
       'secondary-dark':'#203045',
