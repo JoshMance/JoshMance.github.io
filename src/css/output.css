@@ -859,6 +859,10 @@ video {
   border-radius: 1.5rem;
 }
 
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -881,11 +885,13 @@ video {
 }
 
 .border-primary {
-  border-color: #1064a9ff;
+  --tw-border-opacity: 1;
+  border-color: rgb(11 73 131 / var(--tw-border-opacity));
 }
 
 .border-secondary {
-  border-color: #162f66ff;
+  --tw-border-opacity: 1;
+  border-color: rgb(132 199 242 / var(--tw-border-opacity));
 }
 
 .border-transparent {
@@ -893,7 +899,8 @@ video {
 }
 
 .border-white {
-  border-color: #F0F2F6FF;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 248 / var(--tw-border-opacity));
 }
 
 .bg-black {
@@ -905,11 +912,13 @@ video {
 }
 
 .bg-primary {
-  background-color: #1064a9ff;
+  --tw-bg-opacity: 1;
+  background-color: rgb(11 73 131 / var(--tw-bg-opacity));
 }
 
 .bg-white {
-  background-color: #F0F2F6FF;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 248 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\/src\/images\/stardust\.png\'\)\] {
@@ -1071,7 +1080,7 @@ video {
 
 .text-accent {
   --tw-text-opacity: 1;
-  color: rgb(233 213 135 / var(--tw-text-opacity));
+  color: rgb(247 224 24 / var(--tw-text-opacity));
 }
 
 .text-black {
@@ -1079,15 +1088,13 @@ video {
 }
 
 .text-primary {
-  color: #1064a9ff;
-}
-
-.text-secondary {
-  color: #162f66ff;
+  --tw-text-opacity: 1;
+  color: rgb(11 73 131 / var(--tw-text-opacity));
 }
 
 .text-white {
-  color: #F0F2F6FF;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 248 / var(--tw-text-opacity));
 }
 
 .shadow {
@@ -1157,10 +1164,10 @@ video {
 }
 
 :root {
-  --primary:#1064a9ff;
-  --secondary:#162f66ff;
-  --accent:#e9d587;
-  --white:#F0F2F6FF;
+  --primary:#0b4983;
+  --secondary:#84c7f2;
+  --accent:#f7e018;
+  --white:#fffff8;
   line-height: 3.5;
   font-family: outfitLight;
 }
@@ -1263,15 +1270,18 @@ nav {
 }
 
 .focus\:border-primary:focus {
-  border-color: #1064a9ff;
+  --tw-border-opacity: 1;
+  border-color: rgb(11 73 131 / var(--tw-border-opacity));
 }
 
 .focus\:bg-primary:focus {
-  background-color: #1064a9ff;
+  --tw-bg-opacity: 1;
+  background-color: rgb(11 73 131 / var(--tw-bg-opacity));
 }
 
 .focus\:text-white:focus {
-  color: #F0F2F6FF;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 248 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -1433,7 +1443,8 @@ nav {
 }
 
 .dark\:text-primary:where(.dark, .dark *) {
-  color: #1064a9ff;
+  --tw-text-opacity: 1;
+  color: rgb(11 73 131 / var(--tw-text-opacity));
 }
 
 .dark\:shadow-none:where(.dark, .dark *) {

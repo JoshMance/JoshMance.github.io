@@ -38,9 +38,9 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'primary': '#1064a9ff', 
-      'secondary':'#162f66ff',
-      'accent': '#e9d587',
+      'primary': '#0b4983', 
+      'secondary':'#84c7f2',
+      'accent': '#f7e018',
       'accent-dull': '#ffde59',
 
       'primary-dark': '#283b54', 
@@ -51,7 +51,7 @@ module.exports = {
 
       'black':'#161717FF',
       'grey': "#e0e3e9ff",
-      'white': '#F0F2F6FF',
+      'white': '#fffff8',
     },
   },
   plugins: [       
