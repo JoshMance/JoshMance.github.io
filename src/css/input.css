@@ -28,7 +28,13 @@
     --primary:theme("colors.primary");
     --secondary:theme("colors.secondary");
     --accent:theme("colors.accent");
+    --black:theme("colors.black");
     --white:theme("colors.white");
+    --grey:theme("colors.grey");
+
+    --primary-dark:theme("colors.primary-dark");
+    --secondary-dark:theme("colors.secondary-dark");
+    --accent-dark:theme("colors.accent-dark");
 
     line-height: 3.5;
 
@@ -39,6 +45,9 @@ nav {
     font-family:  outfitLight;
 }
 
+.gradient {
+    background: var(--primary);
+}
 
 /* div {border: 1px solid #000000 !important;}  */
 
@@ -59,12 +68,10 @@ nav {
 
 .scrolled {
     color: #fdfbfb;
-    background-color: var(--primary);
-    transition: linear 0.2s;
+    transition: linear 0.1s;
     &.dark {
         color: #fdfbfb; 
-        background-color: #111827;
-        transition: linear 0.2s;
+        transition: linear 0.1s;
 
     }
 }
@@ -84,5 +91,93 @@ nav {
 .inset-shadow {
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
                 rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+    width: 27vw;
+    aspect-ratio: 1;
+}
+
+.sketch-window {
+    position: absolute;
+    top: 5%;
+    left: -7%;
+    width: 95%;
+    height: 70%;
+    border-color:  white;
+    border-width: 1vh;
+    border-radius: 2%;
+    z-index: 2;
+}
+
+
+.sketch-dot-0 {
+    position: absolute;
+    top: 3.2%;
+    left: 84%;
+    width: 1.5vh;
+    height: 1.5vh;
+    background-color: var(--accent);
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.sketch-dot-0:hover {
+    background-color: var(--white);
+ }
+
+.sketch-dot-1 {
+    position: absolute;
+    top: 3.2%;
+    left: 89%;
+    width: 1.5vh;
+    height: 1.5vh;
+    background-color: var(--accent);
+    border-radius: 50%;
+    z-index: 2;
+}
+.sketch-dot-2 {
+    position: absolute;
+    top: 3.2%;
+    left: 94%;
+    width: 1.5vh;
+    height: 1.5vh;
+    background-color: var(--accent);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+.sketch-nav {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: vh;
+    background-color:  var(--secondary);
+    z-index: 1;
+}
+
+.sketch-hr {
+    position: absolute;
+    top: 11%;
+    left: 0%;
+    width: 100%;
+    height: 0.5vh;
+    background-color:  var(--white);
+    z-index: 2;
+}
+
+
+.profile-picture {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; 
 }
 

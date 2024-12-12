@@ -38,20 +38,20 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'primary': '#0b4983', 
-      'secondary':'#84c7f2',
-      'accent': '#f7e018',
+      'primary': '#05306b', 
+      'secondary':'#114794',
+      'accent': '#ffe600',
       'accent-dull': '#ffde59',
 
-      'primary-dark': '#283b54', 
-      'secondary-dark':'#203045',
+      'primary-dark': '#011931', 
+      'secondary-dark':'#013568',
       'accent-dark': '#806c00',
 
       'primary-faint': '#7aa0bfff', 
 
-      'black':'#161717FF',
-      'grey': "#e0e3e9ff",
-      'white': '#fffff8',
+      'black':'#06183e',
+      'grey': "#ffffff75",
+      'white': '#F9F7F7',
     },
   },
   plugins: [       
@@ -59,7 +59,7 @@ module.exports = {
       const extendUnderline = {
         '.underline': {
             'textDecoration': 'underline',
-            'text-decoration-color': '#f3d403',
+            'text-decoration-color': '#f7e018',
         },
       }
       addUtilities(extendUnderline)
