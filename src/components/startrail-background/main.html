@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const numberOfRings = 100;
+    
+            for (let i = 0; i < numberOfRings; i++) {
+                const newRing = document.createElement('div');
+                newRing.classList = "ring";
+                newRing.style.height = 10 + 10*i + "vh";
+                newRing.style.top = 50 -5*i + "vh";
+                newRing.style.left = 50 -5*i + "vh";
+                newRing.style.zIndex = i;
+                console.log(newRing)
+                document.body.appendChild(newRing);
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- <div class="ring" style ="height: 20vh;"></div> -->
+</body>
+</html>
