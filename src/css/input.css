@@ -28,9 +28,34 @@
 }
 
 @font-face {
+    font-family: extraBold;
+    src: url(/src/fonts/outfit/OutfitVariableFont_wght1.ttf);
+    font-weight: 999;
+}
+
+@font-face {
     font-family: outfitVariable;
     src: url(/src/fonts/outfit/OutfitVariableFont_wght1.ttf);
     font-weight: 240;
+}
+
+
+@font-face {
+    font-family: nunito;
+    src: url(/src/fonts/nunito/Nunito-VariableFont_wght.tff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(/src/fonts/nunito/Montserrat-VariableFont_wght.tff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: inter_18pt-Medium;
+    src: url(/src/fonts/inter/static/Inter_18pt-Medium.tff);
+    font-weight: 200;
 }
 
 :root {
@@ -57,6 +82,7 @@
 
   }
 
+  
 .shadow-light {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
@@ -81,8 +107,8 @@
 }
 
 .scrolled {
-    color: var(--secondary);
-    background-color: var(--white);
+    color: var(--white);
+    background-color: var(--secondary);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     transition: ease-out 0.3s;
     &.dark {
@@ -196,4 +222,3 @@
     object-fit: cover;
     pointer-events: none; 
 }
-

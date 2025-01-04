@@ -3,24 +3,38 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
 
-            const numberOfRings = 100;
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function getNormalRandom() {
+            const u1 = Math.random(); // Uniformly distributed random variable
+            const u2 = Math.random(); // Uniformly distributed random variable
+            // Box-Muller transform
+            const z0 = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+            return z0; // Returns a standard normal variable (mean = 0, standard deviation = 1)
+        }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const numberOfRings = 1000;
     
             for (let i = 0; i < numberOfRings; i++) {
                 const newRing = document.createElement('div');
                 newRing.classList = "ring";
-                newRing.style.height = 10 + 10*i + "vh";
-                newRing.style.top = 50 -5*i + "vh";
-                newRing.style.left = 50 -5*i + "vh";
-                newRing.style.zIndex = i;
-                console.log(newRing)
+                newRing.style.setProperty("--radius", 80*(1 + getNormalRandom()) + "vh");
+                newRing.style.setProperty("--angle", getRandomInt(360) + "deg");
                 document.body.appendChild(newRing);
             }
         });
+
+        document.documentElement.style.setProperty('--x', 50 + "%");
+        document.documentElement.style.setProperty('--y', 50 + "%");
+
     </script>
 </head>
 <body>
-    <!-- <div class="ring" style ="height: 20vh;"></div> -->
+    <div class="ring"></div>
 </body>
 </html>
