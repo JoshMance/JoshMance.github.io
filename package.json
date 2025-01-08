@@ -1,4 +1,7 @@
 {
+  "name": "joshua-mance-personal-website",
+  "main": "index.html",
+  "type": "module",
   "devDependencies": {
     "tailwindcss": "^3.4.14"
   }

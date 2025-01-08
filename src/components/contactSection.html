@@ -1,0 +1,74 @@
+ <!--contact section -->
+ <div id = "contact-section" class="flex flex-col justify-start bg-white w-screen h-screen text-black">
+            
+    <!-- Title -->
+    <div class="flex flex-col justify-center mt-[5vh] mb-[1vh] h-[20vh] font-bold text-4xl text-center">
+        Get in Touch
+    </div>
+
+    <!-- Contianer for the contact form and contact details panels -->
+    <div class= "flex flex-row justify-evenly w-[75vw] h-[65vh] self-center">
+
+        <!-- Contact form -->
+        <div class= "flex flex-row justify-center items-center simple-border rounded-md w-[35vw]">
+            <!-- Inner container -->
+                <div  class= "flex flex-col gap-y-[5%] w-[90%] h-[90%]">
+
+                        <div class="w-full h-[6%] font-extrabold text-2xl"> 
+                            Contact Form
+                        </div>
+
+                        <div class="mb-4 w-full h-[8%] font-medium text-black leading-5"> 
+                            Fill out the form below and I'll get back to you as soon as possible
+                        </div>
+
+                        <input type="text" id="name" class ="w-full h-[11%] simple-border rounded-md px-2 text-dark-grey"
+                                name="name" placeholder="Your Name" 
+                                required minlength="2" maxlength="20" size="10" />
+
+                        <input type="text" id="email" class ="w-full h-[11%] simple-border rounded-md px-2 text-dark-grey" 
+                                name="email" placeholder="Your Email" 
+                                required minlength="2" maxlength="20" size="10" />
+
+                        <textarea id="message" class ="w-full h-[30%] simple-border rounded-md px-2 text-justify text-dark-grey" 
+                                placeholder="Your Message">
+                        </textarea>
+
+                        <button class="bg-secondary rounded-md w-full h-[11%] font-semibold text-white"> 
+                            Send Message
+                        </button>
+                </div>
+        </div>
+
+        <!-- Contact details -->
+        <div class= "flex flex-row justify-center items-center simple-border rounded-md w-[35vw]">
+            <!-- Inner container -->
+                <div  class= "flex flex-col gap-y-[5%] w-[90%] h-[90%]"> 
+
+                    <div class="w-full h-[6%] font-extrabold text-2xl"> 
+                        Connect With Me
+                    </div>
+
+                    <div class="mb-4 w-full h-[8%] font-medium text-black leading-5"> 
+                        Find me on social media, or send me an email directly
+                    </div>
+                    
+                    <div class="flex flex-row gap-x-2 w-full h-[11%] text-xl hover:cursor-pointer"> 
+                        <a href="#" class=""><i class="text-primary bi bi-envelope-fill"></i></a>
+                            joshjmance@gmail.com 
+                    </div>
+                    <div class="flex flex-row gap-x-2 w-full h-[11%] text-xl hover:cursor-pointer"> 
+                        <a href="https://github.com/JoshMance" class=""><i class="text-primary bi bi-github"></i></a> 
+                            GitHub
+                    </div>
+                    <div class="flex flex-row gap-x-2 w-full h-[11%] text-xl hover:cursor-pointer"> 
+                        <a href="https://www.linkedin.com/in/joshua-mance/" class=""><i class="text-primary bi bi-linkedin"></i></a>
+                            LinkedIn
+                    </div>
+
+                </div>
+        </div>
+    
+    </div>
+    
+</div>
