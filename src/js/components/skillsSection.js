@@ -39,7 +39,7 @@ export function initSkillsSection() {
             for (let char of text) {
                 let $newDiv = $('<div>')
                     .html(char === ' ' ? '&nbsp;' : char) // Replacing spaces with &nbsp;
-                    .addClass('inline-block');
+                    .css('display', 'inline-block');
                 $(this).append($newDiv);
             }
         });
@@ -47,7 +47,7 @@ export function initSkillsSection() {
 
     splitTextIntoChars($('.skills-btn'));
 
-    const $button = $('#skills-buttons #1');
+    const $button = $('#skills-button-1');
     
     var $temp = $("<div></div>");
     $temp.css("position", "absolute");
@@ -71,7 +71,6 @@ export function initSkillsSection() {
                 $('.skills-btn').children().each(function() {
                     const charLeft = $(this).offset().left;
                     const charRight = charLeft + $(this).outerWidth();
-                    console.log(buttonLeft, charLeft, buttonRight, charRight);
                     if (buttonLeft <= charLeft && buttonRight >= charRight) {
                         $(this).css('color', 'white');
                     }
@@ -86,7 +85,7 @@ export function initSkillsSection() {
     observer.observe($temp[0], config);
 
 
-    $('.skills-btn').click(function() {
+    $('.skills-btn').mousedown(function() {
         let currentLeft = $temp.offset().left;
         let finalLeft = $(this).offset().left;
         let distance = finalLeft - currentLeft;
@@ -98,5 +97,8 @@ export function initSkillsSection() {
         }, 400); 
 
     });
+
+    console.log("Here!");
+    $('#skills-button-1').mousedown();
 
 }

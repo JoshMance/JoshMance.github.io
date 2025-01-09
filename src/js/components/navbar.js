@@ -1,9 +1,5 @@
 export function initNavbar () {
 
-    // Holds the distance from the top. 
-     // Used by the scoll handler to access the previous state.
-     var scroll_distance = 0;
-
     function close_hamburger_menu() {
         $('#hamburger-menu').toggleClass('hidden');
         $('#hamburger-menu').toggleClass('flex');
@@ -31,31 +27,26 @@ export function initNavbar () {
     });
 
     // Navbar scroll handlers 
-    $( document ).on('click', '#home', function() {
+    $( document ).on('click', '#homeNavButton', function() {
         scroll({top: 0, left: 0, behavior: "smooth"});
     });
-    $( document ).on('click', '#home-button', function() {
+    $( document ).on('click', '#returnNavButton', function() {
         scroll({top: 0, left: 0, behavior: "smooth"});
     });
 
-    $( document ).on('click', '#about', function() {
-        var distance = $('#about-section').position().top - 0.5*$('nav').height() 
+    $( document ).on('click', '#skillsNavButton', function() {
+        var distance = $('#skillsSection').position().top
         scroll({top: distance, left: 0, behavior: "smooth"});
     });
 
-    $( document ).on('click', '#projects', function() {
-        var distance = $('#projects-section').position().top - 0.5*$('nav').height() 
+    $( document ).on('click', '#projectsNavButton', function() {
+        var distance = $('#projectsSection').position().top
         scroll({top: distance, left: 0, behavior: "smooth"});
     });
 
-    $( document ).on('click', '#contact', function() {
-        var distance = $('#contact-section').position().top - 0.5*$('nav').height() 
+    $( document ).on('click', '#contactNavButton', function() {
+        var distance = $('#contactSection').position().top
         scroll({top: distance, left: 0, behavior: "smooth"});
-    });
-
-    // Scrolling to the top of the page if home button clicked
-    $( document ).on('click', '.home-button', function() {
-        scroll({top: 0, left: 0, behavior: "smooth"});
     });
 
 

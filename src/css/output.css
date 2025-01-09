@@ -590,14 +590,6 @@ video {
   }
 }
 
-.visible {
-  visibility: visible;
-}
-
-.absolute {
-  position: absolute;
-}
-
 .sticky {
   position: sticky;
 }
@@ -660,10 +652,6 @@ video {
   display: block;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
 .flex {
   display: flex;
 }
@@ -686,14 +674,6 @@ video {
 
 .h-12 {
   height: 3rem;
-}
-
-.h-14 {
-  height: 3.5rem;
-}
-
-.h-4 {
-  height: 1rem;
 }
 
 .h-\[100vh\] {
@@ -1178,10 +1158,6 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
-}
-
-.text-\[2rem\] {
-  font-size: 2rem;
 }
 
 .text-lg {
