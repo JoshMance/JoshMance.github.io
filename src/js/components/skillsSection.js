@@ -1,32 +1,5 @@
 export function initSkillsSection() {
     
-
-    function makeDraggable($div) {
-        let isDragging = false;
-        let offsetX = 0;
-
-        $div.on('mousedown', function(event) {
-            isDragging = true;
-            offsetX = event.pageX - $div.offset().left;
-            $div.css('cursor', 'grabbing'); // Change cursor when dragging
-        });
-
-        $(document).on('mousemove', function(event) {
-            if (isDragging) {
-                const newLeft = event.pageX - offsetX;
-                $div.css('left', newLeft + 'px');
-            }
-        });
-
-        $(document).on('mouseup', function() {
-            if (isDragging) {
-                isDragging = false;
-                $div.css('cursor', 'pointer'); // Reset cursor when dragging is done
-            }
-        });
-    }
-
-
     // Takes all divs supplied by the argument and splits their text
     // into a single div per character (without affecting the UI).
     // Used to allow individual letters to have their properties change
@@ -55,10 +28,9 @@ export function initSkillsSection() {
     $temp.css("height", $button.innerHeight());
     $temp.css("width", $button.innerWidth());
     $temp.css("background", "#143272");
+    $temp.css("border-radius", "10px");
     $temp.css("margin", "2vh");
     $temp.css("z-index", 1);
-
-    makeDraggable($temp);
 
     $('#skills-buttons').append($temp);
 
@@ -98,7 +70,6 @@ export function initSkillsSection() {
 
     });
 
-    console.log("Here!");
     $('#skills-button-1').mousedown();
 
 }

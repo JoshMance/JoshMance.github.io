@@ -1,5 +1,33 @@
 export function initNavbar () {
 
+   $('#navbar').addClass('sticky top-0 z-50 top-0 z-50 sticky dark:shadow-none px-2 py-2 font-normal text-white lg:text-md xl:text-lg align-center navbar');
+
+
+
+   const $button = $('#homeNavButton');
+   const fontSize = parseFloat($button.css('fontSize'));
+
+   var $underline = $("<div></div>");
+   $underline.css("position", "absolute");
+   $underline.css("left", $button.offset().left - $button.width());
+   $underline.css("top", $button.offset().top + $button.height() + 2*fontSize);
+   $underline.css("height", '2px');
+   $underline.css("width", $button.innerWidth()/2);
+   $underline.css("background", "#f3dc0e");
+   $underline.css("z-index", 1);
+
+   $('#navButtons').append($underline);
+
+   $('.navButton').mousedown(function() {
+    $underline.stop(true).animate({
+        left: `${$(this).offset().left + 0.5*$(this).width()}px`,
+    }, 300);
+});
+
+
+
+
+   
     function close_hamburger_menu() {
         $('#hamburger-menu').toggleClass('hidden');
         $('#hamburger-menu').toggleClass('flex');
@@ -27,6 +55,8 @@ export function initNavbar () {
     });
 
     // Navbar scroll handlers 
+    
+
     $( document ).on('click', '#homeNavButton', function() {
         scroll({top: 0, left: 0, behavior: "smooth"});
     });
@@ -72,4 +102,6 @@ export function initNavbar () {
         close_hamburger_menu();
     });
 
+
+    $('#homeNavButton').mousedown();
 };
