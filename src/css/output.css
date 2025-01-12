@@ -606,10 +606,6 @@ video {
   z-index: 10;
 }
 
-.z-50 {
-  z-index: 50;
-}
-
 .m-2 {
   margin: 0.5rem;
 }
@@ -636,8 +632,8 @@ video {
   margin-bottom: 1vh;
 }
 
-.mb-\[3vh\] {
-  margin-bottom: 3vh;
+.mb-\[2vh\] {
+  margin-bottom: 2vh;
 }
 
 .mr-1 {
@@ -740,6 +736,10 @@ video {
   height: 90%;
 }
 
+.h-\[auto\] {
+  height: auto;
+}
+
 .h-auto {
   height: auto;
 }
@@ -812,6 +812,11 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-min {
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .w-screen {
@@ -1009,6 +1014,23 @@ video {
   border-width: 2px;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-b-4 {
+  border-bottom-width: 4px;
+}
+
+.border-b-\[3px\] {
+  border-bottom-width: 3px;
+}
+
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(30 48 86 / var(--tw-border-opacity));
+}
+
 .border-transparent {
   border-color: transparent;
 }
@@ -1033,6 +1055,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-primary-faint {
+  background-color: #d6ecffff;
+}
+
 .bg-\[url\(\'\/src\/images\/Sedivis\.png\'\)\] {
   background-image: url('/src/images/Sedivis.png');
 }
@@ -1047,10 +1073,6 @@ video {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
-}
-
-.p-4 {
-  padding: 1rem;
 }
 
 .px-2 {
@@ -1078,6 +1100,11 @@ video {
   padding-bottom: 0px;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1086,21 +1113,6 @@ video {
 .py-\[8vh\] {
   padding-top: 8vh;
   padding-bottom: 8vh;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .pb-2 {
@@ -1135,24 +1147,8 @@ video {
   padding-top: 5vh;
 }
 
-.pr-7 {
-  padding-right: 1.75rem;
-}
-
-.pl-5 {
-  padding-left: 1.25rem;
-}
-
-.pt-2 {
-  padding-top: 0.5rem;
-}
-
-.pt-1 {
-  padding-top: 0.25rem;
-}
-
-.pr-5 {
-  padding-right: 1.25rem;
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-left {
@@ -1230,10 +1226,6 @@ video {
   font-weight: 600;
 }
 
-.font-thin {
-  font-weight: 100;
-}
-
 .leading-4 {
   line-height: 1rem;
 }
@@ -1267,24 +1259,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-opacity {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .duration-100 {
   transition-duration: 100ms;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
 }
 
 .ease-in {
@@ -1532,19 +1508,6 @@ video {
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
-}
-
-.hover\:underline:hover {
-  text-decoration-line: underline;
-}
-
-.hover\:underline-offset-4:hover {
-  text-underline-offset: 4px;
-}
-
-.hover\:underline:hover {
-  text-decoration: underline;
-  text-decoration-color: #f7e018;
 }
 
 .hover\:first\:scale-150:first-child:hover {

@@ -1,28 +1,57 @@
 export function initNavbar () {
 
-   $('#navbar').addClass('sticky top-0 z-50 top-0 z-50 sticky dark:shadow-none px-2 py-2 font-normal text-white lg:text-md xl:text-lg align-center navbar');
+   $('#navbar').addClass('sticky top-0 z-10 top-0 dark:shadow-none py-1 font-normal text-white lg:text-md xl:text-lg align-center navbar');
 
+    var $button = $('#homeNavButton');
+    var $buttonTextDiv = $button.children().first();
+    var top = $buttonTextDiv.offset().top + $buttonTextDiv.height();
 
-
-   const $button = $('#homeNavButton');
-   const fontSize = parseFloat($button.css('fontSize'));
-
-   var $underline = $("<div></div>");
-   $underline.css("position", "absolute");
-   $underline.css("left", $button.offset().left - $button.width());
-   $underline.css("top", $button.offset().top + $button.height() + 2*fontSize);
-   $underline.css("height", '2px');
-   $underline.css("width", $button.innerWidth()/2);
-   $underline.css("background", "#f3dc0e");
-   $underline.css("z-index", 1);
+    var $underline = $("<div></div>");
+    $underline.css("position", "absolute");
+    $underline.css("top", top);
+    $underline.css("height", '1px');
+    $underline.css("background", "#f3dc0e");
+    $underline.css("z-index", 2);
 
    $('#navButtons').append($underline);
 
    $('.navButton').mousedown(function() {
-    $underline.stop(true).animate({
-        left: `${$(this).offset().left + 0.5*$(this).width()}px`,
-    }, 300);
-});
+        // Moving the underline bar
+        let width =  $(this).children().first().width();
+        let whitespace = (($(this).innerWidth() - width)/2) +2;
+        let left = $(this).offset().left + whitespace;
+        $underline.stop(true).animate({
+            left: `${left}px`,
+            width: `${width}px`
+        }, 300);
+    });
+
+    $('#homeNavButton').mousedown();
+
+    // Creating a scroll observer to determine the current section and toggle the navbar style
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+
+                // Finding the nav button that targets this section
+                var $navButton = $(`div[target="${entry.target.id}"]`);
+
+                if (entry.target.id === "homeSection") {
+                    $('.navbar').css('background', '#00000000');
+                }
+                else {
+                    $('.navbar').css('background', '#1E3056');
+                }
+
+                $navButton.mousedown();
+            }
+        });
+    }, {
+        threshold: 0.5, // Triggers when 50% of the section is visible
+    });
+    
+    const $sections = Array.from($('.section'));
+    $sections.forEach(entry => observer.observe(entry));
 
 
 
@@ -101,7 +130,4 @@ export function initNavbar () {
 
         close_hamburger_menu();
     });
-
-
-    $('#homeNavButton').mousedown();
 };

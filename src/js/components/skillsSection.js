@@ -28,7 +28,7 @@ export function initSkillsSection() {
     $temp.css("height", $button.innerHeight());
     $temp.css("width", $button.innerWidth());
     $temp.css("background", "#143272");
-    $temp.css("border-radius", "10px");
+    $temp.css("border-radius", "7px");
     $temp.css("margin", "2vh");
     $temp.css("z-index", 1);
 
@@ -57,17 +57,26 @@ export function initSkillsSection() {
     observer.observe($temp[0], config);
 
 
-    $('.skills-btn').mousedown(function() {
+    $('.skills-btn').mousedown(function(event) {
+        
+        // Moving the tab highlight background
         let currentLeft = $temp.offset().left;
         let finalLeft = $(this).offset().left;
         let distance = finalLeft - currentLeft;
-
         let finalWidth = $(this).outerWidth();
         $temp.animate({
             left: `+=${distance}px`,
             width: `${finalWidth}`
         }, 400); 
 
+
+        // Switching the skills text
+        $('.skills-text').each(function () {
+            $(this).hide();
+          });
+
+
+        $(`#${$(this).attr("target")}`).show();
     });
 
     $('#skills-button-1').mousedown();

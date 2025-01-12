@@ -50,11 +50,11 @@ export function initHomeSection() {
             if (char === ",") {
                 // Add the cursor and a new line
                 $div.append('<span class="font-bold text-accent cursor"> |</span>');
-                $div.append("<div class='h-4'></div>");
+                $div.append("<div></div>");
             } else if (char === "!") {
                 // Add the cursor and a new longer line
                 $div.append('<span class="font-bold text-[2rem] text-accent cursor"> |</span>');
-                $div.append("<div class='h-14'></div>");
+                $div.append("<div> &nbsp;</div>");
             }
             else {
                 // Add or update the cursor

@@ -21,7 +21,7 @@ module.exports = {
       'secondary-dark':'#013568',
       'accent-dark': '#806c00',
 
-      'primary-faint': '#d4ecffff', 
+      'primary-faint': '#d6ecffff', 
 
       'black':'#000000',
       'dark-grey':'#e6efff',
