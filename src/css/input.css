@@ -74,7 +74,7 @@
     background:  linear-gradient(45deg, var(--secondary) 0%, var(--primary) 10%, var(--secondary) 35%, var(--primary) 15%, var(--secondary) 100%);
     background-image: url("/src/images/bg_desktop.jpg");
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: fit;
 
     line-height: 10px;
     font-family: outfitVariable;
@@ -104,8 +104,12 @@
     transition: linear 0.2s;
 }
 
-.scrolled {
+
+#navbar {
     color: var(--white);
+}
+
+#navbar.scrolled {
     background-color: var(--secondary);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     transition: ease-out 0.3s;

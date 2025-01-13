@@ -1,6 +1,6 @@
 export function initNavbar () {
 
-   $('#navbar').addClass('sticky top-0 z-10 top-0 dark:shadow-none py-1 font-normal text-white lg:text-md xl:text-lg align-center navbar');
+   $('#navbar').addClass('sticky 39top-0 z-10 top-0 dark:shadow-none py-1 font-normal lg:text-md xl:text-lg align-center navbar');
 
     var $button = $('#homeNavButton');
     var $buttonTextDiv = $button.children().first();
@@ -9,7 +9,7 @@ export function initNavbar () {
     var $underline = $("<div></div>");
     $underline.css("position", "absolute");
     $underline.css("top", top);
-    $underline.css("height", '1px');
+    $underline.css("height", '2px');
     $underline.css("background", "#f3dc0e");
     $underline.css("z-index", 2);
 
@@ -37,10 +37,10 @@ export function initNavbar () {
                 var $navButton = $(`div[target="${entry.target.id}"]`);
 
                 if (entry.target.id === "homeSection") {
-                    $('.navbar').css('background', '#00000000');
+                    $('#navbar').removeClass("scrolled");
                 }
                 else {
-                    $('.navbar').css('background', '#1E3056');
+                    $('#navbar').addClass("scrolled");
                 }
 
                 $navButton.mousedown();
@@ -94,17 +94,20 @@ export function initNavbar () {
     });
 
     $( document ).on('click', '#skillsNavButton', function() {
-        var distance = $('#skillsSection').position().top
+        let $title = $('#skills-section-title');
+        let distance = $title.position().top - $title.height();
         scroll({top: distance, left: 0, behavior: "smooth"});
     });
 
     $( document ).on('click', '#projectsNavButton', function() {
-        var distance = $('#projectsSection').position().top
+        let $title = $('#projects-section-title');
+        let distance = $title.position().top - $title.height();
         scroll({top: distance, left: 0, behavior: "smooth"});
     });
 
     $( document ).on('click', '#contactNavButton', function() {
-        var distance = $('#contactSection').position().top
+        let $title = $('#contact-section-title');
+        let distance = $title.position().top - $title.height();
         scroll({top: distance, left: 0, behavior: "smooth"});
     });
 
