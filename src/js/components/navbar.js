@@ -1,6 +1,6 @@
 export function initNavbar () {
 
-   $('#navbar').addClass('sticky 39top-0 z-10 top-0 dark:shadow-none py-1 font-normal lg:text-md xl:text-lg align-center navbar');
+   $('#navbar').addClass('sticky top-0 z-10 py-1 font-normal lg:text-md xl:text-lg align-center navbar');
 
     var $button = $('#homeNavButton');
     var $buttonTextDiv = $button.children().first();
@@ -11,7 +11,7 @@ export function initNavbar () {
     $underline.css("top", top);
     $underline.css("height", '2px');
     $underline.css("background", "#f3dc0e");
-    $underline.css("z-index", 2);
+    $underline.css("z-index", 20);
 
    $('#navButtons').append($underline);
 

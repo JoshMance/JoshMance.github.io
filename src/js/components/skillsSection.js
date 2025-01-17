@@ -81,4 +81,34 @@ export function initSkillsSection() {
 
     $('#skills-button-1').mousedown();
 
+
+
+
+    // Moves all icons in the carousel right one space.
+    // Takes the right-most icon in the $carousel and wraps it around to the start
+    function stepIconCarousel($carousel) {
+
+        const carouselWidth = $carousel.innerWidth();
+        const iconWidth = $carousel.children().first().innerWidth();
+        const carouselLeft = $carousel.offset().left;
+        
+        $carousel.children().each(function(index, icon) {
+            console.log(index, icon);
+            let iconLeft = $(icon).offset().left;
+            let distance = iconLeft + iconWidth;
+            if (distance > (carouselWidth + carouselLeft)) {
+                distance = 0;
+            }
+
+            $(icon).animate({
+                left: `${distance}px`
+              }, 200);
+        });
+    }
+
+
+    $('.icon-carousel').hover(function(event) {
+        stepIconCarousel($(this));
+    });
+
 }

@@ -70,11 +70,9 @@
     --secondary-dark:theme("colors.secondary-dark");
     --accent-dark:theme("colors.accent-dark");
 
-    background-color: var(--primary);
-    background:  linear-gradient(45deg, var(--secondary) 0%, var(--primary) 10%, var(--secondary) 35%, var(--primary) 15%, var(--secondary) 100%);
-    background-image: url("/src/images/bg_desktop.jpg");
+    background-image: url("/src/images/bg_desktop.jpg"); 
     background-repeat: no-repeat;
-    background-size: fit;
+    background-size: cover;
 
     line-height: 10px;
     font-family: outfitVariable;
@@ -82,7 +80,7 @@
 
   
 .shadow-light {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .simple-border {
@@ -106,18 +104,16 @@
 
 
 #navbar {
+    position: sticky;
+    top: 0;
     color: var(--white);
 }
 
 #navbar.scrolled {
-    background-color: var(--secondary);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    background-color: var(--white);
+    color: var(--black);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
     transition: ease-out 0.3s;
-    &.dark {
-        background-color: var(--primary-dark);
-        transition: linear 0.1s;
-
-    }
 }
 
 .shadow {
@@ -144,77 +140,6 @@
     width: 27vw;
     aspect-ratio: 1;
 }
-
-.sketch-window {
-    position: absolute;
-    top: 5%;
-    left: -7%;
-    width: 100%;
-    height: 70%;
-    border-color:   var(--white);
-    border-width: 1vh;
-    border-radius: 2%;
-    z-index: 2;
-}
-
-
-.sketch-dot-0 {
-    position: absolute;
-    top: 3.2%;
-    left: 84%;
-    width: 1.5vh;
-    height: 1.5vh;
-    background-color: var(--accent);
-    border-radius: 50%;
-    z-index: 4;
-}
-
-.sketch-dot-0:hover {
-    background-color: var(--white);
- }
-
-.sketch-dot-1 {
-    position: absolute;
-    top: 3.2%;
-    left: 89%;
-    width: 1.5vh;
-    height: 1.5vh;
-    background-color: var(--accent);
-    border-radius: 50%;
-    z-index: 2;
-}
-.sketch-dot-2 {
-    position: absolute;
-    top: 3.2%;
-    left: 94%;
-    width: 1.5vh;
-    height: 1.5vh;
-    background-color: var(--accent);
-    border-radius: 50%;
-    z-index: 2;
-}
-
-
-.sketch-nav {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: vh;
-    background-color:  var(--secondary);
-    z-index: 1;
-}
-
-.sketch-hr {
-    position: absolute;
-    top: 11%;
-    left: 0%;
-    width: 100%;
-    height: 0.5vh;
-    background-color: var(--primary);
-    z-index: 2;
-}
-
 
 .profile-picture {
     position: relative;
