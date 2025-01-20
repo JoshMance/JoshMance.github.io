@@ -70,7 +70,7 @@
     --secondary-dark:theme("colors.secondary-dark");
     --accent-dark:theme("colors.accent-dark");
 
-    background-image: url("/src/images/bg_desktop.jpg"); 
+    /* background-image: url("/src/images/bg_desktop.jpg");  */
     background-repeat: no-repeat;
     background-size: cover;
 

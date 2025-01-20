@@ -1,4 +1,18 @@
 export function initSkillsSection() {
+
+    const $carousel = $('.icon-carousel');
+    const iconWidth = $carousel.children().first().outerWidth();
+    const screenWidth = $carousel.width();
+    
+    const numIcons = $carousel.children().length;
+    const whitespace = screenWidth - (iconWidth*numIcons);
+    const gapSize = whitespace/numIcons;
+
+    $carousel.children().each(function(index, icon) {
+        var $icon = $(icon);
+        $icon.css("left", index*(iconWidth + gapSize));
+    });
+
     
     // Takes all divs supplied by the argument and splits their text
     // into a single div per character (without affecting the UI).
@@ -63,7 +77,7 @@ export function initSkillsSection() {
         let currentLeft = $temp.offset().left;
         let finalLeft = $(this).offset().left;
         let distance = finalLeft - currentLeft;
-        let finalWidth = $(this).outerWidth();
+        let finalWidth = $(this).innerWidth();
         $temp.animate({
             left: `+=${distance}px`,
             width: `${finalWidth}`
@@ -84,31 +98,50 @@ export function initSkillsSection() {
 
 
 
-    // Moves all icons in the carousel right one space.
-    // Takes the right-most icon in the $carousel and wraps it around to the start
-    function stepIconCarousel($carousel) {
 
-        const carouselWidth = $carousel.innerWidth();
-        const iconWidth = $carousel.children().first().innerWidth();
-        const carouselLeft = $carousel.offset().left;
-        
-        $carousel.children().each(function(index, icon) {
-            console.log(index, icon);
-            let iconLeft = $(icon).offset().left;
-            let distance = iconLeft + iconWidth;
-            if (distance > (carouselWidth + carouselLeft)) {
-                distance = 0;
-            }
 
-            $(icon).animate({
-                left: `${distance}px`
-              }, 200);
-        });
+
+
+
+
+
+    var time = 0;
+
+    function getSpeed(t) {
+        let speed = 5*Math.exp(1-(t/100));
+        return speed > 0.1 ? speed : 0;
     }
 
+    // Moves all icons in the carousel rightward, wrapping around 
+    // to the start when the right-most bound is reached.
+    function stepCarousel() {
+        time += 1;
+        
+        var newLeft = 0;
+        $carousel.children().each(function(index, icon) {
 
-    $('.icon-carousel').hover(function(event) {
-        stepIconCarousel($(this));
+            var $icon = $(icon);
+            var iconLeft = $icon.offset().left; // Absolute position relative to the document
+            newLeft = iconLeft + getSpeed(time);
+                if (newLeft >= screenWidth) {
+                    newLeft = 0;
+                }
+            
+            // Move the icon to the right by 1px
+            console.log("", newLeft,)
+            $icon.css("left", newLeft);
+        });
+
+        requestAnimationFrame(stepCarousel); 
+    }
+
+    // requestAnimationFrame(stepCarousel);
+    
+    $(".icon-carousel").on("click", function () {
+        time = 0;
+        requestAnimationFrame(stepCarousel);
     });
+    
+    
 
 }
