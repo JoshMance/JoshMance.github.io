@@ -1,147 +1,124 @@
 export function initSkillsSection() {
 
+    let time = 0;
+
     const $carousel = $('.icon-carousel');
     const iconWidth = $carousel.children().first().outerWidth();
     const screenWidth = $carousel.width();
-    
     const numIcons = $carousel.children().length;
-    const whitespace = screenWidth - (iconWidth*numIcons);
-    const gapSize = whitespace/numIcons;
+    const whitespace = screenWidth - (iconWidth * numIcons);
+    const gapSize = whitespace / (numIcons);
 
-    $carousel.children().each(function(index, icon) {
-        var $icon = $(icon);
-        $icon.css("left", index*(iconWidth + gapSize));
-    });
+    // Initialize the carousel positions
+    function initCarousel() {
+        $carousel.children().each(function (index, icon) {
+            const $icon = $(icon);
+            $icon.css("left", (index) * (iconWidth + gapSize));
+        });
+    }
 
-    
-    // Takes all divs supplied by the argument and splits their text
-    // into a single div per character (without affecting the UI).
-    // Used to allow individual letters to have their properties change
-    // e.g. when a dynamic tab moves across a button, the letters are able to
-    // change colour individually
+    initCarousel();
+
+    // Splits text into individual characters for each element in the set
     function splitTextIntoChars($divs) {
-        $divs.each(function() {
-            let text = this.textContent; // Preserves whitespaces
-            $(this).empty(); 
-            for (let char of text) {
-                let $newDiv = $('<div>')
-                    .html(char === ' ' ? '&nbsp;' : char) // Replacing spaces with &nbsp;
+        $divs.each(function () {
+            const text = this.textContent;
+            $(this).empty();
+            text.split('').forEach(char => {
+                const $newDiv = $('<div>')
+                    .html(char === ' ' ? '&nbsp;' : char)
                     .css('display', 'inline-block');
                 $(this).append($newDiv);
-            }
+            });
         });
     }
 
     splitTextIntoChars($('.skills-btn'));
 
+    // Create the temporary background element for the button highlight
     const $button = $('#skills-button-1');
-    
-    var $temp = $("<div></div>");
-    $temp.css("position", "absolute");
-    $temp.css("left", $button.offset().left);
-    $temp.css("height", $button.innerHeight());
-    $temp.css("width", $button.innerWidth());
-    $temp.css("background", "#143272");
-    $temp.css("border-radius", "7px");
-    $temp.css("margin", "2vh");
-    $temp.css("z-index", 1);
+    const $temp = $('<div></div>').css({
+        position: 'absolute',
+        left: $button.offset().left,
+        height: $button.innerHeight(),
+        width: $button.innerWidth(),
+        background: '#143272',
+        borderRadius: '7px',
+        margin: '2vh',
+        zIndex: 1
+    });
 
     $('#skills-buttons').append($temp);
 
-    
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
+    // Observe the background element to update text color on the button
+    const observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
                 const buttonLeft = $temp.offset().left;
                 const buttonRight = buttonLeft + $temp.outerWidth();
-                $('.skills-btn').children().each(function() {
+                $('.skills-btn').children().each(function () {
                     const charLeft = $(this).offset().left;
                     const charRight = charLeft + $(this).outerWidth();
-                    if (buttonLeft <= charLeft && buttonRight >= charRight) {
-                        $(this).css('color', 'white');
-                    }
-                    else {
-                        $(this).css('color', 'black');
-                    }
+                    $(this).css('color', buttonLeft <= charLeft && buttonRight >= charRight ? 'white' : 'black');
                 });
-            }  
+            }
         });
     });
-    const config = {attributes: true, childList: false, subtree: false};
+
+    const config = { attributes: true, childList: false, subtree: false };
     observer.observe($temp[0], config);
 
+    // Handle click on skills buttons
+    $('.skills-btn').mousedown(function () {
+        initCarousel(); // Reinitialize carousel position on button click
 
-    $('.skills-btn').mousedown(function(event) {
-        
-        // Moving the tab highlight background
-        let currentLeft = $temp.offset().left;
-        let finalLeft = $(this).offset().left;
-        let distance = finalLeft - currentLeft;
-        let finalWidth = $(this).innerWidth();
+        const currentLeft = $temp.offset().left;
+        const finalLeft = $(this).offset().left;
+        const distance = finalLeft - currentLeft;
+        const finalWidth = $(this).innerWidth();
+
+        // Animate the background element to move with the button
         $temp.animate({
             left: `+=${distance}px`,
             width: `${finalWidth}`
-        }, 400); 
+        }, 400);
 
-
-        // Switching the skills text
-        $('.skills-text').each(function () {
-            $(this).hide();
-          });
-
-
+        // Switch the visible skills text
+        $('.skills-text').hide();
         $(`#${$(this).attr("target")}`).show();
     });
 
+    // Simulate a click to initialize the state
     $('#skills-button-1').mousedown();
 
-
-
-
-
-
-
-
-
-
-
-    var time = 0;
-
+    // Calculate speed for the carousel animation
     function getSpeed(t) {
-        let speed = 5*Math.exp(1-(t/100));
+        let speed = 5 * Math.exp(1 - (t / 100));
         return speed > 0.1 ? speed : 0;
     }
 
-    // Moves all icons in the carousel rightward, wrapping around 
-    // to the start when the right-most bound is reached.
+    // Carousel animation logic (move icons rightward and wrap around)
     function stepCarousel() {
         time += 1;
-        
-        var newLeft = 0;
-        $carousel.children().each(function(index, icon) {
+        const screenWidth = $carousel.width();
 
-            var $icon = $(icon);
-            var iconLeft = $icon.offset().left; // Absolute position relative to the document
-            newLeft = iconLeft + getSpeed(time);
-                if (newLeft >= screenWidth) {
-                    newLeft = 0;
-                }
-            
-            // Move the icon to the right by 1px
-            console.log("", newLeft,)
+        $carousel.children().each(function (index, icon) {
+            const $icon = $(icon);
+            const iconLeft = $icon.offset().left; // Absolute position relative to the document
+            let newLeft = iconLeft + getSpeed(time);
+            if (newLeft >= screenWidth) {
+                newLeft = 0; // Reset position when the icon exceeds the screen width
+            }
+
             $icon.css("left", newLeft);
         });
 
-        requestAnimationFrame(stepCarousel); 
+        requestAnimationFrame(stepCarousel); // Keep the animation going
     }
 
-    // requestAnimationFrame(stepCarousel);
-    
+    // Start carousel animation on click
     $(".icon-carousel").on("click", function () {
-        time = 0;
+        time = 0; // Reset time on each click
         requestAnimationFrame(stepCarousel);
     });
-    
-    
-
 }

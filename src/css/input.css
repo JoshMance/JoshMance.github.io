@@ -70,12 +70,16 @@
     --secondary-dark:theme("colors.secondary-dark");
     --accent-dark:theme("colors.accent-dark");
 
-    /* background-image: url("/src/images/bg_desktop.jpg");  */
+    background-image: url("/src/images/bg_desktop.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
 
     line-height: 10px;
     font-family: outfitVariable;
+
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
 
   
@@ -148,4 +152,9 @@
     height: 100%;
     object-fit: cover;
     pointer-events: none; 
+}
+
+
+.icon {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
