@@ -4,6 +4,11 @@ export function initHomeSection() {
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
+
+    function isEmoji(char) {
+        const emojiRegex = /\p{Extended_Pictographic}/u;
+        return emojiRegex.test(char);
+    }
    
    
     async function typewriter($div, text, index, isbold, insideAccent) {
@@ -12,13 +17,13 @@ export function initHomeSection() {
    
         // Add the current character to the div
         if (index < text.length) {
-            let char = text.charAt(index);
+            let char = text[index];
             let speed = getRandomInt(20, 30);
    
             // Adjust speed for spaces and punctuation
             if (char === " ") {
                 speed += getRandomInt(30, 40);
-            } else if (char === "," || char === "!") {
+            } else if (char === ",") {
                 speed += 1200;
             }
    
@@ -51,7 +56,7 @@ export function initHomeSection() {
                 // Add the cursor and a new line
                 $div.append('<span class="font-bold text-accent cursor"> |</span>');
                 $div.append("<div></div>");
-            } else if (char === "!") {
+            } else if (isEmoji(char)) {
                 // Add the cursor and a new longer line
                 $div.append('<span class="font-bold text-[2rem] text-accent cursor"> |</span>');
                 $div.append("<div> &nbsp;</div>");
@@ -75,7 +80,7 @@ export function initHomeSection() {
      // by first saving the text, making the div visible and then passing 
      // the text to the typewriter function to be (re-) written
      let $div = $(".type-out");
-     let text = $div.text();
+     let text = Array.from($div.text());
      $div.empty();
      $div.show();
      typewriter($div, text, 0, false);

@@ -1,6 +1,5 @@
 import { initNavbar } from "./components/navbar.js";
 import { initFooter } from "./components/footer.js";
-import { initReturnButton } from "./components/returnButton.js";
 import { initHomeSection } from "./components/homeSection.js";
 import { initSkillsSection } from "./components/skillsSection.js";
 import { initProjectsSection } from "./components/projectsSection.js";
@@ -12,7 +11,6 @@ const components = [
   { selector: '#skillsSection', path: './src/components/skillsSection.html', init: initSkillsSection },
   { selector: '#projectsSection', path: './src/components/projectsSection.html', init: initProjectsSection },
   { selector: '#contactSection', path: './src/components/contactSection.html', init: initContactSection },
-  { selector: '#returnButton', path: './src/components/returnButton.html', init: initReturnButton },
   { selector: '#footer', path: './src/components/footer.html', init: initFooter }
 ];
 

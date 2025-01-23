@@ -4,10 +4,14 @@ export function initSkillsSection() {
 
     const $carousel = $('.icon-carousel');
     const iconWidth = $carousel.children().first().outerWidth();
-    const screenWidth = $carousel.width();
+    const iconHeight = $carousel.children().first().outerHeight();
+    const carouselWidth = $carousel.width();
+    const carouselLeft = $carousel.position().left;
     const numIcons = $carousel.children().length;
-    const whitespace = screenWidth - (iconWidth * numIcons);
+    const whitespace = carouselWidth - (iconWidth * numIcons);
     const gapSize = whitespace / (numIcons);
+    const heightGrowthRate = 1;
+
 
     // Initialize the carousel positions
     function initCarousel() {
@@ -93,22 +97,45 @@ export function initSkillsSection() {
 
     // Calculate speed for the carousel animation
     function getSpeed(t) {
-        let speed = 5 * Math.exp(1 - (t / 100));
+        let speed = 4 * Math.exp(1 - (t / 100));
         return speed > 0.1 ? speed : 0;
     }
 
     // Carousel animation logic (move icons rightward and wrap around)
     function stepCarousel() {
         time += 1;
-        const screenWidth = $carousel.width();
 
         $carousel.children().each(function (index, icon) {
             const $icon = $(icon);
             const iconLeft = $icon.offset().left; // Absolute position relative to the document
             let newLeft = iconLeft + getSpeed(time);
-            if (newLeft >= screenWidth) {
+            if (newLeft >= carouselWidth) {
                 newLeft = 0; // Reset position when the icon exceeds the screen width
             }
+
+            var height = $icon.outerHeight();
+
+
+            if ((newLeft < carouselLeft) || (newLeft > ((carouselWidth+carouselLeft)))) {
+                $icon.css('opacity', 0);
+            }
+            else {
+                $icon.css('opacity', 1);
+            }
+
+            if (newLeft < (carouselLeft)) {
+                if (height < iconHeight) {
+                    $icon.css('height', height + heightGrowthRate);
+                }
+            }
+            else if (newLeft > ((carouselWidth+carouselLeft) - 1.5*iconWidth)) {
+                if (height > 0) {
+                    $icon.css('height', height - heightGrowthRate);
+                }
+            }
+            // else {
+            //     // $icon.css('height', iconHeight);
+            // }
 
             $icon.css("left", newLeft);
         });
@@ -121,4 +148,6 @@ export function initSkillsSection() {
         time = 0; // Reset time on each click
         requestAnimationFrame(stepCarousel);
     });
+
+    $(".icon-carousel").click();
 }
