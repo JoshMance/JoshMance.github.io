@@ -1,31 +1,63 @@
 export function initNavbar () {
 
-   $('#navbar').addClass('sticky top-0 z-10 py-1 font-normal lg:text-md xl:text-lg align-center navbar');
+   $('#navbar').addClass('sticky top-0 z-10 bg-white');
 
-    var $button = $('#homeNavButton');
-    var $buttonTextDiv = $button.children().first();
-    var top = $buttonTextDiv.offset().top + $buttonTextDiv.height();
 
-    var $underline = $("<div></div>");
-    $underline.css("position", "absolute");
-    $underline.css("top", top);
-    $underline.css("height", '2px');
-    $underline.css("background", "#f3dc0e");
-    $underline.css("z-index", 20);
 
-   $('#navButtons').append($underline);
+    // Splits text into individual characters for each element in the set
+    function splitTextIntoChars($divs) {
+        $divs.each(function () {
+            const text = this.textContent;
+            $(this).empty();
+            text.split('').forEach(char => {
+                const $newDiv = $('<div>')
+                    .html(char === ' ' ? '&nbsp;' : char)
+                    .css('display', 'inline-block')
+                    .css('z-index', 5)
+                    .css('align-self', 'center')
+                    .css('width', 'min-content')
+                    .addClass("navTextChar");
+                $(this).append($newDiv);
+            });
+        });
+    }
 
-   $('.navButton').mousedown(function() {
-        // Moving the underline bar
-        let width =  $(this).children().first().width();
-        let whitespace = (($(this).innerWidth() - width)/2) +2;
-        let left = $(this).offset().left + whitespace;
-        $underline.stop(true).animate({
-            left: `${left}px`,
-            width: `${width}px`
-        }, 300);
+    splitTextIntoChars($('.navButtonText'));
+
+    // Creating the highlight element
+    const $RefButton = $('#homeNavButton');
+
+    const $highlight = $('<div></div>').css({
+        position: 'absolute',
+        left: $RefButton.offset().left,
+        top: $RefButton.offset().top + 30,
+        height: "1.5px",
+        width: $RefButton.outerWidth(),
+        background: '#ffffff',
+        zIndex: 1
     });
 
+    $('#navButtons').append($highlight);
+
+
+
+    // Handle click on skills buttons
+    $('.navButton').mousedown(function () {
+
+
+        const currentLeft = $highlight.offset().left;
+        const finalLeft = $(this).offset().left;
+        const distance = finalLeft - currentLeft;
+        const finalWidth = $(this).innerWidth();
+
+        // Animate the background element to move with the button
+        $highlight.animate({
+            left: `+=${distance}px`,
+            width: `${finalWidth}`
+        }, 400);
+    });
+
+    // Simulate a click to initialize the state
     $('#homeNavButton').mousedown();
 
     // Creating a scroll observer to determine the current section and toggle the navbar style
@@ -38,9 +70,11 @@ export function initNavbar () {
 
                 if (entry.target.id === "homeSection") {
                     $('#navbar').removeClass("scrolled");
+                    $highlight.css("background", "#ffffff");
                 }
                 else {
                     $('#navbar').addClass("scrolled");
+                    $highlight.css("background", "#000000");
                 }
 
                 $navButton.mousedown();

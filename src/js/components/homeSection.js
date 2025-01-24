@@ -84,5 +84,11 @@ export function initHomeSection() {
      $div.empty();
      $div.show();
      typewriter($div, text, 0, false);
-   
+
+
+
+    $(document).mousemove(function(event) {
+        console.log("Mouse position: X=" + event.pageX + ", Y=" + event.pageY);
+    });
+
 }
