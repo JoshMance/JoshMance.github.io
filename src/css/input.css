@@ -39,25 +39,6 @@
     font-weight: 100;
 }
 
-
-@font-face {
-    font-family: nunito;
-    src: url(/src/fonts/nunito/Nunito-VariableFont_wght.tff);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: montserrat;
-    src: url(/src/fonts/nunito/Montserrat-VariableFont_wght.tff);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: inter_18pt-Medium;
-    src: url(/src/fonts/inter/static/Inter_18pt-Medium.tff);
-    font-weight: 200;
-}
-
 :root {
     --primary:theme("colors.primary");
     --secondary:theme("colors.secondary");
@@ -154,4 +135,13 @@
     -moz-transition: ease-out 0.4s;
     -ms-transition: ease-out 0.4s;
     -o-transition: ease-out 0.4s;
+}
+
+
+.shadow-low {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.shadow-medium {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }

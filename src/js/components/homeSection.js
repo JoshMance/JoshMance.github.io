@@ -87,8 +87,23 @@ export function initHomeSection() {
 
 
 
-    $(document).mousemove(function(event) {
-        console.log("Mouse position: X=" + event.pageX + ", Y=" + event.pageY);
+    // $(document).mousemove(function(event) {
+    //     console.log("Mouse position: X=" + event.pageX + ", Y=" + event.pageY);
+    // });
+
+    $("#downArrow").toggle();
+    setTimeout(() => {
+        $("#downArrow").fadeIn();
+        setTimeout(() => {
+            $("#downArrow").fadeOut();
+        }, 10000);
+    }, 6000);
+
+    $("#downArrow").click((e) => {
+        $('#skillsNavButton').mousedown();
+        $("#downArrow").fadeOut();
     });
+
+
 
 }

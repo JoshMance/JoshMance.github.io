@@ -1,9 +1,9 @@
-<nav id="desktop-menu" class="align-bottom z-50 dark:shadow-none py-2 font-medium lg:text-md xl:text-lg navbar">
+<nav id="desktop-menu" class="align-bottom z-50 dark:shadow-none py-2 font-normal lg:text-md xl:text-lg navbar">
     <div class="flex justify-between items-start mx-auto pl-4 max-w-screen-3xl h-[8vh]">
       <!-- Brand -->
       <div class="flex items-center space-x-2 rtl:space-x-reverse font-normal hover:cursor-pointer">
         <span id ="home" class="self-center"> 
-          <img id="logo" src="/src/images/LogoLight.svg" alt="Logo" class="-space-x-4 rounded-full w-10 sm:w-12 h-10 sm:h-12"> 
+          <img id="logo" src="/src/images/LogoLight.svg" alt="Logo" class="-space-x-4 rounded-full w-10 h-10"> 
         </span>
 
         <div class="flex flex-col -space-y-1">
@@ -44,13 +44,18 @@
           </div>
         </li>
         <li class="">
+          <div id="experienceNavButton" target = "experienceSection" class="flex flex-col px-3 h-[6vh] hover:cursor-pointer hover navButton">
+            <div class="flex flex-row w-min h-full font-semibold navButtonText">Experience</div>
+          </div>
+        </li>
+        <li class="">
           <div id="contactNavButton" target = "contactSection" class="flex flex-col px-3 h-[6vh] hover:cursor-pointer hover navButton">
             <div class="flex flex-row w-min h-full font-semibold navButtonText">Contact</div>
           </div>
         </li>
         <li class="">
           <div class="flex flex-col px-3 h-[6vh] hover:cursor-pointer hover"> 
-            <a href="#" id="dark-mode-toggle" class="flex flex-row w-min h-full text-accent"><i class="bi-brightness-high-fill bi"></i></a>
+            <a href="#" id="dark-mode-toggle" class="flex flex-row items-center w-min h-full text-accent"><i class="bi-brightness-high-fill bi"></i></a>
           </div>
         </li>
       </ul>
@@ -61,17 +66,20 @@
 </nav>
 
 <!-- nav items phone --> 
-<nav id="hamburger-menu" class="top-12 right-0 z-50 fixed flex-col items-center gap-2 hidden bg-secondary mt-4 mr-4 px-2 rounded-lg w-min text-md text-white">
-  <div id = "home-hamburger" class="py-2 origin-center">
+<nav id="hamburger-menu" class="top-12 right-0 z-50 fixed flex-col items-end gap-2 hidden bg-primary mt-[2vh] mr-[2vh] px-2 border-r-2 rounded-l-md w-min text-md text-white">
+  <div id = "homeHamburgerButton" target = "homeSection"  class="py-2 origin-center navButton">
     Home
 </div>
-  <div id = "skills-hamburger" class="py-2 origin-top">
+  <div id = "skillsHamburgerButton" target = "skillsSection"  class="py-2 origin-top navButton">
       Skills
   </div>
-  <div id = "projects-hamburger" class="py-2 origin-top">
+  <div id = "projectsHamburgerButton" target = "projectsSection"  class="py-2 origin-top navButton">
     Projects
   </div>
-  <div id = "contact-hamburger" class="py-2 origin-top">
+  <div id = "experinceHamburgerButton" target = "experienceSection"  class="py-2 origin-top navButton">
+    Experience
+  </div>
+  <div id = "contactHamburgerButton" target = "contactSection" class="py-2 origin-top navButton">
     Contact
   </div>
 </nav>

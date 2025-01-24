@@ -3,6 +3,7 @@ import { initFooter } from "./components/footer.js";
 import { initHomeSection } from "./components/homeSection.js";
 import { initSkillsSection } from "./components/skillsSection.js";
 import { initProjectsSection } from "./components/projectsSection.js";
+import { initExperienceSection } from "./components/experienceSection.js";
 import { initContactSection } from "./components/contactSection.js";
 
 $(document).ready(function() {
@@ -11,6 +12,7 @@ $(document).ready(function() {
     { selector: '#navbar', path: './src/components/navbar.html', init: initNavbar },
     { selector: '#skillsSection', path: './src/components/skillsSection.html', init: initSkillsSection },
     { selector: '#projectsSection', path: './src/components/projectsSection.html', init: initProjectsSection },
+    { selector: '#experienceSection', path: './src/components/experienceSection.html', init: initExperienceSection },
     { selector: '#contactSection', path: './src/components/contactSection.html', init: initContactSection },
     { selector: '#footer', path: './src/components/footer.html', init: initFooter }
   ];
@@ -31,7 +33,7 @@ $(document).ready(function() {
       // Check if all components are loaded
       if (componentsLoaded === components.length) {
         // Hide loading screen
-        $('#loadingScreen').fadeOut(800);
+        $('#loadingScreen').fadeOut(500);
 
       }
     });

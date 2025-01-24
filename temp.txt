@@ -46,3 +46,141 @@
                                                 <!-- In late 2023, I helped develop a website for the Perth-based nonprofit RepairLab using React, TailwindCSS and Typescript. -->
                                 <!-- My profesional computing group project helped me gain experience deisigning graphical user interfaces (GUIs) in a project with
                                 a client giving feedback. -->
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="flex flex-col sm:pb-[8vh] w-[80vw] text-pretty sm:text-xl"> 
+            I love learning, especially when it comes to front-end web development and tackling challenges in algorithms and efficiency.
+        </div> -->
+
+        <div class="flex flex-col items-center rounded-2xl rounded-t-lg w-screen section">
+
+            <!-- Skills button panel -->
+            <div id="skills-buttons" class="flex flex-row justify-items-stretch items-center sm:gap-6 border-secondary bg-white border-b-[3px] w-[90vw] h-[5vh] sm:h-[7vh] font-medium text-center text-nowrap text-xs sm:text-xl">
+                
+                <button class="z-10 px-[12px] py-2 rounded-lg w-fit h-[auto] text-white hover:cursor-pointer btn skills-btn"
+                    id = "skills-button-1" target="skills-text-1">Web Dev</button>
+
+                <button class="z-10 px-[12px] py-2 rounded-lg w-fit h-auto text-black hover:cursor-pointer btn skills-btn"
+                    id = "skills-button-2" target="skills-text-2">Efficient Coding</button>
+
+                <button class="z-10 px-[12px] py-2 rounded-lg w-fit h-auto text-black hover:cursor-pointer btn skills-btn"
+                    id = "skills-button-3" target="skills-text-3">Communication</button>
+            </div>
+
+            <div class="flex flex-col justify-center justify-items-center items-center bg-white w-[90vw] h-max text-left text-xs sm:text-xl xl:text-xl 2x:text-2xl overflow-hidden">
+                
+                <!-- Web dev text box -->
+                <div id="skills-text-1" class="flex flex-col flex-wrap justify-center justify-items-center items-center rounded-md w-[90vw] h-max skills-text">
+
+                    <span id="webdev-icon-carousel" class="flex flex-row items-center border-grey border-b-2 w-[90vw] h-[5em] overflow-hidden icon-carousel">
+                        <img id="webdev-icon-1" class="absolute p-1 rounded-sm h-[3em] transform transition-transform hover:translate-y-[-5px] duration-400 icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" loading="lazy"/>
+                        <img id="webdev-icon-2" class="absolute p-1 rounded-sm h-[3em] transform transition-transform hover:translate-y-[-5px] duration-400 icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" loading="lazy"/>
+                        <img id="webdev-icon-3" class="absolute p-1 rounded-sm h-[3em] transform transition-transform hover:translate-y-[-5px] duration-400 icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" loading="lazy"/>
+                        <img id="webdev-icon-4" class="absolute p-1 rounded-sm h-[3em] transform transition-transform hover:translate-y-[-5px] duration-400 icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" loading="lazy"/>
+                        <img id="webdev-icon-5" class="absolute p-1 rounded-sm h-[3em] transform transition-transform hover:translate-y-[-5px] duration-400 icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg" loading="lazy"/>
+                        <img id="webdev-icon-6" class="absolute p-1 rounded-sm h-[3em] transform transition-transform hover:translate-y-[-5px] duration-400 icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" loading="lazy" />
+                        <img id="webdev-icon-7" class="absolute p-1 rounded-sm h-[3em] transform transition-transform hover:translate-y-[-5px] duration-400 icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" loading="lazy"/>
+                        <img id="webdev-icon-8" class="absolute p-1 rounded-sm h-[3em] transform transition-transform hover:translate-y-[-5px] duration-400 icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"loading="lazy" />
+                        <img id="webdev-icon-9" class="absolute p-1 rounded-sm h-[3em] transform transition-transform hover:translate-y-[-5px] duration-400 icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" loading="lazy"/>
+                    </span>
+
+                    <!-- Web dev tagline -->
+                    <span class="py-4 w-[90vw]">I'm proficient with a range of languages/frameworks, with a focus on frontend development. </span>
+
+                    <!-- <span> My knowledge base isn't static however - I'm an enthusiastic, continuous learner who sees tools as a means to an end. </span> -->
+                    <div class="justify-self-start my-[1em] pl-2 w-[85vw]">
+                        <span class="pl-2 w-[85vw] font-semibold text-md sm:text-xl lg:text-2xl">
+                            Frontend
+                        </span>
+                        <ul class="mt-[0.5em] mb-[1em] pl-2 w-[85vw] text-pretty list-disc">
+                            <li> I have a strong foundation in HTML and CSS.</li>
+                            <li> I have a particular interest in the intricacies of JavaScript.</li>
+                            <li> I have project experience with frameworks such as React.js and TailwindCSS. </li>
+                        </ul>
+                        <span class="mt-[2em] font-semibold text-md sm:text-xl lg:text-2xl">
+                            Backend
+                        </span>
+                        <ul class="mt-[0.5em] pl-12 list-disc">
+                            <li> My second major in data science gave me a solid foundation in in the design of databases, data pipelines and data warehouses. </li>
+                        </ul>
+                    </div>
+
+                   
+                </div>
+
+                <!-- Coding text box -->
+                <div id="skills-text-2" class="flex flex-row flex-wrap h-max overflow-hidden skills-text">
+                    <span class="flex flex-row pb-[3em] w-full h-[5em]">
+                        <img class="p-2 h-[4em] transform transition-transform hover:translate-y-[-5px] duration-400" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" loading="lazy"/>
+                        <!-- <img class="p-2 h-[4em] transform transition-transform hover:translate-y-[-5px] duration-400" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" loading="lazy"/>
+                        <img class="p-2 h-[4em] transform transition-transform hover:translate-y-[-5px] duration-400" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" loading="lazy"/>
+                        <img class="p-2 h-[4em] transform transition-transform hover:translate-y-[-5px] duration-400" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neo4j/neo4j-original-wordmark.svg" loading="lazy"/>
+                        <img class="p-2 h-[4em] transform transition-transform hover:translate-y-[-5px] duration-400" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" loading="lazy"/>
+                        <img class="p-2 h-[4em] transform transition-transform hover:translate-y-[-5px] duration-400" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-original.svg" loading="lazy"/>
+                        <img class="p-2 h-[4em] transform transition-transform hover:translate-y-[-5px] duration-400" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" loading="lazy"/>
+                        <img class="p-2 h-[4em] transform transition-transform hover:translate-y-[-5px] duration-400" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg"loading="lazy" />
+                        <img class="p-2 h-[4em] transform transition-transform hover:translate-y-[-5px] duration-400" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" loading="lazy"/> -->
+                    </span>
+                    <!-- Coding tagline -->
+                    <span class="w-full">
+                        Designing and analyzing algorithms is one of my passions. I'm fascinated with discovering ways to improve the efficiency of applicationss.
+                    </span>
+                        <div class="justify-self-start my-[1em] pl-4 w-full">
+                            <span class="mt-[1em] font-semibold text-md sm:text-xl lg:text-2xl">
+                                Studies
+                            </span>
+                            <ul class="mt-[0.5em] mb-[1em] pl-12 text-pretty list-disc">
+                                <li> During my undergrad, I achieved distinction-level grades in the units 'Data Structures and Algorithms' and 'High Performance Computing.'</li>
+                                <li> I was actively involved in team-based competitive programming, where I trained to design/apply algorithms to novel problems.</li>
+                             </ul>
+                             <span class="mt-[1em] font-semibold text-md sm:text-xl lg:text-2xl">
+                                Languages
+                            </span>
+                            <ul class="mt-[0.5em] mb-[1em] pl-12 text-pretty list-disc">
+                                <li> I am proficient in a range of languages, including JavaScript, C, Python, SQL, Neo4j, R, Java and Visual Basic.</li>
+                                <!-- <li> I am comfortable coding in different paradigms, including functional, object-oriented, and event-driven programming.</li> -->
+                             </ul>
+
+                             
+                             <span class="mt-[1em] font-semibold text-md sm:text-xl lg:text-2xl">
+                                Professional Practice
+                            </span>
+                            <ul class="mt-[0.5em] mb-[1em] pl-12 text-pretty list-disc">
+                                <li> I have extensive experience using the Git/GitHub version control system.</li>
+                                <li> I take best practices seriously and write readable, well-documented code.</li>
+                             </ul>
+                        </div>
+                </div>
+
+                <div id="skills-text-3" class="flex flex-wrap h-max text-left text-pretty overflow-hidden skills-text">
+                    
+                    My communication skills are critical to who I am as a developer.
+                    I have worked in the tech department of my local Officeworks.
+                    I love working with customers to understand their needs and explain how technology works.
+                    In my 1 year, I have been given multiple awards for excellent customer service.
+
+                    Capstone project - talking with client. simple, easy, proffesional.
+                    I enjoy scietiific report writing, and have experience writing reports using LaTeX.
+                    5 years tutoring. Communcating skills.
+                    I create educational martirials on everyting from lingustics to chemsitry.
+                    In my first year, I took electives in Marketing and Consumer behavour, achieivng distinctions for both.
+                    
+                </div>
+
+                
+                
+            </div> 
+
+
+            
+        </div>

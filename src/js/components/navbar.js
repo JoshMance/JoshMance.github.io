@@ -3,6 +3,34 @@ export function initNavbar () {
    $('#navbar').addClass('sticky top-0 z-10 bg-white');
 
 
+   function scrollToTargetSection($navButton) {  
+        // Get the target section ID from the `target` attribute of the nav button
+        const targetId = $navButton.attr('target');  
+        
+        // Ensure the target ID exists
+        if (targetId) {
+            // Find the target element
+            const $target = $(`#${targetId}`);
+            
+            // Ensure the target element exists on the page
+            if ($target.length) {
+                // Scroll to the target element smoothly
+                $('html, body').animate({
+                    scrollTop: $target.offset().top
+                }, 500); // Duration of animation in milliseconds
+            } else {
+                console.warn(`Target section with ID "${targetId}" not found.`);
+            }
+        } else {
+            console.warn('No target ID specified for this nav button.');
+        }
+    }
+
+    $('.navButton').on('click', function() {
+        scrollToTargetSection($(this));
+    });
+
+
 
     // Splits text into individual characters for each element in the set
     function splitTextIntoChars($divs) {
@@ -31,13 +59,13 @@ export function initNavbar () {
         position: 'absolute',
         left: $RefButton.offset().left,
         top: $RefButton.offset().top + 30,
-        height: "1.5px",
-        width: $RefButton.outerWidth(),
-        background: '#ffffff',
+        height: "2px",
+        width:  "5px",
+        background: '#9a1515',
         zIndex: 1
     });
 
-    $('#navButtons').append($highlight);
+    $('#navbar').append($highlight);
 
 
 
@@ -69,11 +97,11 @@ export function initNavbar () {
                 var $navButton = $(`div[target="${entry.target.id}"]`);
 
                 if (entry.target.id === "homeSection") {
-                    $('#navbar').removeClass("scrolled");
+                    $('#navbar').removeClass("scrolled shadow-low");
                     $highlight.css("background", "#ffffff");
                 }
                 else {
-                    $('#navbar').addClass("scrolled");
+                    $('#navbar').addClass("scrolled shadow-low");
                     $highlight.css("background", "#000000");
                 }
 
