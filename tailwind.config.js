@@ -11,7 +11,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'primary': '#1b449f', 
+      'primary': '#0d1d36', 
       'secondary':'#143272',
       'accent': '#FFD700',
       'accent-faint': '#fcf172',

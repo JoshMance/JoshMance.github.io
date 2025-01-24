@@ -711,6 +711,10 @@ video {
   height: 50vh;
 }
 
+.h-\[5vh\] {
+  height: 5vh;
+}
+
 .h-\[6\%\] {
   height: 6%;
 }
@@ -763,10 +767,6 @@ video {
   height: 90%;
 }
 
-.h-\[90vh\] {
-  height: 90vh;
-}
-
 .h-auto {
   height: auto;
 }
@@ -777,10 +777,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[4em\] {
-  height: 4em;
 }
 
 .w-10 {
@@ -1062,7 +1058,7 @@ video {
 
 .bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(27 68 159 / var(--tw-bg-opacity));
+  background-color: rgb(13 29 54 / var(--tw-bg-opacity));
 }
 
 .bg-secondary {
@@ -1150,6 +1146,10 @@ video {
   padding-top: 0.375rem;
 }
 
+.pt-\[10vh\] {
+  padding-top: 10vh;
+}
+
 .pt-\[2vh\] {
   padding-top: 2vh;
 }
@@ -1190,11 +1190,6 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-lg {
@@ -1257,7 +1252,7 @@ video {
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(27 68 159 / var(--tw-text-opacity));
+  color: rgb(13 29 54 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1271,6 +1266,11 @@ video {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.shadow-white {
+  --tw-shadow-color: #ffffff;
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .transition-all {
@@ -1342,7 +1342,7 @@ video {
 }
 
 :root {
-  --primary:#1b449f;
+  --primary:#0d1d36;
   --secondary:#143272;
   --accent:#FFD700;
   --black:#000000;
@@ -1465,6 +1465,18 @@ video {
     height: 60vh;
   }
 
+  .sm\:h-\[70vh\] {
+    height: 70vh;
+  }
+
+  .sm\:h-\[8vh\] {
+    height: 8vh;
+  }
+
+  .sm\:h-\[90vh\] {
+    height: 90vh;
+  }
+
   .sm\:w-12 {
     width: 3rem;
   }
@@ -1479,6 +1491,10 @@ video {
 
   .sm\:w-\[45vw\] {
     width: 45vw;
+  }
+
+  .sm\:w-\[50vw\] {
+    width: 50vw;
   }
 
   .sm\:w-\[62vw\] {
@@ -1571,8 +1587,17 @@ video {
     padding-right: 10vw;
   }
 
+  .sm\:pt-0 {
+    padding-top: 0px;
+  }
+
   .sm\:pt-4 {
     padding-top: 1rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .sm\:text-4xl {
@@ -1604,6 +1629,11 @@ video {
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .lg\:text-lg {
