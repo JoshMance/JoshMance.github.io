@@ -3,6 +3,23 @@ export function initNavbar () {
    $('#navbar').addClass('sticky top-0 z-10 bg-white');
 
 
+   // Ensuring thr logo completes its rotation animation even after 
+   // the user has stopped hovering over it
+   const $logo = $('#logo');
+
+   $logo.on('mouseover', function () {
+       // Add the animation class
+       $logo.addClass('animating');
+   
+       // Optional: Remove the class after the animation ends
+       $logo.one('animationend', function () {
+           $logo.removeClass('animating');
+       });
+   });
+   
+
+
+
    function scrollToTargetSection($navButton) {  
         // Get the target section ID from the `target` attribute of the nav button
         const targetId = $navButton.attr('target');  

@@ -75,20 +75,28 @@
 
 #loadingScreen > img {
     position: absolute;
-    top: 40vh;
-    left: 40vw;
-    width: 20vw;
-    height: 20vh;
+    top: 45vh;
+    left: 45vw;
+    width: 10vw;
+    height: 10vh;
     background-color: var("--accent");
     -webkit-animation:spin 0.7s linear infinite;
     -moz-animation:spin 0.7s linear infinite;
     animation:spin 0.7s linear infinite;
 }
 
+
+
 #logo:hover {
-    -webkit-animation:spin  0.2s ease-out infinite;
-    -moz-animation:spin 0.2s ease-out  infinite;
-    animation:spin  0.2s ease-out infinite;
+    -webkit-animation:spin 2s forwards;
+    -moz-animation:spin 2s forwards;
+    animation:spin 2s forwards;
+}
+
+#logo.animating  {
+    -webkit-animation:spin 2s forwards;
+    -moz-animation:spin 2s forwards;
+    animation:spin 2s forwards;
 }
 
 @-moz-keyframes spin { 
