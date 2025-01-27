@@ -47,7 +47,7 @@
     --white:theme("colors.white");
     --grey:theme("colors.grey");
 
-    --secondary-dark:theme("colors.primary-dark");
+    --primary-dark:theme("colors.primary-dark");
     --secondary-dark:theme("colors.secondary-dark");
     --accent-dark:theme("colors.accent-dark");
 
@@ -112,10 +112,14 @@
     }
 }
 
-
-
 .background-image {
-    background-image: url("/src/images/download.jpg");
+    background-image: url("/src/images/backgroundBlur.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-image.dark {
+    background-image: url("/src/images/backgroundDarkBlur.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -135,15 +139,24 @@
 }
 
 #navbar.scrolled {
-    height: 10vh;
-    background-color: #ffffff;
-    color: var(--black);
+    background-color: var(--primary);
     transition: ease-out 0.4s;
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     -ms-transition: ease-out 0.4s;
     -o-transition: ease-out 0.4s;
 }
+
+#navbar.scrolled.dark {
+    height: 10vh;
+    background-color: var(--primary-dark);
+    transition: ease-out 0.4s;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    -ms-transition: ease-out 0.4s;
+    -o-transition: ease-out 0.4s;
+}
+
 
 
 .shadow-low {

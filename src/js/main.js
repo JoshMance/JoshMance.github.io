@@ -17,6 +17,8 @@ $(document).ready(function() {
     { selector: '#footer', path: './src/components/footer.html', init: initFooter }
   ];
 
+
+
   // Keep track of how many components have loaded
   let componentsLoaded = 0;
 

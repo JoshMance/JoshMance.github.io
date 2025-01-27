@@ -3,23 +3,22 @@ module.exports = {
   mode: 'jit',
   content: ['./src/**/*.html', 
             './index.html'],
-  darkMode: 'selector',
+  darkMode: 'class',
   theme: {
     container: {
       center: true,
     },        
     colors: {
+      
       transparent: 'transparent',
       current: 'currentColor',
-      'primary': '#0d1d36', 
-      'secondary':'#143272',
+      'primary': '#112c58', 
+      'secondary':'#024890',
       'accent': '#FFD700',
-      'accent-faint': '#fcf172',
-      'accent-dull': '#ffde59',
 
-      'primary-dark': '#0e1729', 
-      'secondary-dark':'#013568',
-      'accent-dark': '#806c00',
+      'primary-dark': '#0c1a31', 
+      'secondary-dark':'#101f40',
+      'accent-dark': '#FFD700',
 
       'primary-faint': '#d6ecffff', 
 
@@ -27,6 +26,12 @@ module.exports = {
       'dark-grey':'#e6efff',
       'grey': "#f9f9f9",
       'white': '#ffffff',
+
+      'dark-white': "#e8e8e8",
+      'dark-base': "#121212",
+      'dark-low': "#1C1C1E",
+      'dark-middle': "#2C2C2E",
+      'dark-upper': "#3A3A3C",
     },
   },
   plugins: [       
@@ -35,6 +40,10 @@ module.exports = {
         '.underline': {
             'textDecoration': 'underline',
             'text-decoration-color': '#f7e018',
+        },
+        '.underline-red': {
+            'textDecoration': 'underline',
+            'text-decoration-color': '#e91000',
         },
       }
       addUtilities(extendUnderline)

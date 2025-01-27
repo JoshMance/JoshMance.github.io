@@ -1,6 +1,13 @@
 export function initNavbar () {
 
-   $('#navbar').addClass('sticky top-0 z-10 bg-white');
+    // The logical location and width of the navbar highlight
+    // Used to set goal values when animating changes to the highlight
+    var targetHighlightLeft =  0;
+    var targetHighlightWidth =  0;
+    var highlightIsMoving =  false;
+    var pageIsScrolling = false;
+
+   $('#navbar').addClass('sticky top-0 z-10 bg-white h-[2vh] sm:h-[7vh]');
 
 
    // Ensuring thr logo completes its rotation animation even after 
@@ -20,7 +27,7 @@ export function initNavbar () {
 
 
 
-   function scrollToTargetSection($navButton) {  
+   function scrollToTargetSection($navButton) { 
         // Get the target section ID from the `target` attribute of the nav button
         const targetId = $navButton.attr('target');  
         
@@ -42,12 +49,6 @@ export function initNavbar () {
             console.warn('No target ID specified for this nav button.');
         }
     }
-
-    $('.navButton').on('click', function() {
-        scrollToTargetSection($(this));
-    });
-
-
 
     // Splits text into individual characters for each element in the set
     function splitTextIntoChars($divs) {
@@ -71,68 +72,113 @@ export function initNavbar () {
 
     // Creating the highlight element
     const $RefButton = $('#homeNavButton');
+    const $RefButtonInner = $RefButton.children().first();
+    const $RefButtonInnerText = $RefButton.children().first().children().first();
 
     const $highlight = $('<div></div>').css({
         position: 'absolute',
-        left: $RefButton.offset().left,
-        top: $RefButton.offset().top + 30,
-        height: "2px",
-        width:  "5px",
-        background: '#9a1515',
+        left: $RefButtonInner.children().first().offset().left,
+        top: $RefButtonInnerText.offset().top,
+        height: $RefButtonInnerText.innerHeight(),
+        width:  $RefButton.width(),
+        "border-bottom": "0.15rem solid #f7e018",
         zIndex: 1
     });
 
     $('#navbar').append($highlight);
 
 
+    function moveHighlight() {
 
-    // Handle click on skills buttons
-    $('.navButton').mousedown(function () {
+        if (highlightIsMoving) {
+            return;
+        }
+        else {
 
+            highlightIsMoving = true;
 
-        const currentLeft = $highlight.offset().left;
-        const finalLeft = $(this).offset().left;
-        const distance = finalLeft - currentLeft;
-        const finalWidth = $(this).innerWidth();
+            let currentLeft = $highlight.offset().left;
+            let currentWidth = $highlight.innerWidth();
+        
+            let leftDifference = targetHighlightLeft - currentLeft;
+            let widthDifference = targetHighlightWidth - currentWidth;
+        
+            // Stop condition: When the highlight is close enough to the target
+            if (Math.abs(leftDifference) > 1 || Math.abs(widthDifference) > 1) {
+                // Gradually adjust position and size
+                let newLeft = currentLeft + leftDifference * 0.2; // Move 10% of the distance
+                let newWidth = currentWidth + widthDifference * 0.2; // Resize 10% of the difference
+        
+                $highlight.css("left", newLeft);
+                $highlight.css("width", newWidth);
+        
+                // Request the next frame for animation
+                requestAnimationFrame(moveHighlight);
+            } else {
+                // Snap to the exact target to avoid any rounding issues
+                $highlight.css("left", targetHighlightLeft);
+                $highlight.css("width", targetHighlightWidth);
+            }
 
-        // Animate the background element to move with the button
-        $highlight.animate({
-            left: `+=${distance}px`,
-            width: `${finalWidth}`
-        }, 400);
-    });
+            highlightIsMoving = false;
+        }
 
-    // Simulate a click to initialize the state
-    $('#homeNavButton').mousedown();
+       
+    }
+
 
     // Creating a scroll observer to determine the current section and toggle the navbar style
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.slice().reverse().forEach(entry => {
             if (entry.isIntersecting) {
-
                 // Finding the nav button that targets this section
                 var $navButton = $(`div[target="${entry.target.id}"]`);
-
-                if (entry.target.id === "homeSection") {
-                    $('#navbar').removeClass("scrolled shadow-low");
-                    $highlight.css("background", "#ffffff");
+                if (!pageIsScrolling) {
+                    targetHighlightLeft = Math.ceil($navButton.children().first().offset().left);
+                    targetHighlightWidth = Math.ceil($navButton.width());
+                    moveHighlight();
                 }
-                else {
-                    $('#navbar').addClass("scrolled shadow-low");
-                    $highlight.css("background", "#000000");
-                }
-
-                $navButton.mousedown();
             }
         });
     }, {
-        threshold: 0.5, // Triggers when 50% of the section is visible
+        threshold: 0.5, // Triggers when 80% of the section is visible
+    });
+
+    const $sections = Array.from($('.section')); // Get an array of sections
+    // Observe each section for scroll events
+    $sections.forEach(entry => scrollObserver.observe(entry));
+
+
+
+
+    const scrollThreshold = window.innerHeight/4; 
+
+    // Function to check the scroll position
+    const checkScrollDistance = () => {
+        const $navbar = $('#navbar');
+
+        // Check if the user has scrolled past the threshold
+        if ($(window).scrollTop() > scrollThreshold) {
+            // Add the classes when scrolled beyond the threshold
+            $navbar.addClass('scrolled shadow-low');
+        } else {
+            // Remove the classes when scrolled above the threshold
+            $navbar.removeClass('scrolled shadow-low');
+        }
+    };
+
+    // Add the scroll event listener using jQuery
+    $(window).on('scroll', checkScrollDistance);
+
+
+
+
+    $('.navButton').on('click', function() {
+        pageIsScrolling = true;
+        scrollToTargetSection($(this));
+        pageIsScrolling = false;
     });
     
-    const $sections = Array.from($('.section'));
-    $sections.forEach(entry => observer.observe(entry));
-
-
 
 
    
@@ -152,6 +198,8 @@ export function initNavbar () {
     // Dark mode toggle 
     $(document).on('click', '#dark-mode-toggle', function() {
         $('*').toggleClass("dark");
+
+
         $('#dark-mode-toggle').children("*").toggleClass("bi-brightness-high-fill");
         $('#dark-mode-toggle').children("*").toggleClass("bi-moon-stars-fill");
     });
