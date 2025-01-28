@@ -11,142 +11,126 @@
 
             <!-- Project info boxes-->
             <div class="justify-center justify-items-center gap-10 grid grid-cols-1 sm:grid-cols-3 xs:grid-cols-2">
-  
+
                 <!-- SediVis -->
-                <div class="flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[25vw] h-[20vh] sm:h-[30vh] hover:cursor-pointer">
+                <div class="relative flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[30vw] h-[20vh] sm:h-[60vh] transition-transform hover:-translate-y-2 duration-300 hover:cursor-pointer group">
                     <!-- Top half -->
-                    <div class="bg-contain bg-no-repeat bg-center m-2 rounded-sm w-full h-[35%]"> 
-            
-                    </div>
+                    <div class="relative justify-between bg-[url(/src/images/SediVis.png)] bg-cover bg-center m-2 rounded-sm w-full h-[30vh] group">
+                        <div class="absolute inset-0 flex justify-center items-center">
+                          <img src="/src/images/SediVisLogo.png" alt="Centered Image" class="w-[40%] h-[45%] object-contain">
+                        </div>
+                      
+                        <div class="group-hover:flex absolute inset-0 justify-center items-center hidden bg-black opacity-0 group-hover:opacity-75 rounded-sm text-2xl text-white transition-opacity duration-500">
+                          See more
+                          <a href="" class="bi-box-arrow-up-right pl-[0.3em] bi"> </a>
+                        </div>
+                      </div>
+                      
                     <!-- Bottom half -->
-                    <div class="flex justify-center items-center rounded-b-lg w-full h-[65%]"> 
+                    <div class="flex justify-center items-start rounded-b-lg w-full h-[30vh]">
                         <!-- Inner container -->
                         <div class="flex flex-col w-[95%] h-[70%]">
                             <!-- Title -->
-                            <div class="pb-2 font-semibold"> 
+                            <div class="pb-2 font-bold text-xl">
                                 SediVis
                             </div>
                             <!-- Blurb -->
-                            <div class="leading-4"> 
-                                Software for analyzing sediment cores, designed to help geoarchaeologists uncover insights into the past.
+                            <div class="text-md leading-4">
+                                Software for analyzing sediment cores, created to help geoarchaeologists working in Esperance, WA uncover insights about the past.
                             </div>
+                            <div class="flex flex-wrap gap-1 py-4 w-full h-full leading-4">
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> Project Management </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> Team Leadership </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> UI Design </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> Client Communication </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> Python </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> PyQt </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> CSS </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> GitHub </span>
+                              </div>
                         </div>
                     </div>
                 </div>
-            
 
-                <!-- Repair Labs -->
-                <div class="flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[25vw] h-[20vh] sm:h-[30vh] hover:cursor-pointer">
+
+                <!-- RepairLabs -->
+                <div class="relative flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[30vw] h-[20vh] sm:h-[60vh] transition-transform hover:-translate-y-2 duration-300 hover:cursor-pointer group">
                     <!-- Top half -->
-                    <div class="bg-white bg-contain bg-no-repeat bg-center m-2 rounded-sm w-full h-[35%]"> 
-
-                    </div>
+                    <div class="relative justify-between bg-[url(/src/images/RepairLab.png)] bg-cover bg-center m-2 rounded-sm w-full h-[30vh] group">
+                        <div class="absolute inset-0 flex justify-center items-center">
+                          <img src="/src/images/RepairLabLogo.jpeg" alt="Centered Image" class="w-[40%] h-[45%] object-contain">
+                        </div>
+                      
+                        <div class="group-hover:flex absolute inset-0 justify-center items-center hidden bg-black opacity-0 group-hover:opacity-75 rounded-sm text-2xl text-white transition-opacity duration-500">
+                          See more
+                          <a href="" class="bi-box-arrow-up-right pl-[0.3em] bi"> </a>
+                        </div>
+                      </div>
                     <!-- Bottom half -->
-                    <div class="flex justify-center items-center rounded-b-lg w-full h-[65%]"> 
+                    <div class="flex justify-center items-start rounded-b-lg w-full h-[30vh]">
                         <!-- Inner container -->
                         <div class="flex flex-col w-[95%] h-[70%]">
                             <!-- Title -->
-                            <div class="pb-2 font-semibold"> 
-                                Repair Labs
+                            <div class="pb-2 font-bold text-xl">
+                                Repair Lab
                             </div>
                             <!-- Blurb -->
-                            <div class="leading-4"> 
-                                A website for Repair Labs, a volunteer group dedicated to reducing waste through repairs and skill-sharing.
+                            <div class="text-md leading-4">
+                                A website for Repair Lab, a volunteer group dedicated to reducing waste by repairing household items and skill-sharing.
+                            </div>
+                            <div class="flex flex-wrap gap-1 py-4 w-full h-full leading-4">
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> Agile Software Development </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> React </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> JavaScript </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> JQuery </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> TypeScript </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> HTML </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> CSS </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> Tailwind</span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> Figma </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> GitHub </span>
                             </div>
                         </div>
                     </div>
                 </div>
+
 
                 <!-- Finaincal Planning Charts -->
-                <div class="flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[25vw] h-[20vh] sm:h-[30vh] hover:cursor-pointer">
+                <div class="relative flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[30vw] h-[20vh] sm:h-[60vh] transition-transform hover:-translate-y-2 duration-300 hover:cursor-pointer group">
                     <!-- Top half -->
-                    <div class="bg-white bg-contain bg-no-repeat bg-center m-2 rounded-sm w-full h-[35%]"> 
-
-                    </div>
+                    <div class="relative justify-between bg-white bg-cover bg-center m-2 rounded-sm w-full h-[30vh] group">
+                        <div class="absolute inset-0 flex justify-center items-center">
+                          <img src="/src/images/ThroughlifeLogo.svg" alt="Centered Image" class="w-[70%] h-[70%] object-contain">
+                        </div>
+                
+                      
+                        <div class="group-hover:flex absolute inset-0 justify-center items-center hidden bg-black opacity-0 group-hover:opacity-75 rounded-sm text-2xl text-white transition-opacity duration-500">
+                          See more
+                          <a href="" class="bi-box-arrow-up-right pl-[0.3em] bi"> </a>
+                        </div>
+                      </div>
                     <!-- Bottom half -->
-                    <div class="flex justify-center items-center rounded-b-lg w-full h-[65%]"> 
+                    <div class="flex justify-center items-start rounded-b-lg w-full h-[30vh]">
                         <!-- Inner container -->
                         <div class="flex flex-col w-[95%] h-[70%]">
                             <!-- Title -->
-                            <div class="pb-2 font-semibold"> 
-                                Finaincal Planning Charts
+                            <div class="pb-2 font-bold text-xl">
+                                Financial Planning Charts
                             </div>
                             <!-- Blurb -->
-                            <div class="leading-4"> 
-                                Interactive charts for Thoughlife Finanical Solutions to show finincal projections to clients.
+                            <div class="text-md leading-4">
+                                Interactive charts created for Thoughlife Financial Solutions to visualize their clients' financial projections.
+                            </div>
+                            <div class="flex flex-wrap gap-1 py-4 w-full h-full leading-4">
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> Data Cleaning </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> Data Visualisation </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> Visual Basic </span>
+                                <span class="inline-flex items-center bg-secondary px-[0.6em] py-[0.2em] rounded-l-xl rounded-r-xl font-semibold text-white text-xs"> MS Excel </span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-            
-                <!-- Education site -->
-                <div class="flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[25vw] h-[20vh] sm:h-[30vh] hover:cursor-pointer">
-                    <!-- Top half -->
-                    <div class="bg-white bg-contain bg-no-repeat bg-center m-2 rounded-sm w-full h-[35%]"> 
-
-                    </div>
-                    <!-- Bottom half -->
-                    <div class="flex justify-center items-center rounded-b-lg w-full h-[65%]"> 
-                        <!-- Inner container -->
-                        <div class="flex flex-col w-[95%] h-[70%]">
-                            <!-- Title -->
-                            <div class="pb-2 font-semibold"> 
-                                Education site
-                            </div>
-                            <!-- Blurb -->
-                            <div class="leading-4"> 
-                                A interactive website for learning all about lingustics, chemistry and maths.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Pirate Sails -->
-                <div class="flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[25vw] h-[20vh] sm:h-[30vh] hover:cursor-pointer">
-                    <!-- Top half -->
-                    <div class="bg-white bg-contain bg-no-repeat bg-center m-2 rounded-sm w-full h-[35%]"> 
-
-                    </div>
-                    <!-- Bottom half -->
-                    <div class="flex justify-center items-center rounded-b-lg w-full h-[65%]"> 
-                        <!-- Inner container -->
-                        <div class="flex flex-col w-[95%] h-[70%]">
-                            <!-- Title -->
-                            <div class="pb-2 font-semibold"> 
-                                Pirate Sails
-                            </div>
-                            <!-- Blurb -->
-                            <div class="leading-4"> 
-                                A fun rogue-like sailing game with realistic mechanics and online mulitplayer.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Chrome Extension -->
-                <div class="flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[25vw] h-[20vh] sm:h-[30vh] hover:cursor-pointer">
-                    <!-- Top half -->
-                    <div class="bg-white bg-contain bg-no-repeat bg-center m-2 rounded-sm w-full h-[35%]"> 
-
-                    </div>
-                    <!-- Bottom half -->
-                    <div class="flex justify-center items-center rounded-b-lg w-full h-[65%]"> 
-                        <!-- Inner container -->
-                        <div class="flex flex-col w-[95%] h-[70%]">
-                            <!-- Title -->
-                            <div class="pb-2 font-semibold"> 
-                                Chrome Extension
-                            </div>
-                            <!-- Blurb -->
-                            <div class="leading-4"> 
-                                A cool Chrome extension
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
     </div>
 </div>

@@ -13,7 +13,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       'primary': '#112c58', 
-      'secondary':'#024890',
+      'secondary':'#0355a7',
       'accent': '#FFD700',
 
       'primary-dark': '#0c1a31', 
@@ -23,8 +23,8 @@ module.exports = {
       'primary-faint': '#d6ecffff', 
 
       'black':'#000000',
-      'dark-grey':'#e6efff',
-      'grey': "#f9f9f9",
+      'dark-grey':'#dadfe7',
+      'grey': "#f2f4f6",
       'white': '#ffffff',
 
       'dark-white': "#e8e8e8",

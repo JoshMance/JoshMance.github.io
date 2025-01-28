@@ -184,3 +184,127 @@
 
             
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Repair Labs -->
+                <div class="flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[25vw] h-[20vh] sm:h-[30vh] hover:cursor-pointer">
+                    <!-- Top half -->
+                    <div class="bg-white bg-contain bg-no-repeat bg-center m-2 rounded-sm w-full h-[35%]"> 
+
+                    </div>
+                    <!-- Bottom half -->
+                    <div class="flex justify-center items-center rounded-b-lg w-full h-[65%]"> 
+                        <!-- Inner container -->
+                        <div class="flex flex-col w-[95%] h-[70%]">
+                            <!-- Title -->
+                            <div class="pb-2 font-semibold"> 
+                                Repair Labs
+                            </div>
+                            <!-- Blurb -->
+                            <div class="leading-4"> 
+                                A website for Repair Labs, a volunteer group dedicated to reducing waste through repairs and skill-sharing.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Finaincal Planning Charts -->
+                <div class="flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[25vw] h-[20vh] sm:h-[30vh] hover:cursor-pointer">
+                    <!-- Top half -->
+                    <div class="bg-white bg-contain bg-no-repeat bg-center m-2 rounded-sm w-full h-[35%]"> 
+
+                    </div>
+                    <!-- Bottom half -->
+                    <div class="flex justify-center items-center rounded-b-lg w-full h-[65%]"> 
+                        <!-- Inner container -->
+                        <div class="flex flex-col w-[95%] h-[70%]">
+                            <!-- Title -->
+                            <div class="pb-2 font-semibold"> 
+                                Finaincal Planning Charts
+                            </div>
+                            <!-- Blurb -->
+                            <div class="leading-4"> 
+                                Interactive charts for Thoughlife Finanical Solutions to show finincal projections to clients.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            
+                <!-- Education site -->
+                <div class="flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[25vw] h-[20vh] sm:h-[30vh] hover:cursor-pointer">
+                    <!-- Top half -->
+                    <div class="bg-white bg-contain bg-no-repeat bg-center m-2 rounded-sm w-full h-[35%]"> 
+
+                    </div>
+                    <!-- Bottom half -->
+                    <div class="flex justify-center items-center rounded-b-lg w-full h-[65%]"> 
+                        <!-- Inner container -->
+                        <div class="flex flex-col w-[95%] h-[70%]">
+                            <!-- Title -->
+                            <div class="pb-2 font-semibold"> 
+                                Education site
+                            </div>
+                            <!-- Blurb -->
+                            <div class="leading-4"> 
+                                A interactive website for learning all about lingustics, chemistry and maths.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Pirate Sails -->
+                <div class="flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[25vw] h-[20vh] sm:h-[30vh] hover:cursor-pointer">
+                    <!-- Top half -->
+                    <div class="bg-white bg-contain bg-no-repeat bg-center m-2 rounded-sm w-full h-[35%]"> 
+
+                    </div>
+                    <!-- Bottom half -->
+                    <div class="flex justify-center items-center rounded-b-lg w-full h-[65%]"> 
+                        <!-- Inner container -->
+                        <div class="flex flex-col w-[95%] h-[70%]">
+                            <!-- Title -->
+                            <div class="pb-2 font-semibold"> 
+                                Pirate Sails
+                            </div>
+                            <!-- Blurb -->
+                            <div class="leading-4"> 
+                                A fun rogue-like sailing game with realistic mechanics and online mulitplayer.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Chrome Extension -->
+                <div class="flex flex-wrap bg-white dark:bg-dark-upper shadow-light shadow-medium dark:shadow-none rounded-lg w-[80vw] sm:w-[25vw] h-[20vh] sm:h-[30vh] hover:cursor-pointer">
+                    <!-- Top half -->
+                    <div class="bg-white bg-contain bg-no-repeat bg-center m-2 rounded-sm w-full h-[35%]"> 
+
+                    </div>
+                    <!-- Bottom half -->
+                    <div class="flex justify-center items-center rounded-b-lg w-full h-[65%]"> 
+                        <!-- Inner container -->
+                        <div class="flex flex-col w-[95%] h-[70%]">
+                            <!-- Title -->
+                            <div class="pb-2 font-semibold"> 
+                                Chrome Extension
+                            </div>
+                            <!-- Blurb -->
+                            <div class="leading-4"> 
+                                A cool Chrome extension
+                            </div>
+                        </div>
+                    </div>
+                </div>
