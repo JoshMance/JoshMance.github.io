@@ -1,18 +1,18 @@
 import { initNavbar } from "./components/navbar.js";
-import { initFooter } from "./components/footer.js";
 import { initHomeSection } from "./components/homeSection.js";
+import { initAboutSection } from "./components/aboutSection.js";
 import { initSkillsSection } from "./components/skillsSection.js";
 import { initProjectsSection } from "./components/projectsSection.js";
-import { initExperienceSection } from "./components/experienceSection.js";
 import { initContactSection } from "./components/contactSection.js";
+import { initFooter } from "./components/footer.js";
 
 $(document).ready(function() {
   const components = [
     { selector: '#homeSection', path: './src/components/homeSection.html', init: initHomeSection },
     { selector: '#navbar', path: './src/components/navbar.html', init: initNavbar },
+    { selector: '#aboutSection', path: './src/components/aboutSection.html', init: initAboutSection },
     { selector: '#skillsSection', path: './src/components/skillsSection.html', init: initSkillsSection },
     { selector: '#projectsSection', path: './src/components/projectsSection.html', init: initProjectsSection },
-    { selector: '#experienceSection', path: './src/components/experienceSection.html', init: initExperienceSection },
     { selector: '#contactSection', path: './src/components/contactSection.html', init: initContactSection },
     { selector: '#footer', path: './src/components/footer.html', init: initFooter }
   ];

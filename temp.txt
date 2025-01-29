@@ -308,3 +308,81 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+
+
+
+
+                  <div class="flex sm:flex-row flex-col justify-between items-center w-[100vw] h-[50vh]">
+        <div class="justify-items-end opacity-0 w-[90vw] sm:w-[50vw] h-min transition-all translate-x-[-50px] duration-700 ease-in-out fadeFromLeft">
+            <div class="flex sm:flex-wrap sm:gap-4 sm:pl-[2vw] sm:w-[45vw] sm:h-[40vh] overflow-hidden">
+                <img class="bg-white dark:bg-dark-lower shadow-medium p-2 rounded-sm h-[7vw] transform transition-transform hover:translate-y-[-5px] duration-400 icon object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" loading="lazy"/>
+                <img class="bg-white dark:bg-dark-lower shadow-medium p-2 rounded-sm h-[7vw] transform transition-transform hover:translate-y-[-5px] duration-400 icon object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" loading="lazy"/>
+                <img class="bg-white dark:bg-dark-lower shadow-medium p-2 rounded-sm h-[7vw] transform transition-transform hover:translate-y-[-5px] duration-400 icon object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" loading="lazy"/>
+                <img class="bg-white dark:bg-dark-lower shadow-medium p-2 rounded-sm h-[7vw] transform transition-transform hover:translate-y-[-5px] duration-400 icon object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neo4j/neo4j-original-wordmark.svg" loading="lazy"/>
+                <img class="bg-white dark:bg-dark-lower shadow-medium p-2 rounded-sm h-[7vw] transform transition-transform hover:translate-y-[-5px] duration-400 icon object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" loading="lazy"/>
+                <img class="bg-white dark:bg-dark-lower shadow-medium p-2 rounded-sm h-[7vw] transform transition-transform hover:translate-y-[-5px] duration-400 icon object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-original.svg" loading="lazy"/>
+                <img class="bg-white dark:bg-dark-lower shadow-medium p-2 rounded-sm h-[7vw] transform transition-transform hover:translate-y-[-5px] duration-400 icon object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" loading="lazy"/>
+                <img class="bg-white dark:bg-dark-lower shadow-medium p-2 rounded-sm h-[7vw] transform transition-transform hover:translate-y-[-5px] duration-400 icon object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg"loading="lazy" />
+                <img class="bg-white dark:bg-dark-lower shadow-medium p-2 rounded-sm h-[7vw] transform transition-transform hover:translate-y-[-5px] duration-400 icon object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" loading="lazy"/>
+
+                
+            </div>
+        </div>
+        <div class="opacity-0 w-[50vw] h-min transition-all translate-x-[50px] duration-700 ease-in-out fadeFromRight">
+            <div class="flex sm:flex-col bg-white dark:bg-dark-lower shadow-medium dark:shadow-none sm:px-[2vw] sm:w-[45vw] sm:h-[40vh] text-pretty sm:text-xl overflow-hidden">
+                <span class="flex flex-col justify-start pt-[2vh] w-[45vw] h-[10vh] font-semibold text-md sm:text-xl lg:text-2xl">
+                    Frontend
+                </span>
+                <span>  Designing and analyzing algorithms is one of my passions. I'm fascinated with discovering ways to improve the efficiency of applicationss.</span>
+                <span> During my undergrad, I achieved distinction-level grades in the units 'Data Structures and Algorithms' and 'High Performance Computing.'</span>
+                <span>  I was actively involved in team-based competitive programming, where I trained to design/apply algorithms to novel problems.</span>
+                <span> I am proficient in a range of languages, including JavaScript, C, Python, SQL, Neo4j, R, Java and Visual Basic. </span>
+                <span>  I have extensive experience using the Git/GitHub version control system. </span>
+                <span class="overflow-hidden">  I take best practices seriously and write readable, well-documented code. </span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="flex sm:flex-row flex-col justify-between items-center w-[100vw] h-[50vh]">
+        <div class="justify-items-end opacity-0 w-[90vw] sm:w-[50vw] h-min transition-all translate-x-[-50px] duration-700 ease-in-out fadeFromLeft">
+            <div class="flex sm:flex-col bg-white dark:bg-dark-lower shadow-medium dark:shadow-none sm:px-[2vw] sm:w-[45vw] sm:h-[40vh] text-pretty sm:text-xl overflow-hidden">
+                <span class="flex flex-col justify-start pt-[2vh] w-[45vw] h-[10vh] font-semibold text-md sm:text-xl lg:text-2xl">
+                    Frontend
+                </span>
+                <span class="overflow-hidden">  My communication skills are critical to who I am as a developer.
+                    I have worked in the tech department of my local Officeworks.
+                    I love working with customers to understand their needs and explain how technology works.
+                    In my 1 year, I have been given multiple awards for excellent customer service.
+
+                    Capstone project - talking with client. simple, easy, proffesional.
+                    I enjoy scietiific report writing, and have experience writing reports using LaTeX.
+                    5 years tutoring. Communcating skills.
+                    I create educational martirials on everyting from lingustics to chemsitry.
+                    In my first year, I took electives in Marketing and Consumer behavour, achieivng distinctions for both.</span>
+            </div>
+        </div>
+        <div class="opacity-0 w-[50vw] h-min transition-all translate-x-[50px] duration-700 ease-in-out fadeFromRight">
+            <div class="flex sm:flex-wrap sm:gap-4 sm:pl-[2vw] sm:w-[45vw] sm:h-[40vh] overflow-hidden">
+                
+                <div class="bg-white dark:bg-dark-lower shadow-medium dark:shadow-none p-2 rounded-sm w-[14vw] h-[7vw] transform transition-transform hover:translate-y-[-5px] duration-400 icon object-contain">
+                    <div class="justify-self-center bg-secondary p-4 rounded-lg w-full h-full text-2xl text-white underline-red align-middle">
+                        Officeworks
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-dark-lower shadow-medium dark:shadow-none p-2 rounded-sm w-[21vw] h-[7vw] transform transition-transform hover:translate-y-[-5px] duration-400 icon object-contain">
+                    <div class="justify-self-center border-4` border-accent bg-[#dc0821] p-4 rounded-lg w-full h-[80%] font-semibold text-[] text-white text-xl align-middle">
+                        NumberWorks'nWords
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>

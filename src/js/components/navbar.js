@@ -7,7 +7,7 @@ export function initNavbar () {
     var highlightIsMoving =  false;
     var pageIsScrolling = false;
 
-   $('#navbar').addClass('sticky top-0 z-10 bg-white h-[2vh] sm:h-[7vh]');
+   $('#navbar').addClass('sticky top-0 z-10 bg-white');
 
 
    // Ensuring thr logo completes its rotation animation even after 
@@ -78,7 +78,7 @@ export function initNavbar () {
     const $highlight = $('<div></div>').css({
         position: 'absolute',
         left: $RefButtonInner.children().first().offset().left,
-        top: $RefButtonInnerText.offset().top,
+        top: $RefButtonInnerText.offset().top - 2,
         height: $RefButtonInnerText.innerHeight(),
         width:  $RefButton.width(),
         "border-bottom": "0.15rem solid #f7e018",
