@@ -158,6 +158,24 @@
     -o-transition: ease-out 0.4s;
 }
 
+
+
+#profilePictureWrapper::after {
+    content: "";
+    display: block;
+    position: relative;
+    left: 0;
+    top: -100px;
+    height: 0;
+    border-radius: 50%;
+    height: 10%;
+    aspect-ratio: 1;
+    background-color: var(--secondary);
+}
+  
+
+
+
 .shadow-even {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 0px 2px 0px, rgba(60, 64, 67, 0.15) 0px 0px 3px 1px;
 }
@@ -216,19 +234,19 @@
     border-bottom: 15vh solid var(--color);
 }
 
-/* .divideRight::after {
+.divideRight::after {
     display: block;
     content: " ";
     z-index: 1;
-    width: 100vw;
-    height: 1vh;
+    width: 201vw;
+    height: 2vh;
     background-color: var(--accent);
-    transform: rotate(-4deg) translate(-100vw, -7vh);
-    -webkit-transform: rotate(-4deg) translate(-100vw, -7vh);
-    -moz-transform: rotate(-4deg) translate(-100vw, -7vh);
-    -ms-transform: rotate(-4deg) translate(-100vw, -7vh);
-    -o-transform: rotate(-4deg) translate(-100vw, -7vh);
-} */
+    transform: translateX(-101vw)  rotate(-4deg);
+    -webkit-transform: translateX(-101vw)  rotate(-4deg);
+    -moz-transform: translateX(-101vw)  rotate(-4deg);
+    -ms-transform: translateX(-101vw)  rotate(-4deg);
+    -o-transform: translateX(-101vw)  rotate(-4deg);
+}
 
 .flipped {
     transform: rotateY(180deg);

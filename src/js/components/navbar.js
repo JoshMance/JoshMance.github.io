@@ -70,6 +70,7 @@ export function initNavbar () {
 
     splitTextIntoChars($('.navButtonText'));
 
+    
     // Creating the highlight element
     const $RefButton = $('#homeNavButton');
     const $RefButtonInner = $RefButton.children().first();
@@ -78,7 +79,7 @@ export function initNavbar () {
     const $highlight = $('<div></div>').css({
         position: 'absolute',
         left: $RefButtonInner.children().first().offset().left,
-        top: $RefButtonInnerText.offset().top - 2,
+        top: $RefButtonInnerText.offset().top - 1,
         height: $RefButtonInnerText.innerHeight(),
         width:  $RefButton.width(),
         "border-bottom": "0.15rem solid #f7e018",
@@ -106,8 +107,8 @@ export function initNavbar () {
             // Stop condition: When the highlight is close enough to the target
             if (Math.abs(leftDifference) > 1 || Math.abs(widthDifference) > 1) {
                 // Gradually adjust position and size
-                let newLeft = currentLeft + leftDifference * 0.2; // Move 10% of the distance
-                let newWidth = currentWidth + widthDifference * 0.2; // Resize 10% of the difference
+                let newLeft = currentLeft + leftDifference * 0.25; // Move 10% of the distance
+                let newWidth = currentWidth + widthDifference * 0.25; // Resize 10% of the difference
         
                 $highlight.css("left", newLeft);
                 $highlight.css("width", newWidth);
@@ -173,7 +174,7 @@ export function initNavbar () {
 
 
 
-    $('.navButton').on('click', function() {
+    $('.navButton').on('mousedown', function() {
         pageIsScrolling = true;
         scrollToTargetSection($(this));
         pageIsScrolling = false;
@@ -210,32 +211,18 @@ export function initNavbar () {
         $('#dark-mode-toggle-hamburger').children("*").toggleClass("bi-moon-stars-fill");
     });
 
-    // Navbar scroll handlers 
-    
-
-    $( document ).on('click', '#homeNavButton', function() {
-        scroll({top: 0, left: 0, behavior: "smooth"});
-    });
-    $( document ).on('click', '#returnNavButton', function() {
-        scroll({top: 0, left: 0, behavior: "smooth"});
-    });
-
-    $( document ).on('click', '#skillsNavButton', function() {
-        let $title = $('#skills-section-title');
-        let distance = $title.position().top - $title.height();
-        scroll({top: distance, left: 0, behavior: "smooth"});
-    });
-
-    $( document ).on('click', '#projectsNavButton', function() {
-        let $title = $('#projects-section-title');
-        let distance = $title.position().top - $title.height();
-        scroll({top: distance, left: 0, behavior: "smooth"});
-    });
-
-    $( document ).on('click', '#contactNavButton', function() {
-        let $title = $('#contact-section-title');
-        let distance = $title.position().top - $title.height();
-        scroll({top: distance, left: 0, behavior: "smooth"});
+    // Navbar Button click handler
+    $(document).on("click", "[id$='NavButton']", function () {
+        const sectionMap = {
+            homeNavButton: 0,
+            aboutNavButton: "#aboutSection",
+            skillsNavButton: "#skills-section-title",
+            projectsNavButton: "#projectsSection",
+            contactNavButton: "#contactSection",
+        };
+        const target = sectionMap[this.id];
+        const top = target === 0 ? 0 : $(target).position().top;
+        scroll({ top, left: 0, behavior: "smooth" });
     });
 
 

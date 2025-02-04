@@ -18,12 +18,15 @@ export function initHomeSection() {
         // Add the current character to the div
         if (index < text.length) {
             let char = text[index];
-            let speed = getRandomInt(20, 30);
+            let speed = 15;
    
             // Adjust speed for spaces and punctuation
             if (char === " ") {
                 speed += getRandomInt(30, 40);
             } else if (char === ",") {
+                speed += 800;
+            }
+            else if (isEmoji(char)) {
                 speed += 1200;
             }
    
@@ -43,13 +46,19 @@ export function initHomeSection() {
    
             let spanClass = "";
             spanClass += insideAccent ? "text-accent " : "";
-            spanClass += isbold ? "font-semibold text-[2rem]" : "";
-   
+            spanClass += isbold ? "font-semibold " : "";
+
             let newText = (insideAccent || isbold)
                 ? `<span class="${spanClass.trim()}">${char}</span>`
                 : char;
    
             $div.append(newText);
+
+
+            if (isbold) {
+                $div.children().last().css("font-size", "2.2rem");
+            }
+    
    
             // Add extra elements for punctuation
             if (char === ",") {
@@ -58,7 +67,7 @@ export function initHomeSection() {
                 $div.append("<div></div>");
             } else if (isEmoji(char)) {
                 // Add the cursor and a new longer line
-                $div.append('<span class="font-bold text-[2rem] text-accent cursor"> |</span>');
+                $div.append('<span class="font-bold text-accent cursor"> |</span>');
                 $div.append("<div> &nbsp;</div>");
             }
             else {
@@ -91,6 +100,11 @@ export function initHomeSection() {
     //     console.log("Mouse position: X=" + event.pageX + ", Y=" + event.pageY);
     // });
 
+    $("#downArrow").click((e) => {
+        $('#aboutNavButton').mousedown();
+        $("#downArrow").fadeOut();
+    });
+
     $("#downArrow").toggle();
     setTimeout(() => {
         $("#downArrow").fadeIn();
@@ -99,10 +113,7 @@ export function initHomeSection() {
         }, 10000);
     }, 6000);
 
-    $("#downArrow").click((e) => {
-        $('#skillsNavButton').mousedown();
-        $("#downArrow").fadeOut();
-    });
+ 
 
 
 
