@@ -18,6 +18,26 @@ $(document).ready(function() {
   ];
 
 
+    var $scrollButton = $('#scrollToTop');
+    $scrollButton.fadeOut(0);
+    
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > $(window).height()/2) {
+            $scrollButton.fadeIn(300);
+        } else {
+            $scrollButton.fadeOut(300);
+        }
+    });
+
+    $scrollButton .click((e) => {
+      $('#homeNavButton').mousedown();
+    });
+  
+
+
+  $scrollButton.on('click', function () {
+      $('html, body').animate({ scrollTop: 0 }, 500);
+  });
 
   // Keep track of how many components have loaded
   let componentsLoaded = 0;

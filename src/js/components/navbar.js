@@ -130,8 +130,9 @@ export function initNavbar () {
 
     // Creating a scroll observer to determine the current section and toggle the navbar style
     const scrollObserver = new IntersectionObserver((entries) => {
-        entries.slice().reverse().forEach(entry => {
+        entries.slice().forEach(entry => {
             if (entry.isIntersecting) {
+                console.log($sections)
                 // Finding the nav button that targets this section
                 var $navButton = $(`div[target="${entry.target.id}"]`);
                 if (!pageIsScrolling) {
@@ -183,9 +184,11 @@ export function initNavbar () {
 
 
    
-    function close_hamburger_menu() {
+    function toggle_hamburger_menu() {
         $('#hamburger-menu').toggleClass('hidden');
         $('#hamburger-menu').toggleClass('flex');
+        $('#hamburger-menu').toggleClass("border-2-accent")
+
 
         $('#hamburger-menu-button').children("*").toggleClass("bi bi-list");
         $('#hamburger-menu-button').children("*").toggleClass("bi bi-x-lg");
@@ -193,7 +196,7 @@ export function initNavbar () {
 
     // Hamburger menu toggle 
     $(document).on('click', '#hamburger-menu-button', function() {
-        close_hamburger_menu();
+        toggle_hamburger_menu();
     });
 
     // Dark mode toggle 
@@ -214,9 +217,9 @@ export function initNavbar () {
     // Navbar Button click handler
     $(document).on("click", "[id$='NavButton']", function () {
         const sectionMap = {
-            homeNavButton: 0,
+            homeNavButton: "#homeSection",
             aboutNavButton: "#aboutSection",
-            skillsNavButton: "#skills-section-title",
+            skillsNavButton: "#skillsSection",
             projectsNavButton: "#projectsSection",
             contactNavButton: "#contactSection",
         };
@@ -231,20 +234,20 @@ export function initNavbar () {
         var distance = $('#about-section').position().top - 4*$('nav').height() 
         scroll({top: distance, left: 0, behavior: "smooth"});
 
-        close_hamburger_menu();
+        toggle_hamburger_menu();
     });
 
     $( document ).on('click', '#projects-hamburger', function() {
         var distance = $('#projects-section').position().top - 4*$('nav').height() 
         scroll({top: distance, left: 0, behavior: "smooth"});
         
-        close_hamburger_menu();
+        toggle_hamburger_menu();
     });
 
     $( document ).on('click', '#contact-hamburger', function() {
         var distance = $('#contact-section').position().top - 4*$('nav').height()  
         scroll({top: distance, left: 0, behavior: "smooth"});
 
-        close_hamburger_menu();
+        toggle_hamburger_menu();
     });
 };

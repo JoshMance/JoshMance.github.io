@@ -1,3 +1,7 @@
 export function initProjectsSection() {
-    var temp = 1;
+    
+    $('.projectBox').on('mousedown', function() {
+        $(this).toggle("shadow-medium");
+        $(this).toggle("shadow-high");
+    });
 }

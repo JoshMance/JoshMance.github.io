@@ -3,7 +3,6 @@ export function initSkillsSection() {
     const fadeFromLeftObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                console.log($(entry.target).offset().left);
                 entry.target.classList.remove('opacity-0', 'translate-x-[-40px]');
                 entry.target.classList.add('opacity-100', 'translate-x-0');
             }
