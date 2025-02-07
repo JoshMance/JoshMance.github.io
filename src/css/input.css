@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* div {border: 1px solid #ff0000 ;} */
+/* * {border: 0.5px solid #000000 ;} */
 
 
 
@@ -157,6 +157,51 @@
     -ms-transition: ease-out 0.4s;
     -o-transition: ease-out 0.4s;
 }
+
+#hamburger-menu.open {
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+#hamburgerButton .line {
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+#hamburgerButton.open #topLine {
+    transform-origin: right;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+
+#hamburgerButton.open #middleLine {
+    opacity: 0;
+}
+
+#hamburgerButton.open #bottomLine {
+    transform-origin: right;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+
+
+
+
+
 
 #aboutPictureWrapper {
     position: relative;

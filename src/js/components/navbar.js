@@ -79,7 +79,7 @@ export function initNavbar () {
     const $highlight = $('<div></div>').css({
         position: 'absolute',
         left: $RefButtonInner.children().first().offset().left,
-        top: $RefButtonInnerText.offset().top - 1,
+        top: $RefButtonInnerText.offset().top -2,
         height: $RefButtonInnerText.innerHeight(),
         width:  $RefButton.width(),
         "border-bottom": "0.15rem solid #f7e018",
@@ -182,21 +182,21 @@ export function initNavbar () {
     });
     
 
-
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > $(window).height()/2) {
+            $('#hamburger-menu').removeClass("bg-white opacity-90 text-black")
+            $('#hamburger-menu').addClass("bg-primary opacity-100 text-white")
+        } else {
+            $('#hamburger-menu').removeClass("bg-primary opacity-100 text-white")
+            $('#hamburger-menu').addClass("bg-white opacity-90 text-black")
+        }
+    });
    
-    function toggle_hamburger_menu() {
-        $('#hamburger-menu').toggleClass('hidden');
-        $('#hamburger-menu').toggleClass('flex');
-        $('#hamburger-menu').toggleClass("border-2-accent")
-
-
-        $('#hamburger-menu-button').children("*").toggleClass("bi bi-list");
-        $('#hamburger-menu-button').children("*").toggleClass("bi bi-x-lg");
-    } 
-
     // Hamburger menu toggle 
-    $(document).on('click', '#hamburger-menu-button', function() {
-        toggle_hamburger_menu();
+    $(document).on('mousedown', '#hamburgerButton', function() {
+        $('#hamburger-menu').toggleClass('hidden');
+        $('#hamburger-menu').toggleClass('open');
+        $('#hamburgerButton').toggleClass("open");
     });
 
     // Dark mode toggle 

@@ -3,7 +3,7 @@
     <!-- Brand -->
     <div class="flex flex-row justify-center items-center rtl:space-x-reverse font-normal hover:cursor-pointer align-middle">
       
-      <div id ="home" class="flex justify-center items-center p-1">
+      <div id ="home" class="flex justify-center items-center">
         <img id="logo" src="/src/images/Logo.svg" alt="Logo" class="rounded-full w-11 h-11">
       </div>
 
@@ -19,10 +19,10 @@
 
     <div class="flex flex-row">
       <!-- Hamburger menu button -->
-      <a href="#" id="dark-mode-toggle-hamburger" class="block justify-end sm:hidden mr-1 pt-1.5 text-accent text-xl dark:text-accent-dull hover:cursor-pointer hover:scale-110"><i class="bi-brightness-high-fill bi"></i></a>
-
-      <button type="button"  id="hamburger-menu-button" class="sm:hidden mr-4 w-10 h-10 text-3xl"   target = "hamburger-menu">
-            <i class="bi bi-list"></i>
+      <button type="button"  id="hamburgerButton" class="flex flex-col justify-evenly border-0 sm:hidden mr-[2vw] w-[10vw] h-[90%] aspect-square" target = "hamburger-menu">
+              <div id="topLine" class="block border-0 bg-white rounded-lg w-[75%] h-[3px] line"></div>
+              <div id="middleLine" class="block border-0 bg-white rounded-lg w-[75%] h-[3px] line"></div>
+              <div id="bottomLine" class="block border-0 bg-white rounded-lg w-[75%] h-[3px] line"></div>
       </button>
     </div>
 
@@ -55,8 +55,8 @@
           </div>
         </li>
         <li class="">
-          <div class="flex flex-col justify-center items-center px-3 h-[6vh] hover:cursor-pointer hover"> 
-            <a href="#" id="dark-mode-toggle" class="flex flex-row items-center w-min h-full text-accent text-xl"><i class="bi-brightness-high-fill bi"></i></a>
+          <div class="flex flex-col justify-center items-center px-3 h-full hover:cursor-pointer hover"> 
+            <a href="#" id="dark-mode-toggle" class="flex flex-row justify-center items-center w-min h-full text-3xl text-accent sm:text-2xl"><i class="bi-brightness-high-fill bi"></i></a>
           </div>
         </li>
       </ul>
@@ -67,20 +67,20 @@
 </nav>
 
 <!-- nav items phone --> 
-<nav id="hamburger-menu" class="top-12 right-0 z-50 fixed flex-col items-center gap-2 hidden bg-primary dark:bg-primary-dark shadow-medium mt-2 px-4 rounded-xl w-min text-md text-white">
-  <div id = "homeHamburgerButton" target = "homeSection"  class="py-2 origin-center navButton">
+<nav id="hamburger-menu" class="top-0 right-0 z-50 fixed flex-col justify-between items-left hidden bg-white opacity-90 shadow-medium mt-[7vh] mr-[2vw] p-4 border-r-[6px] rounded-l-md w-min font-semibold text-primary text-xl">
+  <div id = "homeHamburgerButton" target = "homeSection"  class="pb-2 navButton">
     Home
 </div>
-  <div id = "aboutHamburgerButton" target = "aboutSection"  class="py-2 origin-center navButton">
+  <div id = "aboutHamburgerButton" target = "aboutSection"  class="py-2 navButton">
     About
 </div>
-<div id = "projectsHamburgerButton" target = "projectsSection"  class="py-2 origin-top navButton">
+<div id = "projectsHamburgerButton" target = "projectsSection"  class="py-2 navButton">
     Projects
   </div>
-  <div id = "skillsHamburgerButton" target = "skillsSection"  class="py-2 origin-top navButton">
+  <div id = "skillsHamburgerButton" target = "skillsSection"  class="py-2 navButton">
       Skills
   </div>
-  <div id = "contactHamburgerButton" target = "contactSection" class="py-2 origin-top navButton">
+  <div id = "contactHamburgerButton" target = "contactSection" class="py-2 navButton">
     Contact
   </div>
 </nav>
