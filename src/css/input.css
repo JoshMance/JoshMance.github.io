@@ -62,6 +62,7 @@
     position: relative;
 }
 
+
 #loadingScreen {
     position: fixed;
     top: 0;
@@ -158,6 +159,21 @@
     -o-transition: ease-out 0.4s;
 }
 
+
+#dark-mode-toggle {
+    transition: ease-out 0.4s;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    -ms-transition: ease-out 0.4s;
+    -o-transition: ease-out 0.4s;
+}
+
+#dark-mode-toggle.active {
+    opacity: 50%;
+}
+
+
+
 #hamburger-menu.open {
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
@@ -196,11 +212,6 @@
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
 }
-
-
-
-
-
 
 
 #aboutPictureWrapper {

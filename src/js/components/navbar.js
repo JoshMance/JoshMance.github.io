@@ -201,11 +201,13 @@ export function initNavbar () {
 
     // Dark mode toggle 
     $(document).on('click', '#dark-mode-toggle', function() {
+
+        const $icon = $('#dark-mode-toggle').children("*");
+        $icon.toggleClass("bi-brightness-high-fill bi-moon-stars-fill");
         $('*').toggleClass("dark");
 
 
-        $('#dark-mode-toggle').children("*").toggleClass("bi-brightness-high-fill");
-        $('#dark-mode-toggle').children("*").toggleClass("bi-moon-stars-fill");
+
     });
 
     $(document).on('click', '#dark-mode-toggle-hamburger', function() {
