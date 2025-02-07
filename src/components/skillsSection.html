@@ -3,21 +3,21 @@
     <div class="divideCentre" style="--color: var(--grey);"> </div>
 
     <!-- Title -->
-    <div id="skills-section-title" class="flex flex-col justify-center pb-[10vh] w-full sm:h-[20vh] font-semibold text-3xl text-center sm:text-4xl">
-        My Skills
-    </div>
+        <div id="about-section-title" class="flex flex-col justify-center my-[5vh] w-full font-semibold text-3xl text-center sm:text-4xl">
+            My Skills
+        </div>
 
     <!-- Frontend Web Development -->
     <div class="flex flex-col justify-start sm:justify-between items-center w-[90vw] h-auto">
         
-        <div class="flex flex-row justify-start items-end py-[2vh] w-[90vw] h-auto font-semibold text-md sm:text-xl lg:text-2xl align-middle">
+        <div class="flex flex-row justify-center sm:justify-start items-end py-[2vh] w-[80vw] h-auto font-semibold text-xl lg:text-2xl align-middle">
             Frontend Web Development
         </div>
 
-        <div class="flex sm:flex-row flex-col-reverse justify-center sm:justify-end items-start py-5 w-[80vw] sm:w-[80vw]">
+        <div class="flex sm:flex-row flex-col-reverse justify-center sm:justify-end items-start my-[1vh] w-[80vw] sm:w-[80vw]">
             
             <div class="flex flex-col justify-items-end opacity-0 my-[2vh] w-[80vw] sm:w-[55vw] transition-all translate-x-[-40px] duration-700 ease-in-out fadeFromLeft">
-                <ul class="flex flex-col gap-6 dark:bg-dark-lower w-[80vw] sm:w-[55vw] text-pretty sm:text-2xl leading-8 list-inside skills-list">
+                <ul class="flex flex-col gap-6 dark:bg-dark-lower w-[80vw] sm:w-[55vw] text-pretty text-xl sm:text-2xl leading-8 list-inside skills-list">
                     <li class="tick">I'm passionate about using graphic design to create intuitive and engaging user interfaces.</li>
                     <li class="tick">I'm fascinated by the cognitive science behind user behavior and how it shapes user experience.</li>
                     <li class="tick">I have a strong foundation in HTML, CSS, and JavaScript.</li>
@@ -52,7 +52,7 @@
                     <span class="mt-1 font-semibold text-xs sm:text-sm">React</span>
                 </div>
 
-                <div class="flex flex-col justify-center items-center bg-white dark:bg-dark-whiteshadow-medium p-4 rounded-sm w-[15vw] sm:w-[6vw] h-[15vw] sm:h-[6vw] text-black transition-transform hover:translate-y-[-5px] duration-400">
+                <div class="flex flex-col justify-center items-center bg-white dark:bg-dark-white shadow-medium p-4 rounded-sm w-[15vw] sm:w-[6vw] h-[15vw] sm:h-[6vw] text-black transition-transform hover:translate-y-[-5px] duration-400">
                     <img id="webdev-icon-6" class="w-[30vw] sm:w-[4vw] h-[30vw] sm:h-[4vw] object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" loading="lazy"/>
                     <span class="mt-1 font-semibold text-xs sm:text-sm">Figma</span>
                 </div>
@@ -78,12 +78,13 @@
     <div class="bg-white dark:bg-dark-low divideRight" style="--color: var(--secondary);"> </div>
 
     <!-- Efficient Coding -->
-    <div class="flex flex-col justify-start sm:justify-between items-center bg-secondary dark:bg-dark-middle w-[100vw] h-[100vh] sm:h-[80vh] text-white">
-        <div class="flex flex-row justify-end items-start w-[5vw] h-auto font-semibold text-md sm:text-xl lg:text-2xl whitespace-nowrap align-middle">
+    <div class="flex flex-col justify-start sm:justify-between items-center bg-secondary dark:bg-dark-middle w-[100vw] h-auto text-white">
+        <div class="flex flex-row justify-center items-end py-[2vh] w-[80vw] h-auto font-semibold text-xl lg:text-2xl align-middle">
             Efficient Coding
         </div>
-        <div class="flex sm:flex-row flex-col-reverse justify-center sm:justify-evenly items-center w-[90vw] sm:w-[90vw] h-[100vh]">
-            <div class="flex-wrap place-content-center gap-x-4 grid grid-rows-3 grid-flow-col opacity-0 sm:w-[30vw] h-[30vh] sm:h-[60vh] transition-all translate-x-[40px] duration-700 overflow-hidden ease-in-out fadeFromRight icons-panel">
+        <div class="flex sm:flex-row flex-col-reverse justify-center sm:justify-evenly items-center w-[90vw] sm:w-[90vw] h-auto">
+           
+            <div class="flex-grid place-content-start gap-4 sm:gap-x-4 grid grid-rows-2 sm:grid-rows-3 grid-flow-col opacity-0 my-[5vh] sm:pl-[2vw] w-[90vw] sm:w-[30vw] sm:h-[50vh] transition-all translate-x-[-40px] duration-700 overflow-hidden ease-in-out fadeFromLeft icons-panel">
                 <div class="flex flex-col justify-center items-center bg-white dark:bg-dark-lower shadow-medium p-4 rounded-sm w-[15vw] sm:w-[6vw] h-[15vw] sm:h-[6vw] text-black transition-transform hover:translate-y-[-5px] duration-400">
                     <img id="coding-icon-1" class="w-[30vw] sm:w-[4vw] h-[30vw] sm:h-[4vw] object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" loading="lazy"/>
                     <span class="mt-1 font-semibold text-xs sm:text-sm">Python</span>
@@ -124,16 +125,14 @@
                     <span class="mt-1 font-semibold text-xs sm:text-sm">JavaScript</span>
                 </div>
 
-                <div class="flex flex-col justify-center items-center bg-white dark:bg-dark-lower shadow-medium p-4 rounded-sm w-[15vw] sm:w-[6vw] h-[15vw] sm:h-[6vw] text-black transition-transform hover:translate-y-[-5px] duration-400">
+                <div class="sm:flex flex-col justify-center items-center hidden bg-white dark:bg-dark-lower shadow-medium p-4 rounded-sm w-[15vw] sm:w-[6vw] h-[15vw] sm:h-[6vw] text-black transition-transform hover:translate-y-[-5px] duration-400">
                     <img id="webdev-icon-4" class="w-[30vw] sm:w-[4vw] h-[30vw] sm:h-[4vw] object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" loading="lazy"/>
                     <span class="mt-1 font-semibold text-xs sm:text-sm">TypeScript</span>
                 </div>
-
-
-
             </div>
-            <div class="flex flex-col justify-items-end opacity-0 w-[80vw] sm:w-[55vw] h-[60vh] transition-all translate-x-[-40px] duration-700 ease-in-out fadeFromLeft">
-                <ul class="flex flex-col gap-6 dark:bg-dark-lower w-[80vw] sm:w-[55vw] h-[45vh] text-pretty sm:text-2xl leading-8 list-inside skills-list">
+
+            <div class="flex flex-col justify-items-end opacity-0 w-[80vw] sm:w-[55vw] transition-all translate-x-[-40px] duration-700 ease-in-out fadeFromLeft">
+                <ul class="flex flex-col gap-6 dark:bg-dark-lower w-[80vw] sm:w-[55vw] h-[45vh] text-pretty text-xl sm:text-2xl leading-8 list-inside skills-list">
                     <li class="leading-8 tick">Designing and analyzing algorithms is one of my passions. I'm fascinated with discovering ways to improve the efficiency of applications.</li>
                     <li class="leading-8 tick">I'm proficient with wide range of programing languages, and have extensive experience using the Git/GitHub version control system.</li>
                     <li class="leading-8 tick"> During my undergrad, I achieved distinction-level grades in the units 'Data Structures and Algorithms' and 'High Performance Computing.'</li>
@@ -146,8 +145,8 @@
     <div class="bg-secondary divideRight flipped" style="--color: var(--white);"> </div>
 
     <!-- Backend Web Development -->
-    <div class="flex flex-col justify-start sm:justify-between items-center bg-white dark:bg-dark-base w-[100vw] h-[60vh] sm:h-[70vh]">
-        <div class="flex flex-row justify-start items-end pb-4 w-[90vw] h-auto font-semibold text-md sm:text-xl lg:text-2xl align-middle">
+    <div class="flex flex-col justify-start sm:justify-between items-center w-[90vw] h-auto">
+        <div class="flex flex-row justify-center sm:justify-start items-end py-[2vh] w-[80vw] h-auto font-semibold text-xl lg:text-2xl align-middle">
             Backend Web Development
         </div>
         <div class="flex sm:flex-row flex-col-reverse justify-center sm:justify-end items-start w-[90vw] sm:w-[80vw] h-[60vh]">
