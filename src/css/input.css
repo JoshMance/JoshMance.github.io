@@ -88,6 +88,10 @@
     animation:spin 0.7s linear infinite;
 }
 
+.logo {
+    touch-action: manipulation;
+}
+
 
 
 #logo:hover {
@@ -172,9 +176,12 @@
     opacity: 50%;
 }
 
-
+#hamburgerButton {
+    touch-action: manipulation;
+}
 
 #hamburger-menu.open {
+    touch-action: manipulation;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;

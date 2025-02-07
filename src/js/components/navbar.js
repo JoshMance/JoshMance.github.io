@@ -95,7 +95,6 @@ export function initNavbar () {
             return;
         }
         else {
-
             highlightIsMoving = true;
 
             let currentLeft = $highlight.offset().left;
@@ -120,11 +119,8 @@ export function initNavbar () {
                 $highlight.css("left", targetHighlightLeft);
                 $highlight.css("width", targetHighlightWidth);
             }
-
             highlightIsMoving = false;
         }
-
-       
     }
 
 
@@ -132,7 +128,6 @@ export function initNavbar () {
     const scrollObserver = new IntersectionObserver((entries) => {
         entries.slice().forEach(entry => {
             if (entry.isIntersecting) {
-                console.log($sections)
                 // Finding the nav button that targets this section
                 var $navButton = $(`div[target="${entry.target.id}"]`);
                 if (!pageIsScrolling) {
@@ -150,11 +145,7 @@ export function initNavbar () {
     // Observe each section for scroll events
     $sections.forEach(entry => scrollObserver.observe(entry));
 
-
-
-
     const scrollThreshold = window.innerHeight/4; 
-
     // Function to check the scroll position
     const checkScrollDistance = () => {
         const $navbar = $('#navbar');
@@ -174,11 +165,17 @@ export function initNavbar () {
 
 
 
-
     $('.navButton').on('mousedown', function() {
         pageIsScrolling = true;
         scrollToTargetSection($(this));
         pageIsScrolling = false;
+    });
+
+    $('.homeHamburgerButton').on('mousedown', function() {
+        pageIsScrolling = true;
+        scrollToTargetSection($(this));
+        pageIsScrolling = false;
+        $('#hamburgerButton').mousedown();
     });
     
 
@@ -191,7 +188,8 @@ export function initNavbar () {
             $('#hamburger-menu').addClass("bg-white opacity-90 text-black")
         }
     });
-   
+
+
     // Hamburger menu toggle 
     $(document).on('mousedown', '#hamburgerButton', function() {
         $('#hamburger-menu').toggleClass('hidden');
@@ -206,50 +204,11 @@ export function initNavbar () {
         $icon.toggleClass("bi-brightness-high-fill bi-moon-stars-fill");
         $('*').toggleClass("dark");
 
-
-
     });
 
     $(document).on('click', '#dark-mode-toggle-hamburger', function() {
         $('*').toggleClass("dark");
         $('#dark-mode-toggle-hamburger').children("*").toggleClass("bi-brightness-high-fill");
         $('#dark-mode-toggle-hamburger').children("*").toggleClass("bi-moon-stars-fill");
-    });
-
-    // Navbar Button click handler
-    $(document).on("click", "[id$='NavButton']", function () {
-        const sectionMap = {
-            homeNavButton: "#homeSection",
-            aboutNavButton: "#aboutSection",
-            skillsNavButton: "#skillsSection",
-            projectsNavButton: "#projectsSection",
-            contactNavButton: "#contactSection",
-        };
-        const target = sectionMap[this.id];
-        const top = target === 0 ? 0 : $(target).position().top;
-        scroll({ top, left: 0, behavior: "smooth" });
-    });
-
-
-    // Hamburger menu scroll handlers 
-    $( document ).on('click', '#about-hamburger', function() {
-        var distance = $('#about-section').position().top - 4*$('nav').height() 
-        scroll({top: distance, left: 0, behavior: "smooth"});
-
-        toggle_hamburger_menu();
-    });
-
-    $( document ).on('click', '#projects-hamburger', function() {
-        var distance = $('#projects-section').position().top - 4*$('nav').height() 
-        scroll({top: distance, left: 0, behavior: "smooth"});
-        
-        toggle_hamburger_menu();
-    });
-
-    $( document ).on('click', '#contact-hamburger', function() {
-        var distance = $('#contact-section').position().top - 4*$('nav').height()  
-        scroll({top: distance, left: 0, behavior: "smooth"});
-
-        toggle_hamburger_menu();
     });
 };
