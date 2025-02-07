@@ -2071,6 +2071,10 @@ video {
     flex-direction: row;
   }
 
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
   .sm\:place-items-end {
     place-items: end;
   }
