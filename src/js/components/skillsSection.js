@@ -1,5 +1,8 @@
 export function initSkillsSection() {
 
+    $(".fadeFromLeft").addClass('opacity-0');
+    $(".fadeFromRight").addClass('opacity-0');
+
     const fadeFromLeftObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {

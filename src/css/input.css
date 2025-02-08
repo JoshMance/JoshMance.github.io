@@ -154,7 +154,6 @@
 }
 
 #navbar.scrolled.dark {
-    height: 10vh;
     background-color: var(--primary-dark);
     transition: ease-out 0.4s;
     -webkit-transition: ease-out 0.4s;
@@ -180,7 +179,11 @@
     touch-action: manipulation;
 }
 
-#hamburger-menu.open {
+#hamburger-menu {
+    touch-action: manipulation;
+}
+
+#hamburger-menu:active {
     touch-action: manipulation;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;

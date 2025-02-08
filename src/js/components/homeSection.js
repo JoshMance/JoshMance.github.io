@@ -110,7 +110,7 @@ export function initHomeSection() {
         $("#downArrow").fadeIn();
         setTimeout(() => {
             $("#downArrow").fadeOut();
-        }, 10000);
+        }, 100000);
     }, 6000);
 
  

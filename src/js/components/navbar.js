@@ -79,7 +79,7 @@ export function initNavbar () {
     const $highlight = $('<div></div>').css({
         position: 'absolute',
         left: $RefButtonInner.children().first().offset().left,
-        top: $RefButtonInnerText.offset().top -2,
+        top: $RefButtonInnerText.offset().top - 3,
         height: $RefButtonInnerText.innerHeight(),
         width:  $RefButton.width(),
         "border-bottom": "0.15rem solid #f7e018",
@@ -127,7 +127,11 @@ export function initNavbar () {
     // Creating a scroll observer to determine the current section and toggle the navbar style
     const scrollObserver = new IntersectionObserver((entries) => {
         entries.slice().forEach(entry => {
+
             if (entry.isIntersecting) {
+
+                $(entry.target)
+            
                 // Finding the nav button that targets this section
                 var $navButton = $(`div[target="${entry.target.id}"]`);
                 if (!pageIsScrolling) {
@@ -138,9 +142,8 @@ export function initNavbar () {
             }
         });
     }, {
-        threshold: 0.5, // Triggers when 80% of the section is visible
+        threshold: 0.3,
     });
-
     const $sections = Array.from($('.section')); // Get an array of sections
     // Observe each section for scroll events
     $sections.forEach(entry => scrollObserver.observe(entry));
@@ -193,7 +196,6 @@ export function initNavbar () {
     // Hamburger menu toggle 
     $(document).on('mousedown', '#hamburgerButton', function() {
         $('#hamburger-menu').toggleClass('hidden');
-        $('#hamburger-menu').toggleClass('open');
         $('#hamburgerButton').toggleClass("open");
     });
 
