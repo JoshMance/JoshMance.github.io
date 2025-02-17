@@ -22,7 +22,17 @@ $(document).ready(function() {
     $scrollButton.fadeOut(0);
     
     $(window).on('scroll', function () {
-        if ($(window).scrollTop() > $(window).height()/2) {
+      
+      var distanceScrolled = ($(window).scrollTop() - $(window).height());
+      var pageScrollHeight = ($(document).height() - 2*$("#aboutSection").height());
+
+      var scrollPercentage = distanceScrolled/pageScrollHeight;
+      var angle = scrollPercentage*360;
+
+      $scrollButton.css("--angle", angle+"deg");
+
+
+        if ($(window).scrollTop() > $(window).height()) {
             $scrollButton.fadeIn(300);
         } else {
             $scrollButton.fadeOut(300);
@@ -56,6 +66,32 @@ $(document).ready(function() {
       if (componentsLoaded === components.length) {
         // Hide loading screen
         $('#loadingScreen').fadeOut(500);
+
+
+        document.addEventListener("scroll", () => {
+          document.documentElement.style.setProperty("--scroll", window.scrollY);
+      });
+      
+
+
+
+          $("#brand").removeClass("opacity-0");
+          $("#brand").addClass('fadeInFast opacity-100');
+          
+          $("#homeSectionText").removeClass("translate-y-[50vh]");
+          $("#homeSectionText").addClass('fadeIn translate-y-0');
+
+
+        // Making the navbar buttons fade in from above sequentially
+        $('#navButtons .navButton').each(function(index) {
+          var button = $(this);
+          
+          // Delaying the animation for each button's fade in from above
+          setTimeout(function() {
+            button.removeClass('translate-y-[-10vh]');
+            button.addClass('fadeIn translate-y-0');
+          }, 60 * (index+5));
+        });
 
       }
     });

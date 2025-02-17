@@ -1,4 +1,6 @@
 export function initHomeSection() {
+
+
     function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
@@ -33,6 +35,11 @@ export function initHomeSection() {
             // If the character is "*", toggle bold styling
             if (char === "*") {
                 isbold = !isbold;
+                setTimeout(() => typewriter($div, text, index + 1, isbold, insideAccent), speed);
+                return;
+            }
+
+            if (char === "/") {
                 setTimeout(() => typewriter($div, text, index + 1, isbold, insideAccent), speed);
                 return;
             }
@@ -85,16 +92,6 @@ export function initHomeSection() {
     }
 
 
-    // Running typewriter effect for the typewriter class
-     // by first saving the text, making the div visible and then passing 
-     // the text to the typewriter function to be (re-) written
-     let $div = $(".type-out");
-     let text = Array.from($div.text());
-     $div.empty();
-     $div.show();
-     typewriter($div, text, 0, false);
-
-
 
     // $(document).mousemove(function(event) {
     //     console.log("Mouse position: X=" + event.pageX + ", Y=" + event.pageY);
@@ -106,12 +103,21 @@ export function initHomeSection() {
     });
 
     $("#downArrow").toggle();
+    
+    setTimeout(() => {
+        // Running typewriter effect for the typewriter class
+        // by first saving the text, making the div visible and then passing 
+        // the text to the typewriter function to be (re-) written
+        let $div = $(".type-out");
+        let text = Array.from($div.text());
+        $div.empty();
+        $div.show();
+        typewriter($div, text, 0, false);
+    }, 2000);
+
     setTimeout(() => {
         $("#downArrow").fadeIn();
-        setTimeout(() => {
-            $("#downArrow").fadeOut();
-        }, 100000);
-    }, 6000);
+    }, 3000);
 
  
 

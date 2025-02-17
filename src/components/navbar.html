@@ -1,70 +1,57 @@
-<nav id="desktop-menu" class="align-bottom z-999 flex flex-row justify-between items-center dark:shadow-none mx-auto pl-4 max-w-screen-3xl h-min font-normal lg:text-md xl:text-lg navbar">
+<nav id="desktop-menu" class="z-999 flex flex-row justify-between items-center dark:shadow-none w-screen h-[8vh] sm:h-[10vh] max-h-[10vh] navbar">
 
     <!-- Brand -->
-    <div class="flex flex-row justify-center items-center rtl:space-x-reverse font-normal hover:cursor-pointer align-middle">
-      
-      <div id ="home" class="flex justify-center items-center">
-        <img id="logo" src="/src/images/Logo.svg" alt="Logo" class="rounded-full w-11 h-11">
+    <div id="brand" target = "homeSection" class="flex flex-row sm:justify-start items-center gap-[1.5vh] rtl:space-x-reverse ml-[2vh] sm:ml-[4vh] w-max sm:w-[50%] h-[7vh] hover:cursor-pointer">
+      <div class="flex flex-row justify-center items-end">
+        <img id="logo" src="/src/images/logo.svg" alt="Logo" class="w-[4.4vh] sm:w-[7vh] h-[4.4vh] sm:h-[7vh] object-contain">
       </div>
-
-      <div class="flex flex-col justify-center p-2">
-        <span class="font-semibold text-lg lg:text-lg xl:text-2xl whitespace-nowrap">
+      <div class="flex flex-col justify-center items-start h-[7vh]">
+        <span id="name" class="m-0 h-[3vh] sm:h-[4.8vh] font-bold text-[3vh] sm:text-[4.8vh] leading-none whitespace-nowrap ineline-span">
           Joshua Mance
         </span>
-        <span id="" class="font-normal text-pretty text-xs scrolled:text-accent xl:text-sm lg:text-md whitespace-nowrap">
+        <span class="m-0 mt-[0.5vh] h-[1.375vh] sm:h-[2.2vh] font-normal text-[1.375vh] sm:text-[2.2vh] align-middle leading-none whitespace-nowrap ineline-span">
           Always Learning, Always Building
         </span>
       </div>
+
     </div>
 
     <div class="flex flex-row">
       <!-- Hamburger menu button -->
-      <button type="button"  id="hamburgerButton" class="flex flex-col justify-evenly border-0 sm:hidden mr-[2vw] w-[10vw] h-[90%] aspect-square" target = "hamburger-menu">
-              <div id="topLine" class="block border-0 bg-white rounded-lg w-[75%] h-[3px] line"></div>
-              <div id="middleLine" class="block border-0 bg-white rounded-lg w-[75%] h-[3px] line"></div>
-              <div id="bottomLine" class="block border-0 bg-white rounded-lg w-[75%] h-[3px] line"></div>
+      <button type="button"  id="hamburgerButton" class="sm:hidden flex flex-col justify-evenly mr-[2vw] border-0 w-[10vw] h-[90%] aspect-square" target = "hamburger-menu">
+              <div id="topLine" class="block bg-white border-0 rounded-lg w-[75%] h-[3px] line"></div>
+              <div id="middleLine" class="block bg-white border-0 rounded-lg w-[75%] h-[3px] line"></div>
+              <div id="bottomLine" class="block bg-white border-0 rounded-lg w-[75%] h-[3px] line"></div>
       </button>
     </div>
 
     <!-- nav items desktop -->
-    <div class="md:block z-10 content-center hidden mr-4 w-full md:w-auto h-[7vh] font-normal text-md" id="navButtons">
-      <ul class="flex md:flex-row flex-col justify-items-center items-center gap-4 rtl:space-x-reverse pr-6 self-center">
-        <li class="">
-          <div id = "homeNavButton" target = "homeSection" class="flex flex-col px-3 h-[6vh] hover:cursor-pointer hover navButton">
-            <div class="flex flex-row w-min h-full font-normal navButtonText">Home</div>
-          </div>
+    <div class="hidden sm:block z-10 content-center mr-[10vh] w-min h-full font-normal" id="navButtons">
+      <ul class="flex flex-row justify-evenly items-center self-center gap-[3.8vw] rtl:space-x-reverse h-full">
+        <li id = "aboutNavButton" target = "aboutSection" class="flex flex-row justify-center items-center h-[3vh] text-[3vh] hover:text-accent transition-transform translate-y-[-10vh] ease-out hover:cursor-pointer hover navButton">
+            About
         </li>
-        <li class="">
-          <div id = "aboutNavButton" target = "aboutSection" class="flex flex-col px-3 h-[6vh] hover:cursor-pointer hover navButton">
-            <div class="flex flex-row w-min h-full font-normal navButtonText">About</div>
-          </div>
+        <li id = "projectsNavButton" target = "projectsSection" class="flex flex-row justify-center items-center h-[3vh] text-[3vh] hover:text-accent transition-transform translate-y-[-10vh] ease-out hover:cursor-pointer hover navButton">
+          Projects
         </li>
-        <li class="">
-          <div id = "projectsNavButton" target = "projectsSection" class="flex flex-col px-3 h-[6vh] hover:cursor-pointer hover navButton">
-            <div class="flex flex-row w-min h-full font-normal navButtonText">Projects</div>
-          </div>
+        <li id = "skillsNavButton" target = "skillsSection" class="flex flex-row justify-center items-center h-[3vh] text-[3vh] hover:text-accent transition-transform translate-y-[-10vh] ease-out hover:cursor-pointer hover navButton">
+          Skills
         </li>
-        <li class="">
-          <div id = "skillsNavButton" target = "skillsSection" class="flex flex-col px-3 h-[6vh] hover:cursor-pointer hover navButton">
-            <div class="flex flex-row w-min h-full font-normal navButtonText">Skills</div>
-          </div>
+        <li id = "contactNavButton" target = "contactSection" class="flex flex-row justify-center items-center h-[3vh] text-[3vh] hover:text-accent transition-transform translate-y-[-10vh] ease-out hover:cursor-pointer hover navButton">
+          Contact
         </li>
-        <li class="">
-          <div id="contactNavButton" target = "contactSection" class="flex flex-col px-3 h-[6vh] hover:cursor-pointer hover navButton">
-            <div class="flex flex-row w-min h-full font-normal navButtonText">Contact</div>
-          </div>
-        </li>
-        <li class="">
-          <div class="flex flex-col justify-center items-center px-3 h-full hover:cursor-pointer hover"> 
-            <a href="#" id="dark-mode-toggle" class="flex flex-row justify-center items-center w-min h-full text-3xl text-accent sm:text-2xl"><i class="bi-brightness-high-fill bi"></i></a>
-          </div>
-        </li>
+
+        <li id = "dark-mode-toggle" class="flex flex-row justify-center items-center rounded-full h-[3.5vh] text-[3.5vh] text-accent text-center transition-transform translate-y-[-10vh] hover:cursor-pointer hover navButton">
+          <i class="bi-brightness-high-fill bi"></i>
+      </li>
+
+
       </ul>
     </div>
 </nav>
 
 <!-- nav items phone --> 
-<nav id="hamburger-menu" class="top-0 right-0 z-50 fixed flex-col justify-between items-left hidden bg-white opacity-90 shadow-medium mt-[8vh] mr-[2vw] p-4 rounded-xl w-min font-semibold text-primary text-xl">
+<nav id="hamburger-menu" class="hidden top-2 right-0 z-50 fixed flex-col justify-between items-left bg-white opacity-90 shadow-medium mt-[8vh] mr-[2vw] p-4 rounded-xl w-min font-semibold text-black text-xl">
   <div id = "homeHamburgerButton" target = "homeSection"  class="pb-2 navButton">
     Home
 </div>
