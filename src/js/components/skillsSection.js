@@ -1,5 +1,9 @@
 export function initSkillsSection() {
 
+    $(".resumeButton").on("click", function() {
+        window.open("./src/pdfs/test.pdf", "_blank");
+    });
+
     $(".fadeFromLeft").addClass('opacity-0');
     $(".fadeFromRight").addClass('opacity-0');
 

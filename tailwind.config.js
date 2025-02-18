@@ -13,11 +13,11 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       'primary': '#0a3675', 
-      'secondary':'#235296',
+      'secondary':'#90BAF5',
       'accent': '#ffd900',
 
-      'primary-dark': '  #0a1b36', 
-      'secondary-dark':'#082a66',
+      'primary-dark': '  #0f172a', 
+      'secondary-dark':'#1e293b',
       'accent-dark': '#ffd900',
 
       'primary-faint': '#d6ecffff', 

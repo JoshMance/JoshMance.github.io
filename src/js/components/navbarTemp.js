@@ -1,5 +1,6 @@
 export function initNavbar () {
-// The logical location and width of the navbar highlight
+
+    // The logical location and width of the navbar highlight
     // Used to set goal values when animating changes to the highlight
     var targetHighlightLeft =  0;
     var targetHighlightWidth =  0;
@@ -22,6 +23,8 @@ export function initNavbar () {
            $logo.removeClass('animating');
        });
    });
+   
+
 
 
    function scrollToTargetSection($navButton) { 
@@ -69,13 +72,15 @@ export function initNavbar () {
 
     
     // Creating the highlight element
-    const $RefButton = $('#aboutNavButton');
+    const $RefButton = $('#homeNavButton');
+    const $RefButtonInner = $RefButton.children().first();
+    const $RefButtonInnerText = $RefButton.children().first().children().first();
 
     const $highlight = $('<div></div>').css({
         position: 'absolute',
-        left: $RefButton.offset().left,
-        top: $RefButton.offset().top - 3,
-        height: $RefButton.innerHeight(),
+        left: $RefButtonInner.children().first().offset().left,
+        top: $RefButtonInnerText.offset().top - 3,
+        height: $RefButtonInnerText.innerHeight(),
         width:  $RefButton.width(),
         "border-bottom": "0.15rem solid #f7e018",
         zIndex: 1

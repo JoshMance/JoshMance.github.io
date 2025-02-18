@@ -89,6 +89,11 @@
 
 
 
+button:hover {
+    filter: brightness(1.2);
+    -webkit-filter: brightness(1.2);
+}
+
 
 
 #loadingScreen {
@@ -104,17 +109,7 @@
     align-items: center;
 }
 
-#loadingScreen > img {
-    position: absolute;
-    top: 45vh;
-    left: 45vw;
-    width: 10vw;
-    height: 10vh;
-    background-color: var("--accent");
-    -webkit-animation:spin 0.7s linear infinite;
-    -moz-animation:spin 0.7s linear infinite;
-    animation:spin 0.7s linear infinite;
-}
+
 
 .logo {
     touch-action: manipulation;
@@ -122,7 +117,7 @@
 
 
 
-#logo:hover {
+/* #logo:hover {
     -webkit-animation:spin 0.5s forwards;
     -moz-animation:spin  0.5s forwards;
     animation:spin  0.5s forwards;
@@ -132,20 +127,8 @@
     -webkit-animation:spin 2s forwards;
     -moz-animation:spin 2s forwards;
     animation:spin 2s forwards;
-}
+} */
 
-@-moz-keyframes spin { 
-    100% { -moz-transform: rotate(360deg); }
-}
-@-webkit-keyframes spin { 
-    100% { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform:rotate(360deg);
-    }
-}
 
 
 
@@ -173,7 +156,7 @@
 #homeSectionContent::before {
     content: "";
     position: absolute;
-    background-image: url("/src/images/background2.jpg");
+    background-image: url("/src/images/OldBackground2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     top: 0;
@@ -186,6 +169,14 @@
 
 #projectsSection {
     background-image: url("/src/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+#resumeBanner {
+    background-image: url("/src/images/skyline.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -229,16 +220,13 @@
         padding-top: 0.2vh;
         padding-bottom: 0.2vh;
         margin-top: 0vh;
-        color: var(--black);
-        background-color: var(--white);
+        background-color: var(--primary);
         transition-property: 'background-color';
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; 
         transition-duration: 500ms;
     }
 
-    #navbar.scrolled #name {
-        color: var(--primary);
-    }
+
 }
 
 #navbar.scrolled.dark {
@@ -431,3 +419,29 @@
 .flipped {
     transform: rotateY(180deg);
 }
+
+
+
+.grayscaleFilter {
+    position: relative;
+    overflow: hidden;
+}
+
+    
+  .grayscaleFilter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: grayscale(100%);
+    transition: filter 0.2s ease-in-out;
+    z-index: 0;
+    -webkit-transition: filter 0.2s ease-in-out;
+    -moz-transition: filter 0.2s ease-in-out;
+    -ms-transition: filter 0.2s ease-in-out;
+    -o-transition: filter 0.2s ease-in-out;
+}
+
+.grayscaleFilter:hover::before {
+    filter: grayscale(0%);
+  }
