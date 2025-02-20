@@ -20,17 +20,17 @@ export function initHomeSection() {
         // Add the current character to the div
         if (index < text.length) {
             let char = text[index];
-            let speed = 15;
+            let speed = 20;
    
             // Adjust speed for spaces and punctuation
             if (char === " ") {
-                speed += getRandomInt(30, 40);
+                speed += getRandomInt(10, 15);
             } else if (char === ",") {
-                speed += 800;
+                speed += 5;
             }
-            else if (isEmoji(char)) {
-                speed += 1200;
-            }
+            // else if (isEmoji(char)) {
+            //     speed += 120;
+            // }
    
             // If the character is "*", toggle bold styling
             if (char === "*") {
@@ -39,10 +39,6 @@ export function initHomeSection() {
                 return;
             }
 
-            if (char === "/") {
-                setTimeout(() => typewriter($div, text, index + 1, isbold, insideAccent), speed);
-                return;
-            }
    
             // If the character is "_", toggle accent mode
             if (char === "_") {
@@ -51,12 +47,17 @@ export function initHomeSection() {
                 return;
             }
    
-            let spanClass = "";
-            spanClass += insideAccent ? "text-accent " : "";
-            spanClass += isbold ? "font-semibold " : "";
+    
+            let tagClass = "";
+            tagClass += insideAccent ? "text-accent " : "";
+            tagClass += isbold ? "font-semibold " : "";
+
+            let tag = (char === "/") ? "p" : "span";
+
+            console.log("", tag);
 
             let newText = (insideAccent || isbold)
-                ? `<span class="${spanClass.trim()}">${char}</span>`
+                ? `<${tag} class="${tagClass.trim()}">${char}</${tag}>`
                 : char;
    
             $div.append(newText);

@@ -638,6 +638,14 @@ video {
   margin: 0.5rem;
 }
 
+.m-\[1vw\] {
+  margin: 1vw;
+}
+
+.m-\[0\.5rem\] {
+  margin: 0.5rem;
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -666,6 +674,31 @@ video {
 .my-\[8vh\] {
   margin-top: 8vh;
   margin-bottom: 8vh;
+}
+
+.mx-\[1vw\] {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.mx-\[1vh\] {
+  margin-left: 1vh;
+  margin-right: 1vh;
+}
+
+.my-\[0\.5rem\] {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-\[1rem\] {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-\[2rem\] {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mb-4 {
@@ -748,6 +781,22 @@ video {
   margin-top: 8vh;
 }
 
+.mt-\[1vw\] {
+  margin-top: 1vw;
+}
+
+.mt-\[2rem\] {
+  margin-top: 2rem;
+}
+
+.mt-\[1rem\] {
+  margin-top: 1rem;
+}
+
+.mb-\[0\.5rem\] {
+  margin-bottom: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -788,6 +837,10 @@ video {
   height: 1.375vh;
 }
 
+.h-\[100\%\] {
+  height: 100%;
+}
+
 .h-\[10vh\] {
   height: 10vh;
 }
@@ -810,6 +863,10 @@ video {
 
 .h-\[20vh\] {
   height: 20vh;
+}
+
+.h-\[22vh\] {
+  height: 22vh;
 }
 
 .h-\[2em\] {
@@ -912,6 +969,35 @@ video {
 .h-min {
   height: -moz-min-content;
   height: min-content;
+}
+
+.h-\[40vh\] {
+  height: 40vh;
+}
+
+.h-\[33\%\] {
+  height: 33%;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-\[50\%\] {
+  height: 50%;
+}
+
+.h-\[40\%\] {
+  height: 40%;
+}
+
+.h-\[60\%\] {
+  height: 60%;
+}
+
+.h-\[60vh\] {
+  height: 60vh;
 }
 
 .max-h-\[10vh\] {
@@ -1118,6 +1204,10 @@ video {
   justify-content: space-evenly;
 }
 
+.justify-stretch {
+  justify-content: stretch;
+}
+
 .justify-items-start {
   justify-items: start;
 }
@@ -1164,16 +1254,21 @@ video {
        column-gap: 1rem;
 }
 
+.gap-x-\[5vh\] {
+  -moz-column-gap: 5vh;
+       column-gap: 5vh;
+}
+
 .gap-y-10 {
   row-gap: 2.5rem;
 }
 
-.gap-y-\[2vh\] {
-  row-gap: 2vh;
-}
-
 .gap-y-\[5\%\] {
   row-gap: 5%;
+}
+
+.gap-y-\[5vh\] {
+  row-gap: 5vh;
 }
 
 .self-center {
@@ -1198,6 +1293,11 @@ video {
 
 .overflow-y-scroll {
   overflow-y: scroll;
+}
+
+.hyphens-none {
+  -webkit-hyphens: none;
+          hyphens: none;
 }
 
 .whitespace-nowrap {
@@ -1294,6 +1394,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-accent {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 217 0 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\/src\/images\/RepairLab\.png\)\] {
   background-image: url(/src/images/RepairLab.png);
 }
@@ -1333,6 +1438,14 @@ video {
 
 .p-\[1vw\] {
   padding: 1vw;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .px-2 {
@@ -1484,6 +1597,14 @@ video {
   line-height: 1;
 }
 
+.leading-6 {
+  line-height: 1.5rem;
+}
+
+.leading-7 {
+  line-height: 1.75rem;
+}
+
 .text-accent {
   --tw-text-opacity: 1;
   color: rgb(255 217 0 / var(--tw-text-opacity));
@@ -1624,6 +1745,15 @@ video {
   overflow-x: hidden;
   width: 100%;
   position: relative;
+}
+
+br {
+  display: block;
+  /* makes it have a width */
+  content: "";
+  /* clears default height */
+  margin-top: 1.5rem;
+  /* change this to whatever height you want it */
 }
 
 .fadeIn {
@@ -1917,6 +2047,21 @@ button:hover {
   -o-transform: rotate(180deg) translate(00vw, 1vh);
 }
 
+.divideAboutSection {
+  display:block;
+  position: relative;
+  width: 10vw;
+  height: 10vh;
+  border-left: 10vw solid transparent;
+  border-right: 10vw solid transparent;
+  border-bottom: 8vw solid var(--color);
+  transform: rotate(180deg) translate(00vw, 1vh);
+  -webkit-transform: rotate(180deg) translate(00vw, 1vh);
+  -moz-transform: rotate(180deg) translate(00vw, 1vh);
+  -ms-transform: rotate(180deg) translate(00vw, 1vh);
+  -o-transform: rotate(180deg) translate(00vw, 1vh);
+}
+
 .divideRight {
   z-index: 10;
   left: 0;
@@ -1957,7 +2102,7 @@ button:hover {
   transform: rotateY(180deg);
 }
 
-.grayscaleFilter {
+.grayscaleFilter  {
   position: relative;
   overflow: hidden;
 }
@@ -2148,6 +2293,10 @@ button:hover {
 
   .sm\:h-\[90vh\] {
     height: 90vh;
+  }
+
+  .sm\:h-\[90\%\] {
+    height: 90%;
   }
 
   .sm\:w-5\/12 {
@@ -2348,8 +2497,8 @@ button:hover {
     font-size: 2.2vh;
   }
 
-  .sm\:text-\[3\.5vh\] {
-    font-size: 3.5vh;
+  .sm\:text-\[3vh\] {
+    font-size: 3vh;
   }
 
   .sm\:text-\[4\.8vh\] {

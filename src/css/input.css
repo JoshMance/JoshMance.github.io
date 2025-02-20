@@ -62,6 +62,14 @@
     position: relative;
 }
 
+
+br {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 1.5rem; /* change this to whatever height you want it */
+}
+
+
   
   .fadeIn {
     animation: fadeIn 0.5s ease-in forwards;
@@ -382,6 +390,22 @@ button:hover {
     -o-transform: rotate(180deg) translate(00vw, 1vh);
 }
 
+.divideAboutSection {
+    display:block;
+    position: relative;
+    width: 10vw;
+    height: 10vh;
+    border-left: 10vw solid transparent;
+    border-right: 10vw solid transparent;
+    border-bottom: 8vw solid var(--color);
+    transform: rotate(180deg) translate(00vw, 1vh);
+    -webkit-transform: rotate(180deg) translate(00vw, 1vh);
+    -moz-transform: rotate(180deg) translate(00vw, 1vh);
+    -ms-transform: rotate(180deg) translate(00vw, 1vh);
+    -o-transform: rotate(180deg) translate(00vw, 1vh);
+
+}
+
 .divideRight {
     z-index: 10;
     left: 0;
@@ -422,7 +446,7 @@ button:hover {
 
 
 
-.grayscaleFilter {
+.grayscaleFilter  {
     position: relative;
     overflow: hidden;
 }
