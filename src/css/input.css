@@ -5,6 +5,11 @@
 /* #desktop-menu * {border: 0.5px solid #ff0000 ;}
 #desktop-menu {border: 0.5px solid #ff0000 ;} */
 
+@media screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Fallback for iOS */
+    }
+}
 
 
 @font-face {
@@ -204,7 +209,7 @@ button:hover {
 
 #resumeBanner {
     z-index: 0;
-    
+
     /* background-image: url("/src/images/skyline.jpg");
     background-repeat: no-repeat;
     background-size: cover;

@@ -646,6 +646,10 @@ video {
   z-index: -2;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -657,11 +661,6 @@ video {
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-}
-
-.my-\[10vh\] {
-  margin-top: 10vh;
-  margin-bottom: 10vh;
 }
 
 .my-\[2vh\] {
@@ -700,10 +699,6 @@ video {
 
 .mb-\[3vh\] {
   margin-bottom: 3vh;
-}
-
-.mb-\[5vh\] {
-  margin-bottom: 5vh;
 }
 
 .mb-\[7vh\] {
@@ -1324,6 +1319,14 @@ video {
   padding-bottom: 10vh;
 }
 
+.pb-\[5vh\] {
+  padding-bottom: 5vh;
+}
+
+.pt-\[18vh\] {
+  padding-top: 18vh;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1507,6 +1510,13 @@ video {
 
 /* #desktop-menu * {border: 0.5px solid #ff0000 ;}
 #desktop-menu {border: 0.5px solid #ff0000 ;} */
+
+@media screen and (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    /* Fallback for iOS */
+  }
+}
 
 @font-face {
   font-family: outfitExtraLight;
