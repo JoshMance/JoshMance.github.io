@@ -630,6 +630,10 @@ video {
   z-index: 10;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -644,10 +648,6 @@ video {
 
 .z-\[-2\] {
   z-index: -2;
-}
-
-.z-20 {
-  z-index: 20;
 }
 
 .m-0 {
@@ -685,10 +685,6 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mb-\[10vh\] {
-  margin-bottom: 10vh;
-}
-
 .mb-\[1vh\] {
   margin-bottom: 1vh;
 }
@@ -721,12 +717,16 @@ video {
   margin-right: 2vw;
 }
 
-.mr-\[5vw\] {
-  margin-right: 5vw;
+.mr-\[3vw\] {
+  margin-right: 3vw;
 }
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-\[0\.1rem\] {
+  margin-top: 0.1rem;
 }
 
 .mt-\[0\.5rem\] {
@@ -757,6 +757,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-\[7vh\] {
+  margin-top: 7vh;
+}
+
 .mt-\[8vh\] {
   margin-top: 8vh;
 }
@@ -775,6 +779,10 @@ video {
 
 .inline-flex {
   display: inline-flex;
+}
+
+.\!hidden {
+  display: none !important;
 }
 
 .hidden {
@@ -797,6 +805,10 @@ video {
   height: 1.375vh;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .h-\[11\%\] {
   height: 11%;
 }
@@ -811,10 +823,6 @@ video {
 
 .h-\[20vh\] {
   height: 20vh;
-}
-
-.h-\[22vh\] {
-  height: 22vh;
 }
 
 .h-\[2em\] {
@@ -833,6 +841,10 @@ video {
   height: 3px;
 }
 
+.h-\[3rem\] {
+  height: 3rem;
+}
+
 .h-\[3vh\] {
   height: 3vh;
 }
@@ -845,16 +857,8 @@ video {
   height: 40vh;
 }
 
-.h-\[45\%\] {
-  height: 45%;
-}
-
 .h-\[50\%\] {
   height: 50%;
-}
-
-.h-\[55\%\] {
-  height: 55%;
 }
 
 .h-\[6\%\] {
@@ -914,20 +918,13 @@ video {
   height: max-content;
 }
 
-.h-screen {
-  height: 100vh;
+.h-min {
+  height: -moz-min-content;
+  height: min-content;
 }
 
 .max-h-\[10vh\] {
   max-height: 10vh;
-}
-
-.w-1\/5 {
-  width: 20%;
-}
-
-.w-4\/5 {
-  width: 80%;
 }
 
 .w-\[100\%\] {
@@ -940,6 +937,10 @@ video {
 
 .w-\[10vw\] {
   width: 10vw;
+}
+
+.w-\[15\%\] {
+  width: 15%;
 }
 
 .w-\[19vw\] {
@@ -1093,6 +1094,10 @@ video {
 
 .justify-evenly {
   justify-content: space-evenly;
+}
+
+.justify-items-start {
+  justify-items: start;
 }
 
 .justify-items-center {
@@ -1323,8 +1328,8 @@ video {
   padding-bottom: 5vh;
 }
 
-.pt-\[18vh\] {
-  padding-top: 18vh;
+.pt-\[2vh\] {
+  padding-top: 2vh;
 }
 
 .text-left {
@@ -1386,6 +1391,11 @@ video {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xl {
@@ -1511,13 +1521,6 @@ video {
 /* #desktop-menu * {border: 0.5px solid #ff0000 ;}
 #desktop-menu {border: 0.5px solid #ff0000 ;} */
 
-@media screen and (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-    /* Fallback for iOS */
-  }
-}
-
 @font-face {
   font-family: outfitExtraLight;
 
@@ -1565,6 +1568,7 @@ video {
 }
 
 :root {
+  --vh: 100%;
   --primary:#0a3675;
   --secondary:#90BAF5;
   --accent:#ffd900;
@@ -1580,6 +1584,18 @@ video {
   overflow-x: hidden;
   width: 100%;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  body {
+    height: 100vh;
+    /* Force body height to viewport height */
+  }
+
+  #backgroundBlue, #backgroundRed {
+    height: calc(var(--vh, 1vh) * 100);
+    /* Ensure fixed elements take the full viewport height */
+  }
 }
 
 .fadeIn {
@@ -2045,8 +2061,8 @@ button:hover {
     margin-left: 4vh;
   }
 
-  .sm\:mr-\[3vw\] {
-    margin-right: 3vw;
+  .sm\:mr-\[2vw\] {
+    margin-right: 2vw;
   }
 
   .sm\:block {
@@ -2249,11 +2265,6 @@ button:hover {
     padding-top: 15vh;
   }
 
-  .sm\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -2280,6 +2291,11 @@ button:hover {
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .sm\:leading-10 {
@@ -2312,6 +2328,11 @@ button:hover {
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .lg\:text-xl {

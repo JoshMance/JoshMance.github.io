@@ -6,6 +6,18 @@ import { initProjectsSection } from "./components/projectsSection.js";
 import { initContactSection } from "./components/contactSection.js";
 import { initFooter } from "./components/footer.js";
 
+
+// Update the --vh variable on resize for iOS
+function fixViewportHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Call the function on page load and resize
+window.addEventListener('load', fixViewportHeight);
+window.addEventListener('resize', fixViewportHeight);
+
+
 $(document).ready(function() {
   const components = [
     { selector: '#homeSection', path: './src/components/homeSection.html', init: initHomeSection },
