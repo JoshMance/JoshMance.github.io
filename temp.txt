@@ -494,3 +494,8 @@
 
 
 <g clip-path="url(#f0c3e74c55)"><g clip-path="url(#4cca216b7b)"><path fill="#ffd126" d="M 147.277344 16.222656 L 201.953125 16.222656 L 201.953125 70.472656 L 147.277344 70.472656 Z M 147.277344 16.222656 " fill-opacity="1" fill-rule="nonzero"/></g></g><g clip-path="url(#6922d6af34)"><g clip-path="url(#e53799ec63)"><path fill="#ffd126" d="M 259.597656 69.179688 L 314.722656 69.179688 L 314.722656 124.515625 L 259.597656 124.515625 Z M 259.597656 69.179688 " fill-opacity="1" fill-rule="nonzero"/></g></g><g clip-path="url(#9c0f3d9b9f)"><g clip-path="url(#cee5436391)"><path fill="#ffd126" d="M 250.585938 216.289062 L 305.257812 216.289062 L 305.257812 270.539062 L 250.585938 270.539062 Z M 250.585938 216.289062 " fill-opacity="1" fill-rule="nonzero"/></g></g><g clip-path="url(#17c9df0209)"><g clip-path="url(#9706fddeab)"><path fill="#ffd126" d="M 60.941406 133.609375 L 115.617188 133.609375 L 115.617188 187.859375 L 60.941406 187.859375 Z M 60.941406 133.609375 " fill-opacity="1" fill-rule="nonzero"/></g></g></svg>
+
+
+
+
+text-lg sm:text-lg md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl text-pretty leading-5 sm:leading-2 md:leading-7 lg:leading-8 xl:leading-9 2xl:leading-10 3xl:leading-12 hyphens-none

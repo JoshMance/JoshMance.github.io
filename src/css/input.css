@@ -56,6 +56,7 @@
 
     line-height: 10px;
     font-family: outfitVariable;
+    letter-spacing: 0.005em;
 
     overflow-x: hidden;
     width: 100%;
@@ -63,17 +64,10 @@
 }
 
 
-br {
-    display: block; /* makes it have a width */
-    content: ""; /* clears default height */
-    margin-top: 1.5rem; /* change this to whatever height you want it */
-}
 
-
-  
-  .fadeIn {
-    animation: fadeIn 0.5s ease-in forwards;
-    -webkit-animation: fadeIn 0.5s ease-in forwards;
+.fadeIn {
+animation: fadeIn 0.5s ease-in forwards;
+-webkit-animation: fadeIn 0.5s ease-in forwards;
 }
 
 .fadeInFast {
@@ -119,27 +113,36 @@ button:hover {
 
 
 
-.logo {
+/* .logo {
     touch-action: manipulation;
-}
-
-
-
-/* #logo:hover {
-    -webkit-animation:spin 0.5s forwards;
-    -moz-animation:spin  0.5s forwards;
-    animation:spin  0.5s forwards;
-}
-
-#logo.animating  {
-    -webkit-animation:spin 2s forwards;
-    -moz-animation:spin 2s forwards;
-    animation:spin 2s forwards;
 } */
 
 
 
+#logo:hover {
+    -webkit-animation:spin 1s forwards;
+    -moz-animation:spin 1s forwards;
+    animation:spin 1s forwards;
+}
 
+#logo.animating  {
+    -webkit-animation:spin 1s forwards;
+    -moz-animation:spin 1s forwards;
+    animation:spin 1s forwards;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(720deg);
+        -webkit-transform: rotate(720deg);
+        -moz-transform: rotate(720deg);
+        -ms-transform: rotate(720deg);
+        -o-transform: rotate(720deg);
+    }
+}
 
 
 #homeSectionContent {
@@ -174,16 +177,24 @@ button:hover {
     z-index: -1;
 }
 
-
 #projectsSection {
-    background-image: url("/src/images/background.jpg");
+    background: transparent;
+}
+
+#backgroundBlue {
+    background-image: url("/src/images/background2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
+@media (max-width:  639px) {
+    #background.blue {
+        background-image: url("/src/images/background-mobile.jpg");
+    }
+}
 
-#resumeBanner {
+#backgroundRed {
     background-image: url("/src/images/skyline.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -191,20 +202,31 @@ button:hover {
 }
 
 
+#resumeBanner {
+    z-index: 0;
+    
+    /* background-image: url("/src/images/skyline.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+}
+
+
 @media (max-width: 639px) {
     #navbar {
+        letter-spacing: 0.025em;
         position: fixed;
         padding: 0px;
         margin: 0px;
-        color: var(--black);
-        background-color: var(--white);
+        color: var(--white);
+        background-color: var(--primary);
     }
     #navbar #name {
-        color: var(--primary);
+        color: var(--white);
     }
 
     #hamburgerButton  * {
-        background-color: var(--black);
+        background-color: var(--white);
     }
 }
 
@@ -213,8 +235,9 @@ button:hover {
     #navbar {
         transition: ease-out 0.25s;
         position: fixed;
-        padding-top: 2vh;
-        padding-bottom: 2vh;
+        padding-top: 0.75vh;
+        padding-bottom: 0.75vh;
+        margin-top: 0vh;
         background-color: #ffffff00;
         z-index: 999;
         color: var(--white);
@@ -225,9 +248,6 @@ button:hover {
     }
 
     #navbar.scrolled {
-        padding-top: 0.2vh;
-        padding-bottom: 0.2vh;
-        margin-top: 0vh;
         background-color: var(--primary);
         transition-property: 'background-color';
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; 
@@ -375,7 +395,7 @@ button:hover {
 
 
 
-  .divideCentre {
+.divideCentre {
     display:block;
     position: relative;
     width: 10vw;

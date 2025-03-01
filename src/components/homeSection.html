@@ -1,28 +1,23 @@
-
-<div id="homeSectionContent" class="flex flex-col justify-end justify-self-start items-end sm:h-[90vh] text-white dark:text-dark-white">
-    <!-- banner container -->
-    <div class="flex sm:flex-row flex-col justify-evenly sm:justify-stretch justify-items-end items-center sm:items-end sm:content-end sm:place-items-end w-[100vw] sm:w-[100vw] h-[80vh] sm:h-[60vh]">
-        <!-- profile picture container -->
-        <div id="profilePicture" class="flex flex-col sm:justify-center justify-items-center items-center sm:self-end pt-[10vh] sm:pt-0 w-[100vw] sm:w-[38vw] sm:h-[60vh]">
+<section id="homeSectionContent" class="flex flex-col sm:justify-end justify-self-start items-end sm:h-[90vh] text-white dark:text-dark-white" aria-labelledby="homeSection">
+    <!-- Banner Container -->
+    <div class="flex sm:flex-row flex-col justify-items justify-start sm:justify-stretch items-center sm:items-end sm:content-end sm:place-items-end w-[100vw] sm:w-[100vw] h-[80vh] sm:h-[60vh]">
+        <!-- Profile Picture Container -->
+        <div id="profilePicture" class="flex flex-col sm:justify-center justify-items-center items-center sm:self-end sm:m-0 mt-[15vh] mb-[7vh] sm:pt-0 w-[100vw] sm:w-[38vw] sm:h-[60vh]">
             <img class="sm:justify-self-end sm:self-end border-2 border-white sm:border-0 rounded-full sm:rounded-sm w-[30vw] sm:w-auto h-full" src="/src/images/profile_picture.png" alt="Joshua Mance Profile Picture">
         </div>
-        <!-- banner text container -->
+        <!-- Banner Text Container -->
         <div class="flex flex-col self-center sm:self-end sm:pr-[10vw] w-[90vw] sm:w-[60vw] h-[20vh] sm:h-[55vh]">
             <div id="homeSectionText" class="flex flex-col text-left transition-transform translate-y-[50vh]">
-                <span class="mb-8 font-medium text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">Hi there! </span>
-                <span class="hidden mb-4 type-out text-md text-white sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl leading-8">
-                    I'm _Joshua_,
-                    a computer science / data science graduate and lifelong learner who's _passionate_ about building _data-driven_ systems!
-                </span>
-            </div> 
+                <h1 class="mb-8 font-medium text-white text-3xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">Hi there!</h1>
+                <p class="hidden mt-2 mb-4 type-out text-white text-2xl lg:text-2xl sm:text-3xl xl:text-3xl 2xl:text-4xl leading-8 sm:leading-10">
+                    I'm _Joshua_, a computer science/data science graduate and lifelong learner who's _passionate_ about building _data-driven_ systems!
+                </p>
+            </div>
+        </div>
+
+        <!-- Down Arrow -->
+        <div id="downArrow" class="absolute flex flex-col justify-end sm:justify-center items-center w-[100vw] h-full sm:h-[10vh] text-5xl sm:text-5xl lg:text-5xl hover:cursor-pointer">
+            <i class="font-bold text-white animate-pulse bi bi-chevron-down"></i>
+        </div>
     </div>
-
-
-    <div id="downArrow" class="absolute flex flex-col justify-center items-center w-[100vw] h-[5vh] sm:h-[10vh] sm:text-3xl lg:text-5xl hover:cursor-pointer"> 
-        <i class="font-bold text-white animate-pulse bi bi-chevron-down"></i>
-    </div> 
-    </div>
-</div>
-
-
-
+</section>

@@ -6,12 +6,12 @@
         <img id="logo" src="/src/images/OldLogo2.svg" alt="Logo" class="block w-[4.4vh] sm:w-[7vh] h-[4.4vh] sm:h-[7vh] object-contain">
       </div>
       <div class="flex flex-col justify-center items-start h-[7vh]">
-        <span id="name" class="m-0 h-[3vh] sm:h-[4.8vh] font-bold text-[3vh] sm:text-[4.8vh] leading-none whitespace-nowrap ineline-span">
+        <h1 id="brandname" class="m-0 h-[3vh] sm:h-[4.8vh] font-bold text-[3vh] sm:text-[4.8vh] leading-none whitespace-nowrap ineline-span">
           Joshua Mance
-        </span>
-        <span class="m-0 mt-[0.5vh] h-[1.375vh] sm:h-[2.2vh] font-normal text-[1.375vh] sm:text-[2.2vh] align-middle leading-none whitespace-nowrap ineline-span">
+        </h1>
+        <h2 class="m-0 mt-[0.5vh] h-[1.375vh] sm:h-[2.2vh] font-normal text-[1.375vh] sm:text-[2.2vh] align-middle leading-none whitespace-nowrap ineline-span">
           Always Learning, Always Building
-        </span>
+        </h2>
       </div>
 
     </div>
@@ -50,23 +50,25 @@
     </div>
 </nav>
 
-<!-- nav items phone --> 
-<nav id="hamburger-menu" class="hidden top-2 right-0 z-50 fixed flex-col justify-between items-left bg-white opacity-90 shadow-medium mt-[8vh] mr-[2vw] p-4 rounded-xl w-min font-semibold text-black text-xl">
-  <div id = "homeHamburgerButton" target = "homeSection"  class="pb-2 navButton">
-    Home
-</div>
-  <div id = "aboutHamburgerButton" target = "aboutSection"  class="py-2 navButton">
-    About
-</div>
-<div id = "projectsHamburgerButton" target = "projectsSection"  class="py-2 navButton">
-    Projects
-  </div>
-  <div id = "skillsHamburgerButton" target = "skillsSection"  class="py-2 navButton">
-      Skills
-  </div>
-  <div id = "contactHamburgerButton" target = "contactSection" class="py-2 navButton">
-    Contact
-  </div>
+<!-- hamburger nav menu (for use on phones) --> 
+<nav id="hamburger-menu" class="sm:hidden block top-2 right-0 z-50 fixed flex-col justify-between items-left bg-white opacity-0 shadow-medium mt-[8vh] mr-[2vw] p-4 rounded-xl w-min font-semibold text-black text-xl transition-all translate-x-[2vw] duration-300 ease-in-out">
+  <ul>
+    <li id = "homeHamburgerButton" target = "homeSection"  class="pb-2 navButton">
+      Home
+  </li>
+    <li id = "aboutHamburgerButton" target = "aboutSection"  class="py-2 navButton">
+      About
+  </li>
+  <li id = "projectsHamburgerButton" target = "projectsSection"  class="py-2 navButton">
+      Projects
+    </li>
+    <li id = "skillsHamburgerButton" target = "skillsSection"  class="py-2 navButton">
+        Skills
+    </li>
+    <li id = "contactHamburgerButton" target = "contactSection" class="py-2 navButton">
+      Contact
+    </li>
+</ul>
 </nav>
 
 

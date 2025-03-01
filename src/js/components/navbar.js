@@ -1,8 +1,10 @@
 export function initNavbar () {
-// The logical location and width of the navbar highlight
+
+    // The logical location and width of the navbar highlight
     // Used to set goal values when animating changes to the highlight
     var targetHighlightLeft =  0;
     var targetHighlightWidth =  0;
+    
     var highlightIsMoving =  false;
     var pageIsScrolling = false;
 
@@ -130,7 +132,7 @@ export function initNavbar () {
                 // Finding the nav button that targets this section
                 var $navButton = $(`div[target="${entry.target.id}"]`);
                 if (!pageIsScrolling) {
-                    targetHighlightLeft = Math.ceil($navButton.children().first().offset().left);
+                    targetHighlightLeft = Math.ceil($navButton.children().first().offset().left());
                     targetHighlightWidth = Math.ceil($navButton.width());
                     moveHighlight();
                 }
@@ -173,7 +175,6 @@ export function initNavbar () {
         pageIsScrolling = true;
         scrollToTargetSection($(this));
         pageIsScrolling = false;
-        $('#hamburgerButton').mousedown();
     });
     
 
@@ -190,8 +191,8 @@ export function initNavbar () {
 
     // Hamburger menu toggle 
     $(document).on('mousedown', '#hamburgerButton', function() {
-        $('#hamburger-menu').toggleClass('hidden');
-        $('#hamburgerButton').toggleClass("open");
+        $('#hamburgerButton').toggleClass('open');
+        $('#hamburger-menu').toggleClass('opacity-0 opacity-100 translate-x-[2vw] translate-x-0');
     });
 
     // Dark mode toggle 
@@ -208,4 +209,8 @@ export function initNavbar () {
         $('#dark-mode-toggle-hamburger').children("*").toggleClass("bi-brightness-high-fill");
         $('#dark-mode-toggle-hamburger').children("*").toggleClass("bi-moon-stars-fill");
     });
+
+
+
+
 };
