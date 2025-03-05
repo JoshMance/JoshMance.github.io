@@ -132,7 +132,7 @@ export function initNavbar () {
                 // Finding the nav button that targets this section
                 var $navButton = $(`div[target="${entry.target.id}"]`);
                 if (!pageIsScrolling) {
-                    targetHighlightLeft = Math.ceil($navButton.children().first().offset().left());
+                    targetHighlightLeft = Math.ceil($navButton.children().first().offset().left);
                     targetHighlightWidth = Math.ceil($navButton.width());
                     moveHighlight();
                 }
