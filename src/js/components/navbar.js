@@ -34,12 +34,14 @@ export function initNavbar () {
         if (targetId) {
             // Find the target element
             const $target = $(`#${targetId}`);
+
+            console.log($target)
             
             // Ensure the target element exists on the page
             if ($target.length) {
                 // Scroll to the target element smoothly
                 $('html, body').animate({
-                    scrollTop: $target.offset().top
+                    scrollTop: $target.offset().top - (0.1 * $(window).height())
                 }, 500); // Duration of animation in milliseconds
             } else {
                 console.warn(`Target section with ID "${targetId}" not found.`);

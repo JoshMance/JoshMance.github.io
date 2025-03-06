@@ -50,6 +50,8 @@
     --black:theme("colors.black");
     --white:theme("colors.white");
     --grey:theme("colors.grey");
+    --dark-base:theme("colors.dark-base");
+    --dark-low:theme("colors.dark-low");
 
     --primary-dark:theme("colors.primary-dark");
     --secondary-dark:theme("colors.secondary-dark");
@@ -67,10 +69,10 @@
 
 @media (max-width: 768px) {
     body {
-        height: 100vh; /* Force body height to viewport height */
+        height: 100vh; /* Setting the body height to the viewport height */
     }
     #backgroundBlue, #backgroundRed {
-        height: calc(var(--vh, 1vh) * 100); /* Ensure fixed elements take the full viewport height */
+        height: calc(var(--vh, 1vh) * 100); /* Ensuring that fixed elements take the full viewport height */
     }
 }
 
@@ -106,8 +108,6 @@ button:hover {
     -webkit-filter: brightness(1.2);
 }
 
-
-
 #loadingScreen {
     position: fixed;
     top: 0;
@@ -121,13 +121,9 @@ button:hover {
     align-items: center;
 }
 
-
-
-/* .logo {
+.logo {
     touch-action: manipulation;
-} */
-
-
+}
 
 #logo:hover {
     -webkit-animation:spin 1s forwards;
@@ -152,6 +148,16 @@ button:hover {
         -ms-transform: rotate(720deg);
         -o-transform: rotate(720deg);
     }
+}
+
+#brandname {
+    letter-spacing: 0.2px;
+    font-weight: 750;
+}
+
+#tagline {
+    letter-spacing: 0.2px;
+    font-weight: 350;
 }
 
 
@@ -187,6 +193,11 @@ button:hover {
     z-index: -1;
 }
 
+body.dark #homeSectionContent::before {
+    filter: brightness(50%) grayscale(20%);
+    -webkit-filter: brightness(50%) grayscale(20%);
+}
+
 #projectsSection {
     background: transparent;
 }
@@ -196,6 +207,11 @@ button:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+body.dark #backgroundBlue {
+    filter: brightness(50%) grayscale(20%);
+    -webkit-filter: brightness(50%) grayscale(20%);
 }
 
 @media (max-width:  639px) {
@@ -209,6 +225,11 @@ button:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+body.dark #backgroundRed {
+    filter: brightness(50%) grayscale(20%);
+    -webkit-filter: brightness(50%) grayscale(20%);
 }
 
 
@@ -258,9 +279,37 @@ button:hover {
     }
 
     #navbar.scrolled {
-        background-color: var(--primary);
+        background-color: var(--white);
         transition-property: 'background-color';
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; 
+        transition-duration: 500ms;
+    }
+
+    #navbar.scrolled h1 {
+        color: var(--primary);
+        transition-property: 'color';
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; 
+        transition-duration: 500ms;
+    }
+
+    #navbar.scrolled.dark h1 {
+        color: var(--white);
+        transition-property: 'color';
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; 
+        transition-duration: 500ms;
+    }
+
+    #navbar.scrolled h2, #navbar.scrolled li:not(:last-child) {
+        color: var(--black);
+        transition-property: color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+        transition-duration: 500ms;
+    }
+
+    #navbar.scrolled.dark h2, #navbar.scrolled.dark li:not(:last-child) {
+        color: var(--grey);
+        transition-property: color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
         transition-duration: 500ms;
     }
 
@@ -268,7 +317,7 @@ button:hover {
 }
 
 #navbar.scrolled.dark {
-    background-color: var(--primary-dark);
+    background-color: var(--dark-base);
     transition: ease-out 0.4s;
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
@@ -420,6 +469,11 @@ button:hover {
     -o-transform: rotate(180deg) translate(00vw, 1vh);
 }
 
+body.dark .divideCentre {
+    border-bottom-color: var(--dark-low);
+
+}
+
 .divideAboutSection {
     display:block;
     position: relative;
@@ -433,7 +487,6 @@ button:hover {
     -moz-transform: rotate(180deg) translate(00vw, 1vh);
     -ms-transform: rotate(180deg) translate(00vw, 1vh);
     -o-transform: rotate(180deg) translate(00vw, 1vh);
-
 }
 
 .divideRight {

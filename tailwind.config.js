@@ -12,7 +12,7 @@ module.exports = {
       
       transparent: 'transparent',
       current: 'currentColor',
-      'primary': '#0a3675', 
+      'primary': '#004582', 
       'secondary':'#90BAF5',
       'accent': '#ffd900',
 
