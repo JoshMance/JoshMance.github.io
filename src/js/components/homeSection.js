@@ -1,5 +1,7 @@
 export function initHomeSection() {
 
+    let commaCount = 0;
+
 
     function getRandomInt(min, max) {
         min = Math.ceil(min);
@@ -69,7 +71,8 @@ export function initHomeSection() {
     
    
             // Add extra elements for punctuation
-            if (char === ",") {
+            if (char === "," && commaCount == 0) {
+                commaCount += 1;
                 // Add the cursor and a new line
                 $div.append('<span class="font-bold text-accent cursor"> |</span>');
                 $div.append("<div></div>");

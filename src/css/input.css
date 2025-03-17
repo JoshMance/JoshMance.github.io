@@ -50,6 +50,7 @@
     --black:theme("colors.black");
     --white:theme("colors.white");
     --grey:theme("colors.grey");
+    --dark-white:theme("colors.dark-white");
     --dark-base:theme("colors.dark-base");
     --dark-low:theme("colors.dark-low");
 
@@ -63,8 +64,32 @@
 
     overflow-x: hidden;
     width: 100%;
+    height: 100%;
     position: relative;
 }
+
+
+
+
+/* Brandname */
+h1 {
+    font-size: clamp(1.7rem, 2rem, 2.3rem);
+    font-weight: 600;
+}
+
+/* Tagline */
+h2 {
+    font-size: clamp(0.7rem, 0.9rem, 1.1rem);
+    font-weight: 350;
+}
+
+/* Heading 4 (h4) */
+h4 {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Subheading level 4 */
+    font-weight: bold;
+    line-height: clamp(1.5, 2.2vw, 1.6);
+}
+
 
 
 @media (max-width: 768px) {
@@ -121,8 +146,9 @@ button:hover {
     align-items: center;
 }
 
-.logo {
+#logo {
     touch-action: manipulation;
+    height: clamp(2rem, 3rem, 5rem);
 }
 
 #logo:hover {
@@ -150,15 +176,7 @@ button:hover {
     }
 }
 
-#brandname {
-    letter-spacing: 0.2px;
-    font-weight: 750;
-}
 
-#tagline {
-    letter-spacing: 0.2px;
-    font-weight: 350;
-}
 
 
 #homeSectionContent {
@@ -243,6 +261,11 @@ body.dark #backgroundRed {
 }
 
 
+navbar {
+    height: (5vh, 6vh, 7vh);
+}
+
+
 @media (max-width: 639px) {
     #navbar {
         letter-spacing: 0.025em;
@@ -266,8 +289,8 @@ body.dark #backgroundRed {
     #navbar {
         transition: ease-out 0.25s;
         position: fixed;
-        padding-top: 0.75vh;
-        padding-bottom: 0.75vh;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
         margin-top: 0vh;
         background-color: #ffffff00;
         z-index: 999;

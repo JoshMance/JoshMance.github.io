@@ -1,15 +1,15 @@
-<nav id="desktop-menu" class="z-999 flex flex-row justify-between items-center dark:shadow-none w-screen h-[8vh] sm:h-[10vh] max-h-[10vh] navbar">
+<div id="desktop-menu" class="z-999 flex flex-row justify-between items-center dark:shadow-none m-1 w-full max-w-screen-2xl navbar">
 
     <!-- Brand -->
-    <div id="brand" target = "homeSection" class="flex flex-row sm:justify-start items-center gap-[1.5vh] rtl:space-x-reverse ml-[2vh] sm:ml-[4vh] w-max sm:w-[50%] h-[7vh] hover:cursor-pointer">
-      <div class="flex flex-row justify-center items-end">
-        <img id="logo" src="/src/images/OldLogo2.svg" alt="Logo" class="block w-[4.4vh] sm:w-[7vh] h-[4.4vh] sm:h-[7vh] object-contain">
+    <div id="brand" target = "homeSection" class="flex sm:justify-start items-center gap-[0.5rem] rtl:space-x-reverse ml-2 w-full sm:w-auto min-h-fit hover:cursor-pointer">
+      <div class="flex flex-col justify-center items-center h-full object-contain aspect-square">
+        <img id="logo" src="/src/images/OldLogo2.svg" alt="Logo" class="flex justify-center items-center h-fit object-contain aspect-square">
       </div>
-      <div class="flex flex-col justify-center items-start h-[7vh]">
-        <h1 id="brandname" class="m-0 h-[3vh] sm:h-[4.8vh] font-bold text-[3vh] sm:text-[4.8vh] leading-none whitespace-nowrap ineline-span">
+      <div class="flex flex-col justify-center items-start h-full">
+        <h1 id="brandname" class="flex items-start m-0 text-pretty align-top leading-none whitespace-nowrap">
           Joshua Mance
         </h1>
-        <h2 id="tagline" class="m-0 mt-[0.5vh] h-[1.375vh] sm:h-[2.2vh] font-normal text-[1.375vh] sm:text-[2.2vh] align-middle leading-none whitespace-nowrap ineline-span">
+        <h2 id="tagline" class="flex items-end m-0 antialiased align-middle leading-none whitespace-nowrap ineline-span">
           Always Learning, Always Building
         </h2>
       </div>
@@ -26,32 +26,32 @@
     </div>
 
     <!-- nav items desktop -->
-    <div class="hidden sm:block z-10 content-center mr-[10vh] w-min h-full font-medium" id="navButtons">
-      <ul class="flex flex-row justify-evenly items-center self-center gap-[3.8vw] rtl:space-x-reverse h-full">
-        <li id = "aboutNavButton" target = "aboutSection" class="flex flex-row justify-center items-center h-[3vh] text-[3vh] hover:text-accent transition-transform translate-y-[-10vh] ease-out hover:cursor-pointer hover navButton">
+    <div class="hidden z-10 sm:flex justify-start content-center mr-12 w-auto h-full overflow-x-auto font-normal custom-text-medium text-pretty" id="navButtons">
+      <ul class="flex flex-row justify-evenly items-center self-center gap-12 rtl:space-x-reverse w-max h-fit font-medium text-lg sm:text-lg md:text-lg lg:text-lg xl:text-xl 2xl:text-xl 3xl:text-2xl text-pretty">
+        <li id = "aboutNavButton" target = "aboutSection" class="flex flex-row justify-center items-center h-[3vh] hover:text-accent transition-transform translate-y-[-10vh] ease-out hover:cursor-pointer hover navButton">
             About
         </li>
-        <li id = "projectsNavButton" target = "projectsSection" class="flex flex-row justify-center items-center h-[3vh] text-[3vh] hover:text-accent transition-transform translate-y-[-10vh] ease-out hover:cursor-pointer hover navButton">
+        <li id = "projectsNavButton" target = "projectsSection" class="flex flex-row justify-center items-center h-[3vh] hover:text-accent transition-transform translate-y-[-10vh] ease-out hover:cursor-pointer hover navButton">
           Projects
         </li>
-        <li id = "skillsNavButton" target = "skillsSection" class="flex flex-row justify-center items-center h-[3vh] text-[3vh] hover:text-accent transition-transform translate-y-[-10vh] ease-out hover:cursor-pointer hover navButton">
+        <li id = "skillsNavButton" target = "skillsSection" class="flex flex-row justify-center items-center h-[3vh] hover:text-accent transition-transform translate-y-[-10vh] ease-out hover:cursor-pointer hover navButton">
           Skills
         </li>
-        <li id = "contactNavButton" target = "contactSection" class="flex flex-row justify-center items-center h-[3vh] text-[3vh] hover:text-accent transition-transform translate-y-[-10vh] ease-out hover:cursor-pointer hover navButton">
+        <li id = "contactNavButton" target = "contactSection" class="flex flex-row justify-center items-center h-[3vh] hover:text-accent transition-transform translate-y-[-10vh] ease-out hover:cursor-pointer hover navButton">
           Contact
         </li>
 
-        <li id = "dark-mode-toggle" class="flex flex-row justify-center items-center rounded-full h-[3.5vh] text-[3.5vh] text-accent text-center transition-transform translate-y-[-10vh] hover:cursor-pointer hover navButton">
-          <i class="bi-brightness-high-fill bi"></i>
+        <li id = "dark-mode-toggle" class="flex flex-row justify-center items-center rounded-full h-[3.5vh] text-accent text-center transition-transform translate-y-[-10vh] hover:cursor-pointer hover navButton">
+          <i class="bi-brightness-high-fill bi"></i> 
       </li>
 
 
       </ul>
     </div>
-</nav>
+</div>
 
 <!-- hamburger nav menu (for use on phones) --> 
-<nav id="hamburger-menu" class="sm:hidden block top-2 right-0 z-50 fixed flex-col justify-between items-left bg-white opacity-0 shadow-medium mt-[8vh] mr-[2vw] p-4 rounded-xl w-min font-semibold text-black text-xl transition-all translate-x-[2vw] duration-300 ease-in-out">
+<div id="hamburger-menu" class="sm:hidden block top-2 right-0 z-50 fixed flex-col justify-between items-left bg-white opacity-0 shadow-medium mt-[8vh] mr-[2vw] p-4 rounded-xl w-min font-normal text-black text-xl transition-all translate-x-[2vw] duration-300 ease-in-out">
   <ul>
     <li id = "homeHamburgerButton" target = "homeSection"  class="pb-2 navButton">
       Home
@@ -68,8 +68,8 @@
     <li id = "contactHamburgerButton" target = "contactSection" class="py-2 navButton">
       Contact
     </li>
-</ul>
-</nav>
+  </ul>
+</div>
 
 
 

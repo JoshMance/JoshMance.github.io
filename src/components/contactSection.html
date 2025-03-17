@@ -1,74 +1,30 @@
- <!--contact section -->
- <div class="flex flex-col justify-start items-center bg-grey dark:bg-dark-middle w-screen h-[130vh] sm:h-[120vh] text-black dark:text-dark-white">
-   
+<!-- Contact Section -->
+<div class="flex flex-col items-center bg-grey dark:bg-dark-middle py-16 w-full min-h-screen text-black dark:text-dark-white">
+
     <!-- Title -->
-    <div id="contact-section-title" class="flex flex-col justify-center bg-transparent pt-[10vh] pb-[6vh] w-full font-semibold text-primary dark:text-white text-3xl sm:text-4xl text-center">
+    <h2 class="mb-8 font-semibold text-primary dark:text-white text-3xl sm:text-4xl text-center">
         Get in Touch
-    </div>
+    </h2>
 
-    <!-- Contianer for the contact form and contact details panels -->
-    <div class= "flex sm:flex-row flex-col-reverse justify-evenly self-center gap-[5vh] sm:gap-0 w-[90vw] sm:w-[75vw] h-[90vh] sm:h-[65vh]">
+    <!-- Contact Details -->
+    <div class="flex flex-col items-center gap-5 bg-white dark:bg-dark-upper shadow-medium p-6 simple-border rounded-md w-[90vw] sm:w-[50vw] h-[50vh]">
+        
+        <p class="mb-4 text-lg text-center">
+            Please don't hesitate to reach out! Whether you have a question or just want to connect, I'll be more than happy to get back to you.
+        </p>
 
-        <!-- Contact form -->
-        <div class= "flex flex-row justify-center items-center bg-white dark:bg-dark-upper shadow-medium simple-border rounded-md w-[90vw] sm:w-[35vw] h-[70vh]">
-            <!-- Inner container -->
-                <div  class= "flex flex-col gap-y-[5%] w-[90%] h-[90%]">
-
-                        <div class="w-full h-[6%] font-bold text-2xl"> 
-                            Contact Form
-                        </div>
-
-                        <div class="mb-4 w-full h-[8%] font-normal leading-5"> 
-                            Fill out the form below and I'll get back to you as soon as possible
-                        </div>
-
-                        <input type="text" id="name" class ="w-full h-[11%] simple-border rounded-md px-2 text-dark-grey bg-light-grey dark:bg-secondary-dark"
-                                name="name" placeholder="Your Name" 
-                                required minlength="2" maxlength="20" size="10" />
-
-                        <input type="text" id="email" class ="w-full h-[11%] simple-border rounded-md px-2 text-dark-grey bg-light-grey" 
-                                name="email" placeholder="Your Email" 
-                                required minlength="2" maxlength="20" size="10" />
-
-                        <textarea id="message" class ="w-full h-[30%] simple-border rounded-md px-2 text-justify text-dark-grey bg-light-grey" 
-                                placeholder="Your Message">
-                        </textarea>
-
-                        <button class="bg-secondary rounded-md w-full h-[11%] font-semibold text-white"> 
-                            Send Message
-                        </button>
-                </div>
+        <div class="flex flex-col gap-4 text-xl">
+            <a href="mailto:joshjmance@gmail.com" class="flex items-center gap-2 hover:text-primary">
+                <i class="bi-envelope-fill text-primary"></i> joshjmance@gmail.com
+            </a>
+            <a href="https://github.com/JoshMance" class="flex items-center gap-2 hover:text-primary">
+                <i class="text-primary bi bi-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/joshua-mance/" class="flex items-center gap-2 hover:text-primary">
+                <i class="text-primary bi bi-linkedin"></i> LinkedIn
+            </a>
         </div>
 
-        <!-- Contact details -->
-        <div class= "flex flex-row justify-center items-center bg-white dark:bg-dark-upper shadow-medium simple-border rounded-md w-[90vw] sm:w-[35vw] h-[70vh]">
-            <!-- Inner container -->
-                <div  class= "flex flex-col gap-y-[5%] w-[90%] h-[90%]"> 
-
-                    <div class="w-full h-[6%] font-bold text-2xl"> 
-                        Connect With Me
-                    </div>
-
-                    <div class="flex flex-col justify-center mb-4 w-full h-[20%] sm:h-[8%] font-normal align-middle leading-5"> 
-                        Please feel free to email me, check out my GitHub or reach out on LinkedIn
-                    </div>
-                    
-                    <div class="flex flex-row gap-x-2 w-full h-[11%] text-xl hover:cursor-pointer"> 
-                        <a href="#" class=""><i class="bi-envelope-fill text-primary bi"></i></a>
-                            joshjmance@gmail.com 
-                    </div>
-                    <div class="flex flex-row gap-x-2 w-full h-[11%] text-xl hover:cursor-pointer"> 
-                        <a href="https://github.com/JoshMance" class=""><i class="text-primary bi bi-github"></i></a> 
-                            GitHub
-                    </div>
-                    <div class="flex flex-row gap-x-2 w-full h-[11%] text-xl hover:cursor-pointer"> 
-                        <a href="https://www.linkedin.com/in/joshua-mance/" class=""><i class="text-primary bi bi-linkedin"></i></a>
-                            LinkedIn
-                    </div>
-
-                </div>
-        </div>
-    
     </div>
-    
+
 </div>
