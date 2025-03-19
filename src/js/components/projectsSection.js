@@ -13,10 +13,12 @@ export function initProjectsSection() {
     
         if (targetDivHalfway > scrollTop + windowHeight / 2) {
             $('#backgroundBlue').css('z-index', '-1');
+            $('#backgroundBlue').show()
             $('#backgroundRed').css('z-index', '-10');
         } else {
             $('#backgroundBlue').css('z-index', '-10');
             $('#backgroundRed').css('z-index', '-1');
+            $('#backgroundRed').show()
         }
     });
 }

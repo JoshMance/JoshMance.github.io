@@ -1,8 +1,7 @@
 export function initSkillsSection() {
 
     $(".resumeButton").on("click", function() {
-        colourEffect();
-        // window.open("./src/pdfs/test.pdf", "_blank");
+        window.open("./src/pdfs/test.pdf", "_blank");
     });
 
     $(".fadeFromLeft").addClass('opacity-0');

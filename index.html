@@ -14,10 +14,10 @@
     </head>
     <body class="relative flex flex-col w-screen h-auto overflow-x-hidden overflow-y-scroll font-sans text-accent dark:text-accent-dark scroll-snap-type-y hover:cursor-default mandatory">
 
-        <div id="loadingScreen" class="bg-black"></div>
+        <div id="loadingScreen" class="z-10 bg-red"></div>
 
-        <div id="backgroundBlue" class="top-0 left-0 z-[-2] fixed w-[100vw] h-[100vh]"> </div>
-        <div id="backgroundRed" class="top-0 left-0 z-[-10] fixed w-[100vw] h-[100vh]"> </div>
+        <div id="backgroundBlue" class="hidden top-0 left-0 z-[-2] w-[100vw] h-[100vh] background"> </div>
+        <div id="backgroundRed" class="hidden top-0 left-0 z-[-10] w-[100vw] h-[100vh] background"> </div>
 
         <nav id="navbar" class="z-20 flex justify-center w-screen section"></nav>
         <div id="homeSection" class="z-10 section"></div>

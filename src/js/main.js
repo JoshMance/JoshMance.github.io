@@ -7,6 +7,11 @@ import { initContactSection } from "./components/contactSection.js";
 import { initFooter } from "./components/footer.js";
 
 
+if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+  document.documentElement.classList.add("ios");
+  console.log("Device OS is iOS");
+}
+
 // Update the --vh variable on resize for iOS
 function fixViewportHeight() {
   const vh = window.innerHeight * 0.01;

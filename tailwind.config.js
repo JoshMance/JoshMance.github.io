@@ -35,17 +35,16 @@ module.exports = {
       'dark-upper': "#3A3A3C",
     },
   },
-  plugins: [
-    function ({addUtilities}) {
-      const extendUnderline = {
-        '.underline-primary': {
-            'textDecoration': 'underline',
-            'text-decoration-color': '#0a3675',
-        },
-
-
-      }
-      addUtilities(extendUnderline)
-  }
+plugins: [
+    function ({ addUtilities }) {
+        const extendUnderline = {
+            '.underline': {
+                'textDecoration': 'underline',
+                'text-decoration-color': '#ffd900',
+                'text-decoration-thickness': '2px',
+            },
+        }
+        addUtilities(extendUnderline)
+    }
 ]
 }

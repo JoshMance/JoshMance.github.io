@@ -83,14 +83,10 @@ h2 {
     font-weight: 350;
 }
 
-/* Heading 4 (h4) */
-h4 {
-    font-size: clamp(1rem, 2vw, 1.5rem); /* Subheading level 4 */
-    font-weight: bold;
-    line-height: clamp(1.5, 2.2vw, 1.6);
+.background {
+    position: fixed !important; 
+    background-attachment: local !important;
 }
-
-
 
 @media (max-width: 768px) {
     body {
@@ -262,7 +258,7 @@ body.dark #backgroundRed {
 
 
 navbar {
-    height: (5vh, 6vh, 7vh);
+    height: clamp(5vh, 6vh, 7vh);
 }
 
 

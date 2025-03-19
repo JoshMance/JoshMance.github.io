@@ -1,11 +1,6 @@
 export function initNavbar () {
 
-    // The logical location and width of the navbar highlight
-    // Used to set goal values when animating changes to the highlight
-    var targetHighlightLeft =  0;
-    var targetHighlightWidth =  0;
-    
-    var highlightIsMoving =  false;
+
     var pageIsScrolling = false;
 
    $('#navbar').addClass('sticky top-0 z-10 bg-white');
@@ -34,8 +29,6 @@ export function initNavbar () {
         if (targetId) {
             // Find the target element
             const $target = $(`#${targetId}`);
-
-            console.log($target)
             
             // Ensure the target element exists on the page
             if ($target.length) {
@@ -51,86 +44,11 @@ export function initNavbar () {
         }
     }
 
-    // Splits text into individual characters for each element in the set
-    function splitTextIntoChars($divs) {
-        $divs.each(function () {
-            const text = this.textContent;
-            $(this).empty();
-            text.split('').forEach(char => {
-                const $newDiv = $('<div>')
-                    .html(char === ' ' ? '&nbsp;' : char)
-                    .css('display', 'inline-block')
-                    .css('z-index', 5)
-                    .css('align-self', 'center')
-                    .css('width', 'min-content')
-                    .addClass("navTextChar");
-                $(this).append($newDiv);
-            });
-        });
-    }
-
-    splitTextIntoChars($('.navButtonText'));
-
-    
-    // Creating the highlight element
-    const $RefButton = $('#aboutNavButton');
-
-    const $highlight = $('<div></div>').css({
-        position: 'absolute',
-        left: $RefButton.offset().left,
-        top: $RefButton.offset().top - 3,
-        height: $RefButton.innerHeight(),
-        width:  $RefButton.width(),
-        "border-bottom": "0.15rem solid #f7e018",
-        zIndex: 1
-    });
-
-    $('#navbar').append($highlight);
-
-
-    function moveHighlight() {
-
-        if (highlightIsMoving) {
-            return;
-        }
-        else {
-            highlightIsMoving = true;
-
-            let currentLeft = $highlight.offset().left;
-            let currentWidth = $highlight.innerWidth();
-        
-            let leftDifference = targetHighlightLeft - currentLeft;
-            let widthDifference = targetHighlightWidth - currentWidth;
-        
-            // Stop condition: When the highlight is close enough to the target
-            if (Math.abs(leftDifference) > 1 || Math.abs(widthDifference) > 1) {
-                // Gradually adjust position and size
-                let newLeft = currentLeft + leftDifference * 0.25; // Move 10% of the distance
-                let newWidth = currentWidth + widthDifference * 0.25; // Resize 10% of the difference
-        
-                $highlight.css("left", newLeft);
-                $highlight.css("width", newWidth);
-        
-                // Request the next frame for animation
-                requestAnimationFrame(moveHighlight);
-            } else {
-                // Snap to the exact target to avoid any rounding issues
-                $highlight.css("left", targetHighlightLeft);
-                $highlight.css("width", targetHighlightWidth);
-            }
-            highlightIsMoving = false;
-        }
-    }
-
 
     // Creating a scroll observer to determine the current section and toggle the navbar style
     const scrollObserver = new IntersectionObserver((entries) => {
         entries.slice().forEach(entry => {
-
             if (entry.isIntersecting) {
-
-                $(entry.target)
-            
                 // Finding the nav button that targets this section
                 var $navButton = $(`div[target="${entry.target.id}"]`);
                 if (!pageIsScrolling) {
@@ -199,7 +117,6 @@ export function initNavbar () {
 
     // Dark mode toggle 
     $(document).on('click', '#dark-mode-toggle', function() {
-
         const $icon = $('#dark-mode-toggle').children("*");
         $icon.toggleClass("bi-brightness-high-fill bi-moon-stars-fill");
         $('*').toggleClass("dark");
@@ -211,8 +128,6 @@ export function initNavbar () {
         $('#dark-mode-toggle-hamburger').children("*").toggleClass("bi-brightness-high-fill");
         $('#dark-mode-toggle-hamburger').children("*").toggleClass("bi-moon-stars-fill");
     });
-
-
 
 
 };

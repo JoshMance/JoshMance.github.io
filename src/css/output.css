@@ -836,6 +836,10 @@ video {
   height: 50%;
 }
 
+.h-\[50vh\] {
+  height: 50vh;
+}
+
 .h-\[60vh\] {
   height: 60vh;
 }
@@ -877,14 +881,6 @@ video {
 .h-min {
   height: -moz-min-content;
   height: min-content;
-}
-
-.h-\[90vh\] {
-  height: 90vh;
-}
-
-.h-\[50vh\] {
-  height: 50vh;
 }
 
 .min-h-fit {
@@ -1102,12 +1098,12 @@ video {
   gap: 1rem;
 }
 
-.gap-\[0\.5rem\] {
-  gap: 0.5rem;
-}
-
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-\[0\.5rem\] {
+  gap: 0.5rem;
 }
 
 .gap-x-\[5vh\] {
@@ -1203,11 +1199,6 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-grey {
   background-color: #f7f7f7ff;
 }
@@ -1231,27 +1222,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-accent {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 217 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[url\(\/src\/images\/RepairLab\.png\)\] {
-  background-image: url(/src/images/RepairLab.png);
-}
-
-.bg-\[url\(\/src\/images\/SediVis\.png\)\] {
-  background-image: url(/src/images/SediVis.png);
-}
-
-.bg-\[url\(\/src\/images\/ThroughlifeBackground\.jpg\)\] {
-  background-image: url(/src/images/ThroughlifeBackground.jpg);
-}
-
-.bg-\[url\(\/src\/images\/mySite\.png\)\] {
-  background-image: url(/src/images/mySite.png);
-}
-
 .bg-\[url\(\/src\/images\/RepairLab\.jpg\)\] {
   background-image: url(/src/images/RepairLab.jpg);
 }
@@ -1260,12 +1230,12 @@ video {
   background-image: url(/src/images/SediVis1.png);
 }
 
-.bg-\[url\(\/src\/images\/Throughlife\.jpg\)\] {
-  background-image: url(/src/images/Throughlife.jpg);
-}
-
 .bg-\[url\(\/src\/images\/Throughlife\.webp\)\] {
   background-image: url(/src/images/Throughlife.webp);
+}
+
+.bg-\[url\(\/src\/images\/mySite\.png\)\] {
+  background-image: url(/src/images/mySite.png);
 }
 
 .bg-cover {
@@ -1435,10 +1405,6 @@ video {
   line-height: 1;
 }
 
-.leading-3 {
-  line-height: .75rem;
-}
-
 .text-accent {
   --tw-text-opacity: 1;
   color: rgb(255 217 0 / var(--tw-text-opacity));
@@ -1597,13 +1563,9 @@ h2 {
   font-weight: 350;
 }
 
-/* Heading 4 (h4) */
-
-h4 {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  /* Subheading level 4 */
-  font-weight: bold;
-  line-height: clamp(1.5, 2.2vw, 1.6);
+.background {
+  position: fixed !important;
+  background-attachment: local !important;
 }
 
 @media (max-width: 768px) {
@@ -1768,7 +1730,7 @@ body.dark #backgroundRed {
 }
 
 navbar {
-  height: (5vh, 6vh, 7vh);
+  height: clamp(5vh, 6vh, 7vh);
 }
 
 @media (max-width: 639px) {
@@ -2074,19 +2036,24 @@ body.dark .divideCentre {
   cursor: pointer;
 }
 
-.hover\:text-accent:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 217 0 / var(--tw-text-opacity));
-}
-
 .hover\:text-primary:hover {
   --tw-text-opacity: 1;
   color: rgb(0 69 130 / var(--tw-text-opacity));
 }
 
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
 .hover\:grayscale-0:hover {
   --tw-grayscale: grayscale(0);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.hover\:underline:hover {
+  text-decoration: underline;
+  text-decoration-color: #ffd900;
+  text-decoration-thickness: 2px;
 }
 
 .dark\:bg-dark-base:is(.dark *) {
@@ -2237,10 +2204,6 @@ body.dark .divideCentre {
     width: 100%;
   }
 
-  .sm\:w-\[80vw\] {
-    width: 80vw;
-  }
-
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2338,16 +2301,12 @@ body.dark .divideCentre {
     line-height: 1.75rem;
   }
 
-  .sm\:leading-6 {
-    line-height: 1.5rem;
-  }
-
-  .sm\:leading-4 {
-    line-height: 1rem;
-  }
-
   .sm\:leading-5 {
     line-height: 1.25rem;
+  }
+
+  .sm\:leading-6 {
+    line-height: 1.5rem;
   }
 }
 
@@ -2389,16 +2348,12 @@ body.dark .divideCentre {
     line-height: 1.75rem;
   }
 
-  .lg\:leading-7 {
-    line-height: 1.75rem;
-  }
-
-  .lg\:leading-5 {
-    line-height: 1.25rem;
-  }
-
   .lg\:leading-6 {
     line-height: 1.5rem;
+  }
+
+  .lg\:leading-7 {
+    line-height: 1.75rem;
   }
 }
 
@@ -2429,10 +2384,6 @@ body.dark .divideCentre {
 
   .xl\:leading-8 {
     line-height: 2rem;
-  }
-
-  .xl\:leading-6 {
-    line-height: 1.5rem;
   }
 }
 
@@ -2468,10 +2419,6 @@ body.dark .divideCentre {
 
   .\32xl\:leading-9 {
     line-height: 2.25rem;
-  }
-
-  .\32xl\:leading-7 {
-    line-height: 1.75rem;
   }
 }
 
