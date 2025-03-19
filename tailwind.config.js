@@ -43,6 +43,12 @@ plugins: [
                 'text-decoration-color': '#ffd900',
                 'text-decoration-thickness': '2px',
             },
+            '.underline-primary' : {
+              'text-decoration': 'underline',
+              'text-decoration-color': '#004582',
+              'text-decoration-thickness': '3px',
+              'text-underline-offset': '4px',
+          },
         }
         addUtilities(extendUnderline)
     }
