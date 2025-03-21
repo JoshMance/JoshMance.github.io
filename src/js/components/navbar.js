@@ -45,25 +45,47 @@ export function initNavbar () {
     }
 
 
-    // Creating a scroll observer to determine the current section and toggle the navbar style
+
     const scrollObserver = new IntersectionObserver((entries) => {
-        entries.slice().forEach(entry => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Finding the nav button that targets this section
-                var $navButton = $(`div[target="${entry.target.id}"]`);
-                if (!pageIsScrolling) {
-                    targetHighlightLeft = Math.ceil($navButton.children().first().offset().left);
-                    targetHighlightWidth = Math.ceil($navButton.width());
-                    moveHighlight();
-                }
+                // Find all divs with a matching section id as the section's target
+                const sectionId = entry.target.id;
+                
+                // Use jQuery to select the divs with a matching data-target attribute
+                const $matchingDivs = $(`li[target="${sectionId}"]`);
+    
+                $('.navButton').removeClass('active');
+                $matchingDivs.each(function() {
+                    $(this).addClass('active');
+                });
+            } else {
+                // Optionally, remove .active when the section is no longer in view
+                const sectionId = entry.target.id;
+                
+                // Use jQuery to select the divs with a matching data-target attribute
+                const $matchingDivs = $(`div[data-target="${sectionId}"]`);
+                
+                $matchingDivs.each(function() {
+                    $(this).removeClass('active');
+                });
             }
         });
     }, {
-        threshold: 0.3,
+        // Adjust the rootMargin to push the observer's root boundary into the viewport
+        rootMargin: '-50% 0% -50% 0%', // This is a vertical margin of 50% in both top and bottom
+        threshold: 0.0 // This means that any intersection of the target will trigger the observer
     });
-    const $sections = Array.from($('.section')); // Get an array of sections
+    
+    const $sections = $('.section'); // Get a jQuery object of all .section elements
+    
     // Observe each section for scroll events
-    $sections.forEach(entry => scrollObserver.observe(entry));
+    $sections.each(function() {
+        scrollObserver.observe(this);  // Observe the section
+    });
+    
+
+
 
     const scrollThreshold = window.innerHeight/4; 
     // Function to check the scroll position

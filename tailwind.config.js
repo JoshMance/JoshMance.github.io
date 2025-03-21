@@ -13,8 +13,9 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       'primary': '#004582', 
-      'secondary':'#90BAF5',
+      'secondary':'#3377ca',
       'accent': '#ffd900',
+      'accent-faint': '#ffd900ca',
 
       'primary-dark': '  #0f172a', 
       'secondary-dark':'#1e293b',
@@ -41,14 +42,14 @@ plugins: [
             '.underline': {
                 'textDecoration': 'underline',
                 'text-decoration-color': '#ffd900',
-                'text-decoration-thickness': '2px',
+                'text-decoration-thickness': '3px',
             },
             '.underline-primary' : {
-              'text-decoration': 'underline',
-              'text-decoration-color': '#004582',
-              'text-decoration-thickness': '3px',
-              'text-underline-offset': '4px',
-          },
+                'text-decoration': 'underline',
+                'text-decoration-color': '#004582',
+                'text-decoration-thickness': '4px',
+                'text-underline-offset': '15px',
+            },
         }
         addUtilities(extendUnderline)
     }

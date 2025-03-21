@@ -56,8 +56,6 @@ export function initHomeSection() {
 
             let tag = (char === "/") ? "p" : "span";
 
-            console.log("", tag);
-
             let newText = (insideAccent || isbold)
                 ? `<${tag} class="${tagClass.trim()}">${char}</${tag}>`
                 : char;
@@ -128,7 +126,6 @@ export function initHomeSection() {
     const fadeFromRightObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                console.log($(entry.target).offset().left);
                 entry.target.classList.remove('opacity-0', 'translate-x-[-40px]');
                 entry.target.classList.add('opacity-100', 'translate-x-0');
             }

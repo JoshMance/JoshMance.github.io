@@ -14,18 +14,20 @@
     </head>
     <body class="relative flex flex-col w-screen h-auto overflow-x-hidden overflow-y-scroll font-sans text-accent dark:text-accent-dark scroll-snap-type-y hover:cursor-default mandatory">
 
-        <div id="loadingScreen" class="z-10 bg-red"></div>
+        <div id="loadingScreen" class="">
+            <img id="loadingLogo" src="/src/images/OldLogo2.svg" alt="Logo">
+        </div>
 
         <div id="backgroundBlue" class="hidden top-0 left-0 z-[-2] w-[100vw] h-[100vh] background"> </div>
         <div id="backgroundRed" class="hidden top-0 left-0 z-[-10] w-[100vw] h-[100vh] background"> </div>
 
         <nav id="navbar" class="z-20 flex justify-center w-screen section"></nav>
-        <div id="homeSection" class="z-10 section"></div>
-        <div id="aboutSection" class="scroll-snap-align-start section"></div>
-        <div id="projectsSection" class="scroll-snap-align-start section"></div>
-        <div id="skillsSection" class="scroll-snap-align-start section"></div>
-        <div id="contactSection" class="scroll-snap-align-start section"></div>
-        <div id="footer"></div>
+        <section id="homeSection" class="z-10 section"></section>
+        <section id="aboutSection" class="scroll-snap-align-start section"></section>
+        <section id="projectsSection" class="scroll-snap-align-start section"></section>
+        <section id="skillsSection" class="scroll-snap-align-start section"></section>
+        <section id="contactSection" class="scroll-snap-align-start section"></section>
+        <section id="footer"></section>
 
         
         <div id="scrollToTop" class="!hidden right-0 bottom-0 z-50 fixed sm:flex justify-center items-center shadow-medium mr-[3vw] sm:mr-[2vw] mb-[3vh] sm:mb-[4vh] rounded-full w-[19vw] sm:w-[5vw] aspect-square hover:cursor-pointer">

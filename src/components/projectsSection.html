@@ -1,5 +1,5 @@
 <!--projects section -->
-<div id="projectsSection" class="flex flex-col justify-start dark:bg-dark-base pb-[10vh] w-screen h-auto text-black dark:text-dark-white background-image">
+<div class="flex flex-col justify-start dark:bg-dark-base pb-[10vh] w-screen h-auto text-black dark:text-dark-white background-image">
 
     <!--projects section inner container-->
     <div class="flex flex-col justify-start items-center w-[100vw] h-auto">
@@ -7,157 +7,103 @@
         <div class="divideCentre" style="--color: var(--white);"> </div>
 
         <!-- Title -->
-        <div id="projects-section-title" class="flex flex-col justify-center bg-transparent pt-[10vh] pb-[6vh] w-full font-semibold text-white text-3xl sm:text-4xl text-center translate-y-[-5vh]">
+        <h3 id="projects-section-title" class="flex flex-col justify-center bg-transparent pt-[10vh] pb-[6vh] w-full font-bold text-white text-3xl sm:text-4xl text-center translate-y-[-5vh] section-title">
             My Projects
-        </div>
+        </h3>
 
         <!-- Project info boxes-->
         <div class="flex flex-wrap justify-center gap-x-5 gap-y-10 w-[90vw] h-auto">
 
 
-
             <!-- SediVis -->
-            <div class="group relative flex flex-wrap bg-white dark:bg-dark-upper shadow-light dark:shadow-none p-2 rounded-lg w-[80vw] sm:w-[28vw] h-[60vh] transition-transform duration-300 hover:cursor-pointer projectBox">
-
-                <!-- Inner container -->
-                <div class="flex flex-col rounded-sm w-full h-full">
-
-                    <div class="bg-[url(/src/images/SediVis1.png)] bg-cover bg-center h-[50%]"></div>
-
-                    <div class="flex flex-col justify-between h-[50%]">
-                        <div class="flex flex-col justify-evenly h-[80%]">
-                            <div class="mt-[1rem] mb-[0.5rem] font-bold text-xl">
-                                Sedivis Software
-                            </div>
-                            <div class="h-full text-md sm:text-md lg:text-md text-sm md:text-sm 2xl:text-lg xl:text-lg 3xl:text-xl text-pretty hyphens-none">
-                                I helped lead an agile-based team to develop software for geoarchaeologists analyzing sediment cores in Esperance, WA.
-                                <br>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 w-full h-[20%]">
-                            <span class="inline-flex items-center bg-secondary px-[0.6em] rounded-r-xl rounded-l-xl h-[2em] font-semibold text-white text-xs"> Computer Vision </span>
-                            <span class="inline-flex items-center bg-secondary px-[0.6em] rounded-r-xl rounded-l-xl h-[2em] font-semibold text-white text-xs"> Data Processing </span>
-                            <span class="inline-flex items-center bg-secondary px-[0.6em] rounded-r-xl rounded-l-xl h-[2em] font-semibold text-white text-xs"> UI Design </span>
+            <div class="group relative flex flex-col bg-white dark:bg-dark-upper shadow-light dark:shadow-none p-2 rounded-lg max-w-[100%] sm:max-w-[28vw] h-[20rem] transition-transform duration-300 hover:cursor-pointer projectBox">
+                <div class="flex flex-col flex-grow bg-[url(/src/images/SediVis1.png)] bg-cover bg-top w-full h-full"></div>
+                <div class="flex flex-col flex-grow justify-between h-full">
+                    <div class="flex flex-col flex-grow justify-start">
+                        <div class="mt-4 font-bold text-lg sm:text-xl">SediVis Software</div>
+                        <div class="mt-1 lg:text-md text-sm sm:text-sm hyphens-none">
+                            I led the development of software enabling geoarchaeologists in Esperance, WA to analyze sediment cores more effectively.
                         </div>
                     </div>
-
+                    <div class="flex flex-wrap gap-1 text-xs">
+                        <span class="inline-flex items-center bg-secondary px-2 py-[0.1rem] rounded-xl font-semibold text-white whitespace-nowrap">Data Processing</span>
+                        <span class="inline-flex items-center bg-secondary px-2 py-[0.1rem] rounded-xl font-semibold text-white whitespace-nowrap">Software Engineering </span>
+                    </div>
                 </div>
             </div>
 
 
             <!-- Warehouse simulation -->
-            <div class="group relative flex flex-wrap bg-white dark:bg-dark-upper shadow-light dark:shadow-none p-2 rounded-lg w-[80vw] sm:w-[28vw] h-[60vh] transition-transform duration-300 hover:cursor-pointer projectBox">
-
-                <!-- Inner container -->
-                <div class="flex flex-col grayscaleFilter rounded-sm w-full h-full">
-
-                    <div class="bg-[url(/src/images/data.png)] bg-cover bg-center h-[50%]"></div>
-
-                    <div class="flex flex-col justify-between h-[50%]">
-                        <div class="flex flex-col justify-evenly h-[80%]">
-                            <div class="mt-[1rem] mb-[0.5rem] font-bold text-xl">
-                                Warehouse Simulations
-                            </div>
-                            <div class="h-full sm:text-md lg:text-md text-sm md:text-sm 2xl:text-lg xl:text-lg 3xl:text-xl text-pretty hyphens-none">
-                                I'creating C++ software to simulate picking/packing operations in a small distribution warehouse to optimise picking routes and layout.
-                                <br>
-                            </div>
+            <div class="group relative flex flex-col bg-white dark:bg-dark-upper shadow-light dark:shadow-none p-2 rounded-lg max-w-[100%] sm:max-w-[28vw] h-[20rem] transition-transform duration-300 hover:cursor-pointer projectBox">
+                <div class="flex flex-col flex-grow bg-[url(/src/images/data.png)] bg-cover bg-top w-full h-full"></div>
+                <div class="flex flex-col flex-grow justify-between h-full">
+                    <div class="flex flex-col flex-grow justify-start">
+                        <div class="mt-4 font-bold text-lg sm:text-xl">Warehouse Simulations</div>
+                        <div class="mt-1 lg:text-md text-sm sm:text-sm hyphens-none">
+                            I'm creating C++ software to simulate picking/packing operations in a small distribution warehouse to optimise picking routes and layout.
                         </div>
-                        <div class="flex flex-row gap-1 w-full h-[20%]">
-                            <span class="inline-flex items-center bg-secondary px-[0.6em] rounded-r-xl rounded-l-xl h-[2em] font-semibold text-white text-xs whitespace-nowrap"> Experiment Design </span>
-                            <span class="inline-flex items-center bg-secondary px-[0.6em] rounded-r-xl rounded-l-xl h-[2em] font-semibold text-white text-xs whitespace-nowrap"> High Performance Computing </span>
-                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-1 text-xs">
+                        <span class="inline-flex items-center bg-secondary px-2 py-[0.1rem] rounded-xl font-semibold text-white whitespace-nowrap">Operations Research </span>
+                        <span class="inline-flex items-center bg-secondary px-2 py-[0.1rem] rounded-xl font-semibold text-white whitespace-nowrap">Software Engineering </span>
                     </div>
                 </div>
             </div>
 
 
             <!-- RepairLabs -->
-            <div class="group relative flex flex-wrap bg-white dark:bg-dark-upper shadow-light dark:shadow-none p-2 rounded-lg w-[80vw] sm:w-[28vw] h-[60vh] transition-transform duration-300 hover:cursor-pointer projectBox">
-
-                <!-- Inner container -->
-                <div class="flex flex-col grayscaleFilter rounded-sm w-full h-full">
-
-                    <div class="bg-[url(/src/images/RepairLab.jpg)] bg-cover bg-center h-[50%]"></div>
-
-                    <div class="flex flex-col justify-between h-[50%]">
-                        <div class="flex flex-col justify-evenly h-[80%]">
-                            <div class="mt-[1rem] mb-[0.5rem] font-bold text-xl">
-                                Repair Lab Website
-                            </div>
-                            <div class="h-full sm:text-md lg:text-md text-sm md:text-sm 2xl:text-lg xl:text-lg 3xl:text-xl text-pretty hyphens-none">
-                                I worked with a Coders for Causes team to develop a website for a Perth-based non-profit, helping them efficiently organize events and manage memberships.
-                                <br>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 w-full h-[20%]">
-                            <span class="inline-flex items-center bg-secondary px-[0.6em] rounded-r-xl rounded-l-xl h-[2em] font-semibold text-white text-xs"> REST API Handling  </span>
-                            <span class="inline-flex items-center bg-secondary px-[0.6em] rounded-r-xl rounded-l-xl h-[2em] font-semibold text-white text-xs"> UI Design </span>
+            <div class="group relative flex flex-col bg-white dark:bg-dark-upper shadow-light dark:shadow-none p-2 rounded-lg max-w-[100%] sm:max-w-[28vw] h-[20rem] transition-transform duration-300 hover:cursor-pointer projectBox">
+                <div class="flex flex-col flex-grow bg-[url(/src/images/RepairLab.jpg)] bg-cover bg-top w-full h-full"></div>
+                <div class="flex flex-col flex-grow justify-between h-full">
+                    <div class="flex flex-col flex-grow justify-start">
+                        <div class="mt-4 font-bold text-lg sm:text-xl">Repair Lab Website</div>
+                        <div class="mt-1 lg:text-md text-sm sm:text-sm hyphens-none">
+                            I worked with a Coders for Causes team to develop a website for a Perth-based non-profit, helping them efficiently organize events and manage volunteers.
                         </div>
                     </div>
-
+                    <div class="flex flex-wrap gap-1 text-xs">
+                        <span class="inline-flex items-center bg-secondary px-2 py-[0.1rem] rounded-xl font-semibold text-white whitespace-nowrap"> UI Design</span>
+                        <span class="inline-flex items-center bg-secondary px-2 py-[0.1rem] rounded-xl font-semibold text-white whitespace-nowrap"> REST API Design </span>
+                    </div>
                 </div>
             </div>
 
 
-    
 
             <!-- Finaincal Planning Charts -->
-            <div class="group relative flex flex-wrap bg-white dark:bg-dark-upper shadow-light dark:shadow-none p-2 rounded-lg w-[80vw] sm:w-[28vw] h-[60vh] transition-transform duration-300 hover:cursor-pointer projectBox">
-
-                <!-- Inner container -->
-                <div class="flex flex-col grayscaleFilter rounded-sm w-full h-full">
-
-                    <div class="bg-[url(/src/images/Throughlife.webp)] bg-cover bg-center h-[50%]"></div>
-
-                    <div class="flex flex-col justify-between h-[50%]">
-                        <div class="flex flex-col justify-evenly h-[80%]">
-                            <div class="mt-[1rem] mb-[0.5rem] font-bold text-xl">
-                                Financial Planning Charts
-                            </div>
-                            <div class="h-full sm:text-md lg:text-md text-sm md:text-sm 2xl:text-lg xl:text-lg 3xl:text-xl text-pretty hyphens-none">
-                                I worked for Thoughlife Financial Solutions to create software that visualizes their clients' financial projections.
-                                <br>
-                            </div>
-                            
-                        </div>
-                        <div class="flex flex-row gap-1 w-full h-[20%]">
-                            <span class="inline-flex items-center bg-secondary px-[0.6em] rounded-r-xl rounded-l-xl h-[2em] font-semibold text-white text-xs"> Data Cleaning </span>
-                            <span class="inline-flex items-center bg-secondary px-[0.6em] rounded-r-xl rounded-l-xl h-[2em] font-semibold text-white text-xs"> Data Visualisation </span>
+            <div class="group relative flex flex-col bg-white dark:bg-dark-upper shadow-light dark:shadow-none p-2 rounded-lg max-w-[100%] sm:max-w-[28vw] h-[20rem] transition-transform duration-300 hover:cursor-pointer projectBox">
+                <div class="flex flex-col flex-grow bg-[url(/src/images/Throughlife.webp)] bg-cover bg-top w-full h-full"></div>
+                <div class="flex flex-col flex-grow justify-between h-full">
+                    <div class="flex flex-col flex-grow justify-start">
+                        <div class="mt-4 font-bold text-lg sm:text-xl">Financial Planning Charts</div>
+                        <div class="mt-1 lg:text-md text-sm sm:text-sm hyphens-none">
+                            I worked for Thoughlife Financial Solutions to create software that visualizes their clients' financial projections.
                         </div>
                     </div>
-
+                    <div class="flex flex-wrap gap-1 text-xs">
+                        <span class="inline-flex items-center bg-secondary px-2 py-[0.1rem] rounded-xl font-semibold text-white whitespace-nowrap"> Data Cleaning </span>
+                        <span class="inline-flex items-center bg-secondary px-2 py-[0.1rem] rounded-xl font-semibold text-white whitespace-nowrap"> Data Visualisation </span>
+                    </div>
                 </div>
             </div>
-
-
-    
 
             <!-- Personal Website -->
-            <div class="group relative flex flex-wrap bg-white dark:bg-dark-upper shadow-light dark:shadow-none p-2 rounded-lg w-[80vw] sm:w-[28vw] h-[60vh] transition-transform duration-300 hover:cursor-pointer projectBox">
-
-                <!-- Inner container -->
-                <div class="flex flex-col grayscaleFilter rounded-sm w-full h-full">
-
-                    <div class="bg-[url(/src/images/mySite.png)] bg-cover bg-center h-[50%]"></div>
-
-                    <div class="flex flex-col justify-between h-[50%]">
-                        <div class="flex flex-col justify-evenly h-[80%]">
-                            <div class="mt-[1rem] mb-[0.5rem] font-bold text-xl">
-                                Personal Website
-                            </div>
-                            <div class="h-full sm:text-md lg:text-md text-sm md:text-sm 2xl:text-lg xl:text-lg 3xl:text-xl text-pretty hyphens-none">
-                                I built this site to showcase my projects and approach to software development, design, and optimization.
-                                <br>
-                            </div>
+            <div class="group relative flex flex-col bg-white dark:bg-dark-upper shadow-light dark:shadow-none p-2 rounded-lg max-w-[100%] sm:max-w-[28vw] h-[20rem] transition-transform duration-300 hover:cursor-pointer projectBox">
+                <div class="flex flex-col flex-grow bg-[url(/src/images/mySite.png)] bg-cover bg-top w-full h-full"></div>
+                <div class="flex flex-col flex-grow justify-between h-full">
+                    <div class="flex flex-col flex-grow justify-start">
+                        <div class="mt-4 font-bold text-lg sm:text-xl">Personal Website</div>
+                        <div class="mt-1 lg:text-md text-sm sm:text-sm hyphens-none">
+                            I built this site to showcase my projects and approach to software development, design, and optimization.
                         </div>
-                        <div class="flex flex-row gap-1 w-full h-[20%]">
-                            <span class="inline-flex items-center bg-secondary px-[0.6em] rounded-r-xl rounded-l-xl h-[2em] font-semibold text-white text-xs whitespace-nowrap"> UI Design </span>
-                            <span class="inline-flex items-center bg-secondary px-[0.6em] rounded-r-xl rounded-l-xl h-[2em] font-semibold text-white text-xs whitespace-nowrap"> Server Development </span>
-                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-1 text-xs">
+                        <span class="inline-flex items-center bg-secondary px-2 py-[0.1rem] rounded-xl font-semibold text-white whitespace-nowrap"> Graphic Design </span>
+                        <span class="inline-flex items-center bg-secondary px-2 py-[0.1rem] rounded-xl font-semibold text-white whitespace-nowrap"> Server Development </span>
                     </div>
                 </div>
             </div>
+
 
 
         </div>
