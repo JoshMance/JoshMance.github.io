@@ -737,6 +737,10 @@ video {
   margin-top: 8vh;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -846,6 +850,14 @@ video {
 .h-min {
   height: -moz-min-content;
   height: min-content;
+}
+
+.h-\[25rem\] {
+  height: 25rem;
+}
+
+.h-\[22rem\] {
+  height: 22rem;
 }
 
 .min-h-fit {
@@ -1157,11 +1169,6 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(0 69 130 / var(--tw-bg-opacity));
@@ -1398,7 +1405,7 @@ video {
 
 .text-black {
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(13 12 12 / var(--tw-text-opacity));
 }
 
 .text-dark-grey {
@@ -1516,7 +1523,7 @@ video {
   --primary:#004582;
   --secondary:#3377ca;
   --accent:#ffd900;
-  --black:#000000;
+  --black:#0d0c0c;
   --white:#ffffff;
   --grey:#f7f7f7ff;
   --dark-white:#e8e8e8;
@@ -1808,7 +1815,7 @@ navbar {
   }
 
   #navbar.scrolled.dark h2, #navbar.scrolled.dark li:not(:last-child) {
-    color: var(--grey);
+    color: var(--white);
     transition-property: color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 500ms;
@@ -2054,11 +2061,6 @@ body.dark .divideCentre {
   cursor: pointer;
 }
 
-.hover\:text-primary:hover {
-  --tw-text-opacity: 1;
-  color: rgb(0 69 130 / var(--tw-text-opacity));
-}
-
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -2099,9 +2101,8 @@ body.dark .divideCentre {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
-.dark\:bg-white:is(.dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+.dark\:bg-transparent:is(.dark *) {
+  background-color: transparent;
 }
 
 .dark\:text-accent-dark:is(.dark *) {
@@ -2112,6 +2113,11 @@ body.dark .divideCentre {
 .dark\:text-dark-white:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(232 232 232 / var(--tw-text-opacity));
+}
+
+.dark\:text-secondary:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(51 119 202 / var(--tw-text-opacity));
 }
 
 .dark\:text-white:is(.dark *) {
@@ -2180,10 +2186,6 @@ body.dark .divideCentre {
 
   .sm\:h-\[90vh\] {
     height: 90vh;
-  }
-
-  .sm\:h-auto {
-    height: auto;
   }
 
   .sm\:w-5\/12 {
@@ -2268,10 +2270,6 @@ body.dark .divideCentre {
 
   .sm\:justify-center {
     justify-content: center;
-  }
-
-  .sm\:justify-between {
-    justify-content: space-between;
   }
 
   .sm\:justify-evenly {

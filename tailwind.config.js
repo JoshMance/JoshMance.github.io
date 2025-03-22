@@ -23,7 +23,7 @@ module.exports = {
 
       'primary-faint': '#d6ecffff', 
 
-      'black':'#000000',
+      'black':'#0d0c0c',
       'dark-grey':'#aaafb8',
       'grey': "#f7f7f7ff",
       'light-grey': "#f1f1f1",
