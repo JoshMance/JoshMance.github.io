@@ -1,7 +1,7 @@
 export function initSkillsSection() {
 
     $(".resumeButton").on("click", function() {
-        window.open("./src/pdfs/test.pdf", "_blank");
+        window.open("./src/pdfs/Resume Joshua Mance.pdf", "_blank");
     });
 
     $(".fadeFromLeft").addClass('opacity-0');
