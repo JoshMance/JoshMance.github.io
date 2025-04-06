@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {border: 0.5px solid #ff0000 ;} */
-
-
 @font-face {
     font-family: outfitExtraLight;
     src: url(/src/fonts/outfit/OutfitExtraLight.ttf);
@@ -68,18 +65,20 @@
 }
 
 
-
-
 /* Brandname */
 h1 {
-    font-size: clamp(1.7rem, 2rem, 2.3rem);
+    font-size: clamp(1.5rem, 2rem, 2.3rem);
     font-weight: 600;
 }
 
 /* Tagline */
 h2 {
-    font-size: clamp(0.7rem, 0.9rem, 1.1rem);
+    font-size: clamp(0.5rem, 0.9rem, 1.1rem);
     font-weight: 350;
+}
+
+li {
+    line-height: clamp(1.1rem, 1.5rem, 1.7rem);
 }
 
 .underlineDecoration {
@@ -175,7 +174,7 @@ button:hover {
 
 #logo {
     touch-action: manipulation;
-    height: clamp(2rem, 3rem, 5rem);
+    height: clamp(1rem, 3rem, 5rem);
 }
 
 #logo:hover {

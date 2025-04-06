@@ -636,6 +636,11 @@ video {
   margin-right: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .my-\[2vh\] {
   margin-top: 2vh;
   margin-bottom: 2vh;
@@ -651,6 +656,10 @@ video {
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.mb-\[1vh\] {
+  margin-bottom: 1vh;
 }
 
 .mb-\[2vh\] {
@@ -681,10 +690,6 @@ video {
   margin-left: 5vw;
 }
 
-.ml-\[8vw\] {
-  margin-left: 8vw;
-}
-
 .mr-12 {
   margin-right: 3rem;
 }
@@ -703,6 +708,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .mt-4 {
@@ -733,12 +742,28 @@ video {
   margin-top: 2rem;
 }
 
+.mt-\[2vh\] {
+  margin-top: 2vh;
+}
+
 .mt-\[8vh\] {
   margin-top: 8vh;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mr-\[5vw\] {
+  margin-right: 5vw;
+}
+
+.mr-\[10vw\] {
+  margin-right: 10vw;
+}
+
+.mt-\[3vh\] {
+  margin-top: 3vh;
 }
 
 .block {
@@ -785,12 +810,12 @@ video {
   height: 2.5rem;
 }
 
-.h-\[20rem\] {
-  height: 20rem;
-}
-
 .h-\[20vh\] {
   height: 20vh;
+}
+
+.h-\[22rem\] {
+  height: 22rem;
 }
 
 .h-\[3\.5vh\] {
@@ -825,10 +850,6 @@ video {
   height: 80vh;
 }
 
-.h-\[90\%\] {
-  height: 90%;
-}
-
 .h-auto {
   height: auto;
 }
@@ -850,14 +871,6 @@ video {
 .h-min {
   height: -moz-min-content;
   height: min-content;
-}
-
-.h-\[25rem\] {
-  height: 25rem;
-}
-
-.h-\[22rem\] {
-  height: 22rem;
 }
 
 .min-h-fit {
@@ -1160,13 +1173,18 @@ video {
   border-width: 0px;
 }
 
-.border-2 {
-  border-width: 2px;
+.border-4 {
+  border-width: 4px;
 }
 
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.bg-accent {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 217 0 / var(--tw-bg-opacity));
 }
 
 .bg-primary {
@@ -1237,10 +1255,6 @@ video {
   padding: 0.75rem;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1271,6 +1285,11 @@ video {
   padding-bottom: 5vh;
 }
 
+.py-\[3vh\] {
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -1279,12 +1298,12 @@ video {
   padding-bottom: 10vh;
 }
 
-.pb-\[5vh\] {
-  padding-bottom: 5vh;
+.pb-\[3vh\] {
+  padding-bottom: 3vh;
 }
 
-.pb-\[6vh\] {
-  padding-bottom: 6vh;
+.pb-\[5vh\] {
+  padding-bottom: 5vh;
 }
 
 .pr-\[10\%\] {
@@ -1297,6 +1316,26 @@ video {
 
 .pt-\[5vh\] {
   padding-top: 5vh;
+}
+
+.pt-\[2vh\] {
+  padding-top: 2vh;
+}
+
+.pt-\[3vh\] {
+  padding-top: 3vh;
+}
+
+.pb-\[2vh\] {
+  padding-bottom: 2vh;
+}
+
+.pb-\[1vh\] {
+  padding-bottom: 1vh;
+}
+
+.pt-\[7vh\] {
+  padding-top: 7vh;
 }
 
 .text-left {
@@ -1335,6 +1374,11 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-5xl {
@@ -1392,6 +1436,10 @@ video {
 
 .leading-7 {
   line-height: 1.75rem;
+}
+
+.leading-8 {
+  line-height: 2rem;
 }
 
 .leading-none {
@@ -1470,8 +1518,6 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-/* * {border: 0.5px solid #ff0000 ;} */
-
 @font-face {
   font-family: outfitExtraLight;
 
@@ -1544,15 +1590,19 @@ video {
 /* Brandname */
 
 h1 {
-  font-size: clamp(1.7rem, 2rem, 2.3rem);
+  font-size: clamp(1.5rem, 2rem, 2.3rem);
   font-weight: 600;
 }
 
 /* Tagline */
 
 h2 {
-  font-size: clamp(0.7rem, 0.9rem, 1.1rem);
+  font-size: clamp(0.5rem, 0.9rem, 1.1rem);
   font-weight: 350;
+}
+
+li {
+  line-height: clamp(1.1rem, 1.5rem, 1.7rem);
 }
 
 .underlineDecoration {
@@ -1643,7 +1693,7 @@ button:hover {
 
 #logo {
   touch-action: manipulation;
-  height: clamp(2rem, 3rem, 5rem);
+  height: clamp(1rem, 3rem, 5rem);
 }
 
 #logo:hover {
@@ -2140,12 +2190,24 @@ body.dark .divideCentre {
     margin-bottom: 0px;
   }
 
+  .sm\:mb-\[2vh\] {
+    margin-bottom: 2vh;
+  }
+
   .sm\:mb-\[4vh\] {
     margin-bottom: 4vh;
   }
 
+  .sm\:ml-\[8vw\] {
+    margin-left: 8vw;
+  }
+
   .sm\:mr-\[2vw\] {
     margin-right: 2vw;
+  }
+
+  .sm\:mt-\[1vh\] {
+    margin-top: 1vh;
   }
 
   .sm\:block {
@@ -2304,9 +2366,17 @@ body.dark .divideCentre {
     border-width: 0px;
   }
 
+  .sm\:bg-transparent {
+    background-color: transparent;
+  }
+
   .sm\:py-\[10vh\] {
     padding-top: 10vh;
     padding-bottom: 10vh;
+  }
+
+  .sm\:pb-\[6vh\] {
+    padding-bottom: 6vh;
   }
 
   .sm\:pr-0 {
@@ -2361,6 +2431,10 @@ body.dark .divideCentre {
   .sm\:leading-6 {
     line-height: 1.5rem;
   }
+
+  .sm\:leading-8 {
+    line-height: 2rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2402,6 +2476,10 @@ body.dark .divideCentre {
 
   .lg\:leading-7 {
     line-height: 1.75rem;
+  }
+
+  .lg\:leading-8 {
+    line-height: 2rem;
   }
 }
 
