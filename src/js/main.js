@@ -80,8 +80,6 @@ $(document).ready(function() {
       // Increment loaded components count
       componentsLoaded++;
 
-      console.log(componentsLoaded, components.length);
-
       // Check if all components are loaded
       if (componentsLoaded === components.length) {
         // Hide loading screen
